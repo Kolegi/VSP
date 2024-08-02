@@ -1,0 +1,86 @@
+@import "./_normalize";
+@import "./_color_font";
+@import "./_servise";
+@import "./trust-us";
+@import "./publication";
+@import "./team";
+@import "./consistent";
+@import "./footer";
+@import "./hero";
+@import "./publications_page";
+@import "./header";
+@import "./output";
+
+html {
+  scroll-behavior: smooth
+}
+
+.h1{
+  @include font-hero;
+}
+
+.h2{
+  @include font-h2;
+}
+
+.h3{
+  @include font-h3;
+}
+
+.h3-caps{
+  @include font-h3__caps;
+}
+
+.h4{
+  @include font-h4;
+}
+
+.paragraph{
+  @include font-paragrapf;
+}
+
+.wrapper{
+  // margin-left: auto;
+  // margin-right: auto;
+  // width: 315px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media (min-width: 768px) {
+  .wrapper{
+    // margin-left: auto;
+    // margin-right: auto;
+    // width: 648px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper{
+    // margin-left: auto;
+    // margin-right: auto;
+    // width: 904px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper{
+    // margin-left: auto;
+    // margin-right: auto;
+    // width: 1320px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1600px;
+  }
+}
