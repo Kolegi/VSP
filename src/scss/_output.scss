@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.8 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -633,10 +633,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
 }
@@ -803,11 +799,6 @@ video {
 .text-grey-03 {
   --tw-text-opacity: 1;
   color: rgb(54 54 53 / var(--tw-text-opacity));
-}
-
-.hover\:text-main:hover {
-  --tw-text-opacity: 1;
-  color: rgb(7 159 93 / var(--tw-text-opacity));
 }
 
 .active\:text-white-08:active {
