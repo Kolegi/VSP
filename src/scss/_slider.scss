@@ -1,11 +1,14 @@
 /* Слайдер */
-.slick-slider{}
+.slick-slider {
+}
 
 /* Слайдер запущений */
-.slick-slider.slick-initialized{}
+.slick-slider.slick-initialized {
+}
 
 /* Слайдер з крапками */
-.slick-slider.slick-dotted{}
+.slick-slider.slick-dotted {
+}
 
 /* Обмежувальна оболонка */
 .slick-list {
@@ -13,55 +16,67 @@
 }
 
 /* Стрічка слайдів */
-.slick-track{
+.slick-track {
   display: flex;
 }
 
 /* Слайд */
-.slick-slide{}
+.slick-slide {
+}
 
 /* Слайд активний (показується) */
-.slick-slide.slick-active{}
+.slick-slide.slick-active {
+}
 
 /* Слайд основний */
-.slick-slide.slick-current{}
+.slick-slide.slick-current {
+}
 
 /* Слайд по центру */
-.slick-slide.slick-center{}
+.slick-slide.slick-center {
+}
 
 /* Клонований слайд */
-.slick-slide.slick-cloned{}
+.slick-slide.slick-cloned {
+}
 
 /* Стрілка */
-.slick-arrow{}
+.slick-arrow {
+}
 
 /* Стрілка вліво */
-.slick-arrow.slick-prev{}
+.slick-arrow.slick-prev {
+}
 
 /* Стрілка вправо */
-.slick-arrow.slick-next{}
+.slick-arrow.slick-next {
+}
 
 /* Стрілка не активна */
-.slick-arrow.slick-disabled{}
+.slick-arrow.slick-disabled {
+}
 
 /* Точки (буліти) */
-.slick-dots{}
+.slick-dots {
+}
 
-.slick-dots li{}
+.slick-dots li {
+}
 
 /* Активна точка */
-.slick-dots li.slick-active{}
+.slick-dots li.slick-active {
+}
 
 /* Елемент точки */
-.slick-dots li button{}
-
+.slick-dots li button {
+}
 
 /* Slider_MAIN */
 .slider {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  .slick-arrow{
+  .slick-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -69,102 +84,102 @@
     font-size: 0;
     width: 30px;
     height: 64px;
-    &.slick-prev{
+    &.slick-prev {
       left: 20px;
       background: url("./image/svg/left-arrow.svg") 0 0 / 100% no-repeat;
     }
-    &.slick-next{
+    &.slick-next {
       right: 20px;
       background: url("./image/svg/right-arrow.svg") 0 0 / 100% no-repeat;
     }
   }
-  .slick-dots:nth-of-type(2) button{
+  .slick-dots:nth-of-type(2) button {
     background-image: url(./image/slider/4-min.jpg);
-  } 
+  }
 }
-  /* Точки (буліти) */
+/* Точки (буліти) */
 
-  .slick-dots{
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    & li:nth-child(1) button{
-      background-image: url(./image/slider/1-min.jpg);
-    }
-    & li:nth-child(2) button{
-      background-image: url(./image/slider/2-min.jpg);
-    }
-    & li:nth-child(3) button{
-      background-image: url(./image/slider/3-min.jpg);
-    }
-    & li:nth-child(4) button{
-      background-image: url(./image/slider/4-min.jpg);
-    }
-    & li:nth-child(5) button{
-      background-image: url(./image/slider/5-min.jpg);
-    }
-    &.slick-active button::after {
-      width: 100%; /* Заповнює всю ширину кнопки */
-      }
-    li{
-      list-style: none;
-      &.slick-active {
-        button{
-          font-size: 0;
-          width: 70px;
-          height: 40px;
-          border-radius: 2%;
-          background-position: center;
-          background-size: cover;
-          position: relative;
-          overflow: hidden;
-          &::after {
-            display: block;
-            content: '';
-            z-index: 30;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            border-radius: 3px;
-            background: rgba(255, 255, 255, 0.40);
-            animation: expand 2s ease-in-out forwards;
-          }
-        }
-      }
-      button{
+.slick-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  & li:nth-child(1) button {
+    background-image: url(./image/slider/1-min.jpg);
+  }
+  & li:nth-child(2) button {
+    background-image: url(./image/slider/2-min.jpg);
+  }
+  & li:nth-child(3) button {
+    background-image: url(./image/slider/3-min.jpg);
+  }
+  & li:nth-child(4) button {
+    background-image: url(./image/slider/4-min.jpg);
+  }
+  & li:nth-child(5) button {
+    background-image: url(./image/slider/5-min.jpg);
+  }
+  &.slick-active button::after {
+    width: 100%; /* Заповнює всю ширину кнопки */
+  }
+  li {
+    list-style: none;
+    &.slick-active {
+      button {
         font-size: 0;
         width: 70px;
         height: 40px;
         border-radius: 2%;
         background-position: center;
         background-size: cover;
+        position: relative;
+        overflow: hidden;
+        &::after {
+          display: block;
+          content: "";
+          z-index: 30;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          border-radius: 3px;
+          background: rgba(255, 255, 255, 0.4);
+          animation: expand 2s ease-in-out forwards;
+        }
       }
     }
-  }
-  .slider__item{
-    height: 500px;
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      object-fit: cover;
+    button {
+      font-size: 0;
+      width: 70px;
+      height: 40px;
+      border-radius: 2%;
+      background-position: center;
+      background-size: cover;
     }
   }
+}
+.slider__item {
+  height: 500px;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+}
 
-  @keyframes expand {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
+@keyframes expand {
+  from {
+    width: 0;
   }
+  to {
+    width: 100%;
+  }
+}

@@ -1,36 +1,36 @@
-
 .header-desk {
-    // background-color: #3b82f6;
-    width: 100%;
-    min-height: 60px;
-    padding-top: 20px;
+  // background-color: #3b82f6;
+  width: 100%;
+  min-height: 60px;
+  padding-top: 20px;
 }
 
-.nav-hover{
-    &:hover #svg-icon-down-arrow{
-        transform: rotate(180deg) translateY(-1px);
-        fill: #079F5D;
-    }
+.nav-hover {
+  &:hover #svg-icon-down-arrow {
+    transform: rotate(180deg) translateY(-1px);
+    fill: #079f5d;
+  }
 }
 
-.nav-list-lv-2{
-    position: absolute;
-    left: -17px;
-    top: 58px;
-    display: none;
-    flex-direction: column;
-    padding: 8px;
-    border: 1px solid var(--08, #E2E2E2);
-    background: #FFF;
-    border-radius: 12px;
-    z-index: 5;
+.nav-list-lv-2 {
+  position: absolute;
+  left: -17px;
+  top: 58px;
+  display: none;
+  flex-direction: column;
+  padding: 8px;
+  border: 1px solid var(--08, #e2e2e2);
+  background: #fff;
+  border-radius: 12px;
+  z-index: 5;
 }
-.item-list-lv-2{
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    border-radius: 5px;
-    &:hover{
-        background: var(--09, #F8F8F8);
-    }
+
+.item-list-lv-2 {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-radius: 5px;
+  &:hover {
+    background: var(--09, #f8f8f8);
+  }
 }
