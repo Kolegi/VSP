@@ -7,9 +7,8 @@
 @import "./icon-svg";
 @import "../font/font.scss";
 
-
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -22,7 +21,7 @@ html {
   // padding-left: 40px;
   // padding-right: 40px;
 }
-.wrapper-for-absolute{
+.wrapper-for-absolute {
   margin-left: auto;
   margin-right: auto;
   width: 1220px;
@@ -47,7 +46,6 @@ html {
 //     padding-right: 60px;
 //   }
 // }
-
 
 // Основне
 // @media (min-width: 1220px) {
