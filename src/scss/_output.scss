@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.8 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -804,6 +804,12 @@ video {
 .active\:text-white-08:active {
   --tw-text-opacity: 1;
   color: rgb(226 226 226 / var(--tw-text-opacity));
+}
+
+.group\/\{nav-list-lv-2\}:hover .group-hover\/\{nav-list-lv-2\}\:flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .group:hover .group-hover\:flex {
