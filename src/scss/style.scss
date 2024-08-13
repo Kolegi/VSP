@@ -1,67 +1,24 @@
 @import "./normalize";
+@import "../font/font.scss";
 @import "./footer";
 @import "./header";
+@import "./icon-svg";
+@import "./input";
+@import "./news";
 @import "./output";
 @import "./slider";
-@import "./news";
-@import "./icon-svg";
-@import "../font/font.scss";
 
 html {
   scroll-behavior: smooth;
 }
 
 .wrapper {
-  // margin-left: auto;
-  // margin-right: auto;
-  // width: 315px;
   margin-left: auto;
   margin-right: auto;
   width: 1140px;
-  // padding-left: 40px;
-  // padding-right: 40px;
 }
 .wrapper-for-absolute {
   margin-left: auto;
   margin-right: auto;
   width: 1220px;
 }
-
-// @media (min-width: 768px) {
-//   .wrapper{
-//     // margin-left: auto;
-//     // margin-right: auto;
-//     // width: 648px;
-//     padding-left: 60px;
-//     padding-right: 60px;
-//   }
-// }
-
-// @media (min-width: 1024px) {
-//   .wrapper{
-//     // margin-left: auto;
-//     // margin-right: auto;
-//     // width: 904px;
-//     padding-left: 60px;
-//     padding-right: 60px;
-//   }
-// }
-
-// Основне
-// @media (min-width: 1220px) {
-//   .wrapper{
-//     margin-left: auto;
-//     margin-right: auto;
-//     width: 1140px;
-//     // padding-left: 40px;
-//     // padding-right: 40px;
-//   }
-// }
-
-// @media (min-width: 1920px) {
-//   .wrapper{
-//     margin-left: auto;
-//     margin-right: auto;
-//     width: 1600px;
-//   }
-// }

@@ -8,11 +8,7 @@
 .nav-hover {
   &:hover #svg-icon-down-arrow {
     transform: rotate(180deg) translateY(-1px);
-<<<<<<< HEAD
-    fill: #079F5D;
-=======
     fill: #079f5d;
->>>>>>> 2ad0e8f8729414ecf5ca9f411cd5da9d34181422
   }
 }
 
@@ -23,13 +19,8 @@
   display: none;
   flex-direction: column;
   padding: 8px;
-<<<<<<< HEAD
-  border: 1px solid var(--08, #E2E2E2);
-  background: #FFF;
-=======
   border: 1px solid var(--08, #e2e2e2);
   background: #fff;
->>>>>>> 2ad0e8f8729414ecf5ca9f411cd5da9d34181422
   border-radius: 12px;
   z-index: 5;
 }
@@ -39,10 +30,8 @@
   padding: 10px;
   align-items: center;
   border-radius: 5px;
-<<<<<<< HEAD
-
   &:hover {
-    background: var(--09, #F8F8F8);
+    background: var(--09, #f8f8f8);
   }
 }
 
@@ -53,12 +42,11 @@
   display: none;
   flex-direction: column;
   padding: 8px;
-  border: 1px solid var(--08, #E2E2E2);
-  background: #FFF;
+  border: 1px solid var(--08, #e2e2e2);
+  background: #fff;
   background-origin: border-box;
   border-radius: 12px;
   z-index: 5;
-
   &::after {
     content: "";
     position: absolute;
@@ -79,12 +67,11 @@
   display: none;
   flex-direction: column;
   padding: 8px;
-  border: 1px solid var(--08, #E2E2E2);
-  background: #FFF;
+  border: 1px solid var(--08, #e2e2e2);
+  background: #fff;
   background-origin: border-box;
   border-radius: 12px;
   z-index: 5;
-
   &::after {
     content: "";
     position: absolute;
@@ -103,14 +90,7 @@
   padding: 10px;
   align-items: center;
   border-radius: 5px;
-
-  &:hover {
-    background: var(--09, #F8F8F8);
-  }
-}
-=======
   &:hover {
     background: var(--09, #f8f8f8);
   }
 }
->>>>>>> 2ad0e8f8729414ecf5ca9f411cd5da9d34181422
