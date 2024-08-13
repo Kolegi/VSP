@@ -123,6 +123,9 @@
   & li:nth-child(5) button {
     background-image: url(./image/slider/5-min.jpg);
   }
+  & li:nth-child(6) button {
+    background-image: url(./image/slider/6git.jpg);
+  }
   &.slick-active button::after {
     width: 100%; /* Заповнює всю ширину кнопки */
   }
