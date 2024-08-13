@@ -63,7 +63,9 @@ function copy() {
 function watching() {
   gulp.watch("./src/scss/**/*.scss", css);
   gulp.watch("./src/*.html", html).on("change", browserSync.reload);
-  gulp.watch("./src/_input.scss", tailwind).on("change", browserSync.reload);
+  gulp
+    .watch("./src/scss/_input.scss", tailwind)
+    .on("change", browserSync.reload);
   gulp.watch("src/js/**/*.js", copyfolder).on("change", browserSync.reload);
 }
 
@@ -92,6 +94,7 @@ function defaultTask(cb) {
 
 exports.default = defaultTask;
 exports.css = css;
+exports.tailwind = tailwind;
 exports.clear = clear;
 exports.copyfolder = copyfolder;
 exports.build = gulp.series(clear, gulp.parallel(css, html, copy, tailwind));
