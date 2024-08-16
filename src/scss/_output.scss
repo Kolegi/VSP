@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.8 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -637,6 +637,10 @@ video {
   position: relative;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -714,6 +718,10 @@ video {
   gap: 0.25rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .gap-5 {
   gap: 1.25rem;
 }
@@ -773,12 +781,24 @@ video {
   padding-bottom: 10px;
 }
 
+.pb-\[31px\] {
+  padding-bottom: 31px;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .pt-\[59px\] {
   padding-top: 59px;
 }
 
 .text-right {
   text-align: right;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .text-3xl {
@@ -824,6 +844,10 @@ video {
   font-weight: 500;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .leading-6 {
   line-height: 1.5rem;
 }
@@ -849,6 +873,11 @@ video {
 .text-grey-03 {
   --tw-text-opacity: 1;
   color: rgb(54 54 53 / var(--tw-text-opacity));
+}
+
+.text-grey-04 {
+  --tw-text-opacity: 1;
+  color: rgb(84 84 84 / var(--tw-text-opacity));
 }
 
 .shadow {
