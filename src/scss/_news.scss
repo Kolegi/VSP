@@ -1,8 +1,10 @@
 .news-container {
   margin-top: 60px;
+  margin-bottom: 80px;
 }
 
 .news-image-wrapper {
+  max-height: 306px;
   overflow: hidden;
   &:hover .news-image {
     transform: scale(1.1);
