@@ -645,12 +645,12 @@ video {
   margin-bottom: 0.25rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
 .mr-5 {
   margin-right: 1.25rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .inline-block {
@@ -924,11 +924,6 @@ video {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition-duration: 150ms;
           transition-duration: 150ms;
-}
-
-.hover\:text-main:hover {
-  --tw-text-opacity: 1;
-  color: rgb(7 159 93 / var(--tw-text-opacity));
 }
 
 .active\:text-white-08:active {
