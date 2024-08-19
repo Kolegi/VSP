@@ -3,6 +3,17 @@
   width: 100%;
   min-height: 60px;
   padding-top: 20px;
+  background-image: url("./image/header-bg.png");
+  background-size: cover;
+  border-radius: 0 0 32px 32px;
+  // overflow: hidden;
+}
+
+.nav-separetor {
+  display: flex;
+  min-height: 100%;
+  width: 1px;
+  background: #e2e2e2;
 }
 
 .nav-hover {
@@ -93,4 +104,8 @@
   &:hover {
     background: var(--09, #f8f8f8);
   }
+}
+
+.nav-border-inside {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
