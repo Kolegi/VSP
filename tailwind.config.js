@@ -5,6 +5,21 @@ module.exports = {
     fontFamily: {
       body: ["e-Ukraine", "Montserrat"],
     },
+    fontSize: {
+      xs: ["12px", "16px"],
+      sm: ["15px", "24px"],
+      base: ["16px", "24px"],
+      lg: ["18px", "28px"],
+      xl: ["20px", "28px"],
+      "2xl": ["24px", "32px"],
+      "3xl": ["30px", "36px"],
+      "4xl": ["36px", "40px"],
+      "5xl": ["48px", "48px"],
+      "6xl": ["60px", "60px"],
+      "7xl": ["72px", "72px"],
+      "8xl": ["96px", "96px"],
+      "9xl": ["128px", "128px"],
+    },
     extend: {
       custom: ["e-Ukraine", "sans-serif"],
       colors: {
