@@ -32,6 +32,6 @@
     "gulp-postcss": "^10.0.0"
   },
   "browserslist": [
-    "last 5 version"
-  ] 
+    "last 25 version"
+  ]
 }
