@@ -6,13 +6,13 @@
     <title>VSP</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body id="body">
     <header class="header-desk px-3">
       <div class="wrapper">
         <div class="flex flex-col">
           <div class="flex justify-between py-5 nav-border-inside">
             <div class="flex justify-center items-center gap-[15px]">
-              <a href="#">
+              <a href="./index.html">
                 <img
                   class="max-h-full"
                   src="./image/logo-ntpu-s.png"
@@ -531,30 +531,6 @@
         </div>
       </div>
     </header>
-    <div class="hero-content">
-      <div class="wrapper">
-        <div class="slider">
-          <div class="slider__item relative">
-            <img src="./image/slider/1.jpg" alt="" />
-          </div>
-          <div class="slider__item">
-            <img src="./image/slider/2.jpg" alt="" />
-          </div>
-          <div class="slider__item">
-            <img src="./image/slider/3.jpg" alt="" />
-          </div>
-          <div class="slider__item">
-            <img src="./image/slider/4.jpg" alt="" />
-          </div>
-          <div class="slider__item">
-            <img src="./image/slider/5.jpg" alt="" />
-          </div>
-          <div class="slider__item">
-            <img src="./image/slider/6.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="news-container">
       <div class="wrapper">
         <div class="flex flex-col gap-5">
@@ -562,81 +538,12 @@
           <div
             id="news-container"
             class="grid grid-cols-2 grid-rows-[auto_auto] gap-[32px]"
-          >
-            <a class="group flex flex-col gap-[20px] w-full h-full" href="#">
-              <div class="news-image-wrapper">
-                <img class="news-image" src="./image/news-1.png" alt="news" />
-              </div>
-              <div class="flex flex-col gap-[8px]">
-                <h3
-                  class="text-xl font-normal text-grey-02 group-hover:text-main"
-                >
-                  Засідання приймальної комісії
-                </h3>
-                <p
-                  class="text-s font-light text-grey-03 overflow-ellipsis line-clamp-2"
-                >
-                  2 серпня 2024 року відбулося засідання приймальної комісії під
-                  головування Мирослави ІВАСИК, директора коледжу ання
-                  приймальної ко ання приймальної ко ання приймальної ко
-                </p>
-              </div>
-            </a>
-            <a class="group flex flex-col gap-[20px] w-full h-full" href="#">
-              <div class="news-image-wrapper">
-                <img class="news-image" src="./image/news-1.png" alt="news" />
-              </div>
-              <div class="flex flex-col gap-[8px]">
-                <h3
-                  class="text-xl font-normal text-grey-02 group-hover:text-main"
-                >
-                  Засідання приймальної комісії
-                </h3>
-                <p class="text-s font-light text-grey-03">
-                  2 серпня 2024 року відбулося засідання приймальної комісії під
-                  головування Мирослави ІВАСИК, директора коледжу...
-                </p>
-              </div>
-            </a>
-            <a class="group flex flex-col gap-[20px] w-full h-full" href="#">
-              <div class="news-image-wrapper">
-                <img class="news-image" src="./image/news-1.png" alt="news" />
-              </div>
-              <div class="flex flex-col gap-[8px]">
-                <h3
-                  class="text-xl font-normal text-grey-02 group-hover:text-main"
-                >
-                  Засідання приймальної комісії
-                </h3>
-                <p class="text-s font-light text-grey-03">
-                  2 серпня 2024 року відбулося засідання приймальної комісії під
-                  головування Мирослави ІВАСИК, директора коледжу...
-                </p>
-              </div>
-            </a>
-            <a class="group flex flex-col gap-[20px] w-full h-full" href="#">
-              <div class="news-image-wrapper">
-                <img class="news-image" src="./image/news-1.png" alt="news" />
-              </div>
-              <div class="flex flex-col gap-[8px]">
-                <h3
-                  class="text-xl font-normal text-grey-02 group-hover:text-main"
-                >
-                  Засідання приймальної комісії
-                </h3>
-                <p class="text-s font-light text-grey-03">
-                  2 серпня 2024 року відбулося засідання приймальної комісії під
-                  головування Мирослави ІВАСИК, директора коледжу...
-                </p>
-              </div>
-            </a>
+          ></div>
+          <div id="pagination">
+            <button type="button" id="prev">Попередня</button>
+            <span id="current-page">1</span> з <span id="total-pages">1</span>
+            <button type="button" id="next">Наступна</button>
           </div>
-          <a
-            href="./news.html"
-            class="flex h-[50px] py-[10px] px-[36px] justify-center self-center items-center rounded-[30px] text-grey-02 bg-[#F5F3F0] mt-8 hover:bg-[#E7E4E0]"
-          >
-            Дивитись більше новин
-          </a>
         </div>
       </div>
     </div>
@@ -777,5 +684,6 @@
     ></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/javascript.js"></script>
+    <script type="text/javascript" src="./js/pagination.js"></script>
   </body>
 </html>
