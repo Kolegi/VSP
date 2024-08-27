@@ -36,5 +36,8 @@ module.exports = {
       },
     },
     plugins: [],
+    future: {
+      all: true,
+    },
   },
 };

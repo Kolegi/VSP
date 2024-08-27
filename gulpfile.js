@@ -97,10 +97,11 @@ exports.css = css;
 exports.tailwind = tailwind;
 exports.clear = clear;
 exports.copyfolder = copyfolder;
-exports.build = gulp.series(clear, gulp.parallel(css, html, copy, tailwind));
+exports.build = gulp.series(clear, tailwind, gulp.parallel(css, html, copy));
 
 exports.start = gulp.series(
   clear,
-  gulp.parallel(css, html, copyfolder, copy, tailwind),
+  tailwind,
+  gulp.parallel(css, html, copyfolder, copy),
   gulp.parallel(watching, tailwindWatch, server)
 );
