@@ -23,6 +23,15 @@ module.exports = {
       "9xl": ["128px", "128px"],
     },
     extend: {
+      keyframes: {
+        scrollpage: {
+          "0%": { opacity: "0", transform: "scale(0.5)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+      },
+      animation: {
+        scrollpage: "scrollpage 1s ease-in-out",
+      },
       custom: ["e-Ukraine", "sans-serif"],
       colors: {
         main: "#079F5D",
@@ -35,7 +44,18 @@ module.exports = {
         "bg-03": "#F6F5F2",
       },
     },
-    plugins: [],
+    plugins: [
+      function ({ addUtilities }) {
+        const newUtilities = {
+          ".scroll-ani": {
+            animation: "appear linear",
+            "animation-timeline": "view()",
+            "animation-range": "entry 0% cover 40%",
+          },
+        };
+        addUtilities(newUtilities, ["responsive", "hover"]);
+      },
+    ],
     future: {
       all: true,
     },
