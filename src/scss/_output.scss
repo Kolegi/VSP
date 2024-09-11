@@ -914,6 +914,10 @@ video {
   gap: 2.5rem;
 }
 
+.gap-12 {
+  gap: 3rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -940,10 +944,6 @@ video {
 
 .gap-\[12px\] {
   gap: 12px;
-}
-
-.gap-\[15px\] {
-  gap: 15px;
 }
 
 .gap-\[20px\] {
@@ -977,6 +977,10 @@ video {
 
 .rounded-\[30px\] {
   border-radius: 30px;
+}
+
+.rounded-\[32px\] {
+  border-radius: 32px;
 }
 
 .rounded-sm {
@@ -1065,6 +1069,11 @@ video {
   padding-bottom: 10px;
 }
 
+.py-\[14px\] {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
 .py-\[48px\] {
   padding-top: 48px;
   padding-bottom: 48px;
@@ -1106,16 +1115,8 @@ video {
   font-size: 12px;
 }
 
-.text-\[14px\] {
-  font-size: 14px;
-}
-
 .text-\[15px\] {
   font-size: 15px;
-}
-
-.text-\[28px\] {
-  font-size: 28px;
 }
 
 .text-lg {
@@ -1166,6 +1167,10 @@ video {
 
 .leading-8 {
   line-height: 2rem;
+}
+
+.text-current {
+  color: currentColor;
 }
 
 .text-grey-02 {
