@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="uk"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Макет з синхронізованим скролінгом</title><style>body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        height: 100%;
+        overflow: hidden;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 800px 1fr;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100vh;
+        overflow-y: auto;
+      }
+      .content {
+        padding: 20px;
+      }
+      .sidebar {
+        padding: 20px;
+        padding-right: 37px; /* Компенсація прихованого скролбару */
+      }
+      .document {
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      /* Приховати стандартний скролбар */
+      .container::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }</style></head><body><div class="container"><main class="content"><h1>Основний контент</h1><script>for (let i = 1; i <= 50; i++) {
+            document.write(
+              `<p>Параграф ${i}: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>`
+            );
+          }</script></main><aside class="sidebar"><h2>Документи</h2><script>for (let i = 1; i <= 20; i++) {
+            document.write(
+              `<div class="document">Документ ${i}: Це важливий документ, який містить цінну інформацію.</div>`
+            );
+          }</script></aside></div><script>document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".container");
+        const content = document.querySelector(".content");
+        const sidebar = document.querySelector(".sidebar");
+
+        // Створюємо кастомний скролбар
+        const scrollbar = document.createElement("div");
+        scrollbar.style.position = "fixed";
+        scrollbar.style.top = "0";
+        scrollbar.style.right = "0";
+        scrollbar.style.width = "10px";
+        scrollbar.style.height = "100%";
+        scrollbar.style.backgroundColor = "#f0f0f0";
+        document.body.appendChild(scrollbar);
+
+        const scrollThumb = document.createElement("div");
+        scrollThumb.style.position = "absolute";
+        scrollThumb.style.top = "0";
+        scrollThumb.style.right = "0";
+        scrollThumb.style.width = "100%";
+        scrollThumb.style.backgroundColor = "#c0c0c0";
+        scrollThumb.style.borderRadius = "5px";
+        scrollbar.appendChild(scrollThumb);
+
+        function updateScrollThumb() {
+          const scrollPercentage =
+            container.scrollTop /
+            (container.scrollHeight - container.clientHeight);
+          const thumbHeight = Math.max(
+            20,
+            (container.clientHeight / container.scrollHeight) *
+              container.clientHeight
+          );
+          scrollThumb.style.height = `${thumbHeight}px`;
+          scrollThumb.style.top = `${
+            scrollPercentage * (container.clientHeight - thumbHeight)
+          }px`;
+        }
+
+        container.addEventListener("scroll", updateScrollThumb);
+        updateScrollThumb();
+
+        // Додаємо можливість перетягування скролбара
+        let isDragging = false;
+        let startY;
+        let startScrollTop;
+
+        scrollThumb.addEventListener("mousedown", (e) => {
+          isDragging = true;
+          startY = e.clientY - scrollThumb.offsetTop;
+          startScrollTop = container.scrollTop;
+        });
+
+        document.addEventListener("mousemove", (e) => {
+          if (!isDragging) return;
+          const y = e.clientY - scrollbar.getBoundingClientRect().top;
+          const percentY = y / container.clientHeight;
+          container.scrollTop =
+            percentY * (container.scrollHeight - container.clientHeight);
+        });
+
+        document.addEventListener("mouseup", () => {
+          isDragging = false;
+        });
+      });</script></body></html>
