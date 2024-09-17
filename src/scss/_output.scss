@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -691,13 +691,20 @@ video {
   --tw-contain-style:  ;
 }
 
-.relative {
-  position: relative;
+.visible {
+  visibility: visible;
 }
 
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
 }
 
 .top-1 {
