@@ -70,6 +70,7 @@ const newsItems = [
     image: "./image/news-2.png",
     title: "Друга новина",
     content: "Короткий опис другої новини...",
+    link: "http",
   },
   // ... ваші новини ...
 ];
