@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "/www/ntpu.org.ua/webstat"
+AuthUserFile /var/www/ntpuorgu/data/etc/9568263.passwd
+DirectoryIndex index.html
+<Limit GET POST>
+	require valid-user
+</Limit>
