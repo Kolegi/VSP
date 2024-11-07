@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>JS-SlideShow</title>
+<style> <!--
+BODY, P, SPAN, DIV, TABLE, TD, TH, UL, OL, LI {
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+  color: black;
+}
+.code {
+  font-family: Courier New, Monospace;
+  font-size: 12px;
+  margin: 10px;
+  padding: 0px;
+  color: blue;
+}
+A, A:visited {
+  color: black;
+}
+--> </style>
+</head>
+<body>
+<h4>Introduction</h4>
+You can create a slideshow with this script. It is not only useful for image presentation - you
+can view any HTML content. Just have a look at this example:
+<br><br>
+<table border="1" align ="center">
+  <tr>
+    <td>
+      <script language="JavaScript" src="contents.js"></script>
+      <script language="JavaScript" src="slideshow.js"></script>
+    </td>
+  </tr>
+</table>
+<br>
+This script was tested with the following operating systems and browsers:
+<br><br>
+<table border="0" cellspacing="0" cellpadding="2"><tr valign="top">
+<td nowrap><b>Windows XP:</b></td><td>IE 6, NN 7, Opera 7 + 9, Firefox 2</td>
+</tr><tr valign="top">
+<td nowrap><b>Mac OS X:</b></td><td>IE 5, Safari 1</td>
+</tr></table><br>
+If you use another browser or operating system, this script may not work for you - sorry.
+<br><br>
+NOTE: IE 5 on Mac OS doesn't view elements (text etc.) below the slideshow area properly;
+they will appear underneath the slideshow area instead.
+<h4>Usage</h4>
+First, adapt the <b>contents.js</b> file to your needs. This file contains the contents
+for your slideshow.
+<br><br>
+Then adapt the configuration to your needs and insert these lines into your HTML body where you
+want the slideshow to appear:
+<pre class="code">
+&lt;script language="JavaScript" src="contents.js"&gt;&lt;/script&gt;
+&lt;script language="JavaScript" src="slideshow.js"&gt;&lt;/script&gt;
+</pre>
+You should also put the following line on top of your HTML page:
+<pre class="code">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+</pre>
+This is necessary to fix the CSS box model bug of Internet Explorer. Just have a look at the
+source code of this page. ;-)
+<br><br>
+NOTE: The actual width of the slideshow DIV depends on the size of your slideshow contents. You can
+of course set the visible slideshow area to any size you wish, but this has no effect on the actual
+width. If the actual width is bigger than the width of your browser window, a horizontal scrollbar
+might appear. You can avoid this by putting the page with the slideshow script into a frameset with
+scrollbars turned off.
+</body>
+</html>
