@@ -8,7 +8,7 @@ function loadComponent(url, containerId) {
 }
 
 // Завантаження хедера
-loadComponent("header.html", "header-container");
+loadComponent("/header.html", "header-container");
 
 // Завантаження футера
-loadComponent("footer.html", "footer-container");
+loadComponent("/footer.html", "footer-container");
