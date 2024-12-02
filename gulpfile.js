@@ -23,6 +23,7 @@ function css() {
     .pipe(csso())
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest("./build"))
+    .pipe(gulp.dest("./build/news"))
     .pipe(browserSync.stream());
 }
 
@@ -50,6 +51,10 @@ function tailwind(cb) {
 
 function copyfolder() {
   return gulp.src("./src/js/**/*").pipe(gulp.dest("./build/js"));
+}
+
+function copyfolderNews() {
+  return gulp.src("./src/news/**/*").pipe(gulp.dest("./build/news"));
 }
 
 function copy() {
@@ -97,10 +102,13 @@ exports.css = css;
 exports.tailwind = tailwind;
 exports.clear = clear;
 exports.copyfolder = copyfolder;
+exports.copyfolderNews = copyfolderNews;
+
 exports.build = gulp.series(clear, tailwind, gulp.parallel(css, html, copy));
 
 exports.start = gulp.series(
   clear,
+  copyfolderNews,
   tailwind,
   gulp.parallel(css, html, copyfolder, copy),
   gulp.parallel(watching, tailwindWatch, server)
