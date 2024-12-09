@@ -2,6 +2,70 @@ const newsPerPage = 6;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "./image/news/world_cleanup_day/1.pdf",
+    image: "./image/news/world_cleanup_day/1.jpg",
+    img_descr: "День прибирання",
+    title: "Всесвітня акція World Cleanup Day",
+    content:
+      "Щороку в третю суботу вересня проходить акція Всесвітній день прибирання «World Cleanup Day»...",
+  },
+  {
+    link: "./image/news/den_seluscha/1.pdf",
+    image: "./image/news/den_seluscha/1.jpg",
+    img_descr: "День селища",
+    title: "День селища скажемо «ДЯКУЮ» нашим захисникам",
+    content:
+      "Багата та розмаїта історія Новоушицького краю налічує близько шести століть. Вперше назва селища згадується в середині XV століття. В 1439 році польський шляхтич Сенько...",
+  },
+  {
+    link: "./image/news/pravula_povedinku/1.pdf",
+    image: "./image/news/pravula_povedinku/1.jpg",
+    img_descr: "Виховна година",
+    title: "Культура поведінки здобувачів фахової передвищої освіти",
+    content:
+      "18.09  кураторами академічних груп проведено виховні години на тему: «Культура поведінки здобувачів фахової передвищої освіти»...",
+  },
+  {
+    link: "./image/news/den_fizuchnoi_kyltyru_i_sporty/1.pdf",
+    image: "./image/news/den_fizuchnoi_kyltyru_i_sporty/1.jpg",
+    img_descr: "День фізичної культури і спорту України!",
+    title: "З днем фізичної культури і спорту України!",
+    content:
+      "Загальноколежанський патріотичний забіг «Біжу за ГЕРОЇВ України» присвячується пам’яті Героїв, випускників коледжу…",
+  },
+  {
+    link: "./image/news/tyrnir_z_voleiboly/1.pdf",
+    image: "./image/news/tyrnir_z_voleiboly/1.jpg",
+    img_descr: "Турнір з волейболу",
+    title: "Турнір з волейболу",
+    content:
+      "14 вересня з нагоди Дня фізичної культури і спорту УКРАЇНИ відбувся турнір з волейболу серед команд Новоушицької територіальної громади...",
+  },
+  {
+    link: "./image/news/tujden_pershokyrsnuka/1.pdf",
+    image: "./image/news/tujden_pershokyrsnuka/1.jpg",
+    img_descr: "Тиждень першокурсника",
+    title: "Тиждень першокурсника в бібліотеці",
+    content:
+      "У вересні місяці в бібліотеці  коледжу розпочався комплексний захід «Тиждень першокурсника». Головна мета цього заходу – ознайомлення здобувачів першого курсу з книжковим фондом...",
+  },
+  {
+    link: "./image/news/perevirka_gyrtojutok/1.pdf",
+    image: "./image/news/perevirka_gyrtojutok/1.jpg",
+    img_descr: "Гуртожиток коледжу",
+    title: "Перевірка гуртожитку",
+    content:
+      "12 вересня 2024 року проводився рейд перевірки санітарного стану кімнат мешканців третього і четвертого поверхів - студентів коледжу...",
+  },
+  {
+    link: "./image/news/den_gramotnosti/1.pdf",
+    image: "./image/news/den_gramotnosti/1.jpg",
+    img_descr: "Міжнародний день грамотності",
+    title: "До міжнародного дня грамотності",
+    content:
+      "Щорічно 8 вересня у всьому світі святкується Міжнародний день грамотності. Його започатковано ЮНЕСКО у вересні 1965 року...",
+  },
+  {
     link: "./image/news/ivan_rozgonyuk/ivan_rozgonyuk.pdf",
     image: "./image/news/ivan_rozgonyuk/1.jpg",
     img_descr: "Вічна шана герою!",
