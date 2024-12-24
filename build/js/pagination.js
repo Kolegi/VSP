@@ -2,6 +2,136 @@ const newsPerPage = 6;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/goduna_spilkyvania.html",
+    image: "./image/news/goduna_spilkyvania/1.jpg",
+    img_descr: "Освіта для мене-це...",
+    title: "«Освіта для мене-це...»",
+    content:
+      "30 жовтня 2024 року зі студентами АЛ11 грпи та спільно з завідувачем відділенням...",
+  },
+  {
+    link: "/news/konkyrs_petra-yacuka.html",
+    image: "./image/news/konkyrs_petra-yacuka/1.jpg",
+    img_descr: "Конкурс Петра ЯЦИКА",
+    title: "«Конкурс Петра ЯЦИКА»",
+    content:
+      "29 жовтня 2024 року у Відокремленому структурному підрозділі «Новоушицький фаховий коледж Закладу вищої освіти...",
+  },
+
+  {
+    link: "/news/den_avtomobilista.html",
+    image: "./image/news/den_avtomobilista/1.jpg",
+    img_descr: "«День автомобіліста і дорожника»",
+    title: "«День автомобіліста і дорожника»",
+    content:
+      "З нагоди Дня автомобіліста і дорожника, який відзначають в цьому році 27 жовтня  зі студентами спеціальностей 275...",
+  },
+  {
+    link: "/news/vidkrute_zanyattya.html",
+    image: "./image/news/vidkrute_zanyattya/1.jpg",
+    img_descr: "Атестаційна  кампанія - 2025 в дії",
+    title: "Атестаційна  кампанія - 2025 в дії",
+    content:
+      "ВСП Новоушицький фаховий коледж ЗВО ПДУ: підготовка майбутніх спеціалістів поєднується з практичною діяльністю та освоєнням необхідних професійних компентентостей...",
+  },
+  {
+    link: "/news/26_jovtniya.html",
+    image: "./image/news/26_jovtniya/1.jpg",
+    img_descr:
+      "26 жовтня у м. Хмельницький відбувся Кубок Хмельницької області з армрестлінгу",
+    title:
+      "26 жовтня у м. Хмельницький відбувся Кубок Хмельницької області з армрестлінгу",
+    content:
+      "Здобувачі освіти учасники спортивної секції СИЛОВІ ВИДИ СПОРТУ взяли активну участь у Чемпіонаті Хмельницької області з армрестлінгу та вибороли 14 медалей!...",
+  },
+  {
+    link: "/news/mo_kyratoriv.html",
+    image: "./image/news/mo_kyratoriv/1.jpg",
+    img_descr: "Методоб'єднання кураторів навчальних груп.",
+    title: "Методоб'єднання кураторів навчальних груп.",
+    content:
+      "«24 жовтня 2024 року, відбулося засідання методичного об’єднання кураторів груп...",
+  },
+  {
+    link: "/news/zasidanya_atestaciinoi_komisii.html",
+    image: "./image/news/zasidanya_atestaciinoi_komisii/1.jpg",
+    img_descr:
+      "Засідання атестаційної комісії: ключові питання та плани на 2024-2025 н.р.",
+    title:
+      "Засідання атестаційної комісії: ключові питання та плани на 2024-2025 н.р.",
+    content:
+      "«22 жовтня відбулося засідання атестаційної комісії  у змішаному форматі...",
+  },
+  {
+    link: "/news/den_borotbu_z_torgivley_lydmu.html",
+    image: "./image/news/den_borotbu_z_torgivley_lydmu/1.jpg",
+    img_descr:
+      "Європейський день боротьби з торгівлею людьми: як не стати жертвою?",
+    title:
+      "Європейський день боротьби з торгівлею людьми: як не стати жертвою?",
+    content:
+      "«18 жовтня в Україні відзначається Європейський день боротьби з торгівлею людьми. З цієї...",
+  },
+  {
+    link: "/news/klasufikaciya_medy.html",
+    image: "./image/news/klasufikaciya_medy/1.jpg",
+    img_descr:
+      "Лабораторно-практичне заняття на тему: КЛАСИФІКАЦІЯ РІЗНИХ СОРТІВ МЕДУ",
+    title:
+      "Лабораторно-практичне заняття на тему: КЛАСИФІКАЦІЯ РІЗНИХ СОРТІВ МЕДУ",
+    content:
+      "«Просте насадження знань – це не освіта!» - стверджують відомі педагоги...",
+  },
+  {
+    link: "/news/praktuchne_navchannya_djivaldis.html",
+    image: "./image/news/praktuchne_navchannya_djivaldis/1.jpg",
+    img_descr:
+      "Проведення практичних занять на ПП «Дживальдіс» для здобувачі освіти Х14 групи",
+    title:
+      "Проведення практичних занять на ПП «Дживальдіс» для здобувачі освіти Х14 групи",
+    content:
+      "ПП «Дживальдіс» стало дієвою  платформою проведення практичних занять для здобувачів освіти за освітньо-професійною програмою...",
+  },
+  {
+    link: "/news/tujden_kosmosy.html",
+    image: "./image/news/tujden_kosmosy/1.jpg",
+    img_descr: "Досліджуючи безмежний всесвіт",
+    title: "Досліджуючи безмежний всесвіт",
+    content:
+      "У США космонавтів називають астронавтами, у Китаї – тайконавтами...",
+  },
+  {
+    link: "/news/vsesvitniy_den_psuhichnogo_zdorovya.html",
+    image: "./image/news/vsesvitniy_den_psuhichnogo_zdorovya/1.jpg",
+    img_descr: "Всесвітній день психічного здоров'я",
+    title: "Всесвітній день психічного здоров'я",
+    content:
+      "Світ переживає складні часи. Не встигнувши оговтатися від наслідків пандемії COVID-19...",
+  },
+  {
+    link: "/news/shkola_molodogo_pedagoga.html",
+    image: "./image/news/shkola_molodogo_pedagoga_08_10/1.jpg",
+    img_descr: "Школа молодого педагога",
+    title: "Перше у цьому році засідання школи молодого педагога відбулося  ",
+    content: "«Зібратися разом – це початок, триматися разом – це процес...",
+  },
+  {
+    link: "/news/zasidanya_stydraru.html",
+    image: "./image/news/zasidanya_stydradu/1.jpg",
+    img_descr: "Засідання студради: плани та ініціативи",
+    title: "Засідання студради: плани та ініціативи",
+    content:
+      "7 жовтня відбулося планове засідання студентської ради коледжу. Активісти обговорили низку важливих питань...",
+  },
+  {
+    link: "/news/den_osvityanuna.html",
+    image: "./image/news/den_osvityanuna/1.jpg",
+    img_descr: "День освітянина",
+    title: "День освітянина",
+    content:
+      "У коледжі  відбулося урочисте відзначення працівників освіти з нагоди їхнього професійного свята...",
+  },
+  {
     link: "./image/news/world_cleanup_day/1.pdf",
     image: "./image/news/world_cleanup_day/1.jpg",
     img_descr: "День прибирання",
