@@ -2,6 +2,54 @@ const newsPerPage = 6;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/den_silskogo_gospodarstva.html",
+    image: "./image/news/den_silskogo_gospodarstva/1.jpg",
+    img_descr: "З Днем працівників сільського господарства!",
+    title: "З Днем працівників сільського господарства!",
+    content:
+      "Шановні працівники аграрної галузі, викладачі, студенти та випускники нашого...",
+  },
+  {
+    link: "/news/vidkrute_zanyattya_kozak.html",
+    image: "./image/news/vidkrute_zanyattya_kozak/1.jpg",
+    img_descr: "АТЕСТАЦІЙНА  КАМПАНІЯ -2025 В ДІЇ",
+    title: "АТЕСТАЦІЙНА  КАМПАНІЯ -2025 В ДІЇ",
+    content:
+      "Викладачем Вячеславом Петровичем Козаком 13.11.2024р. проведено відкрите заняття...",
+  },
+  {
+    link: "/news/treningove_zanyattya.html",
+    image: "./image/news/treningove_zanyattya/1.jpg",
+    img_descr: "Тренінгове заняття «Я знаю, як стати впевненим»",
+    title: "Тренінгове заняття «Я знаю, як стати впевненим»",
+    content:
+      "Впевненість у собі — це наше сприйняття себе, своїх можливостей...",
+  },
+  {
+    link: "/news/yrok_na_vurobnuctvi.html",
+    image: "./image/news/yrok_na_vurobnuctvi/1.jpg",
+    img_descr: "Урок на виробництві",
+    title: "Урок на виробництві",
+    content:
+      "В рамках підготовки фахівці за освітньо-професійною програмою «Монтаж і обслуговування холодильно-компресорних машин...",
+  },
+  {
+    link: "/news/voleibol_obiednye.html",
+    image: "./image/news/voleibol_obiednye/1.jpg",
+    img_descr: "Нові зустрічі, нові можливості",
+    title: "Нові зустрічі, нові можливості",
+    content:
+      "04 листопада 2024 року  в рамках проєкту Коледж та ТОВ «Компанія ЛАН» відбулася запланована...",
+  },
+  {
+    link: "/news/vidkrute_zanyattya_melnuchenko.html",
+    image: "./image/news/vidkrute_zanyattya_melnuchenko/1.jpg",
+    img_descr: "МЕТОДИЧНИЙ КАЛЕЙДОСКОП ВІДКРИТИХ ЗАНЯТЬ ПРОДОВЖУЄТЬСЯ!",
+    title: "МЕТОДИЧНИЙ КАЛЕЙДОСКОП ВІДКРИТИХ ЗАНЯТЬ ПРОДОВЖУЄТЬСЯ!",
+    content:
+      "В рамках АТЕСТАЦІЙНОЇ КАМПАНІЇ-2025 1 та 5 листопада 2024 року представили свої надбання педагогічної...",
+  },
+  {
     link: "/news/goduna_spilkyvania.html",
     image: "./image/news/goduna_spilkyvania/1.jpg",
     img_descr: "Освіта для мене-це...",
@@ -17,7 +65,6 @@ const newsItems = [
     content:
       "29 жовтня 2024 року у Відокремленому структурному підрозділі «Новоушицький фаховий коледж Закладу вищої освіти...",
   },
-
   {
     link: "/news/den_avtomobilista.html",
     image: "./image/news/den_avtomobilista/1.jpg",
@@ -130,6 +177,14 @@ const newsItems = [
     title: "День освітянина",
     content:
       "У коледжі  відбулося урочисте відзначення працівників освіти з нагоди їхнього професійного свята...",
+  },
+  {
+    link: "/news/trenyvannya_z_cz.html",
+    image: "./image/news/trenyvannya_z_cz/1.jpg",
+    img_descr: "Тренування з питань цивільного захисту",
+    title: "Тренування з питань цивільного захисту",
+    content:
+      "26 вересня 2024 року, відповідно до План-графіку проведення на підприємствах, установах, організаціях спеціальних об’єктових навчань...",
   },
   {
     link: "./image/news/world_cleanup_day/1.pdf",
