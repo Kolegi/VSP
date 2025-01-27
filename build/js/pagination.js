@@ -2,6 +2,117 @@ const newsPerPage = 6;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/batkivski_zboru_mefodovska.html",
+    image: "./image/news/batkivski_zboru_mefodovska/1.jpg",
+    img_descr: "Батьківські збори в М11 групі",
+    title: "Батьківські збори в М11 групі",
+    content:
+      "29 листопада 2024 року в М11 групі куратором Валентиною МЕФОДОВСЬКОЮ...",
+  },
+  {
+    link: "/news/zasidanya_pedradu_26_lustopada.html",
+    image: "./image/news/zasidanya_pedradu_26_lustopada/1.jpg",
+    img_descr: "Засідання педагогічної ради: підсумки та подальші кроки",
+    title: "Засідання педагогічної ради: підсумки та подальші кроки",
+    content:
+      "26 листопада 2024 року відбулося планове засідання педагогічної ради, де були обговорені актуальні питання функціонування...",
+  },
+  {
+    link: "/news/polojenya_pro_atestaciy.html",
+    image: "./image/news/polojenya_pro_atestaciy/1.jpg",
+    img_descr:
+      "Міністерство освіти і науки України оновило Положення про атестацію педагогічних працівників ",
+    title:
+      "Міністерство освіти і науки України оновило Положення про атестацію педагогічних працівників ",
+    content:
+      "Міністерство освіти і науки України оновило Положення про атестацію педагогічних працівників...",
+  },
+  {
+    link: "/news/stydentu_ta_administraciya.html",
+    image: "./image/news/stydentu_ta_administraciya/1.jpg",
+    img_descr: "«Студенти та адміністрація: діалог заради розвитку»",
+    title: "«Студенти та адміністрація: діалог заради розвитку»",
+    content:
+      "25 листопада відбулася довгоочікувана зустріч студентського активу з в.о. директора Віталієм Хрустінським...",
+  },
+  {
+    link: "/news/den_protu_nasullya_nad_jinkamu.html",
+    image: "./image/news/den_protu_nasullya_nad_jinkamu/1.jpg",
+    img_descr: "«16 днів проти насильства»",
+    title: "«16 днів проти насильства»",
+    content:
+      "Вже традицією для нашого закладу стала участь у  Всеукраїнській акції 16 днів проти насильства...",
+  },
+  {
+    link: "/news/mo_kyratoriv_29_listopada.html",
+    image: "./image/news/mo_kyratoriv_29_listopada/1.jpg",
+    img_descr:
+      "Звітуємо про результати засідання методичного об’єднання кураторів",
+    title: "Звітуємо про результати засідання методичного об’єднання кураторів",
+    content:
+      "29 листопада відбулося планове засідання методичного об’єднання кураторів нашого коледжу...",
+  },
+  {
+    link: "/news/partnerstvo.html",
+    image: "./image/news/partnerstvo/1.jpg",
+    img_descr: "ПАРТНЕРСТВО ЗАРАДИ МАЙБУНЬОГО!",
+    title: "ПАРТНЕРСТВО ЗАРАДИ МАЙБУНЬОГО!",
+    content:
+      "22 листопада відбулася знакова подія для нашого навчального закладу – зустріч, присвячена розвитку матеріально-технічної...",
+  },
+  {
+    link: "/news/den_gidnosti_ta_svobodu.html",
+    image: "./image/news/den_gidnosti_ta_svobodu/1.jpg",
+    img_descr:
+      "Народ мій є! Народ мій завжди буде! Ніхто не  перекреслить мій народ!",
+    title:
+      "Народ мій є! Народ мій завжди буде! Ніхто не  перекреслить мій народ!",
+    content:
+      "Слова українського письменника Василя Симоненка стали епіграфом виховної години ...",
+  },
+  {
+    link: "/news/sakyru.html",
+    image: "./image/news/sakyru/1.jpg",
+    img_descr: "Сакури розквітнуть на території навчального закладу!",
+    title: "Сакури розквітнуть на території навчального закладу!",
+    content:
+      "Озеленення міст – це глобальний тренд, який набуває дедалі більшої...",
+  },
+  {
+    link: "/news/vidkrute_zanyattya_melnuchenko_g.html",
+    image: "./image/news/vidkrute_zanyattya_melnuchenko_g/1.jpg",
+    img_descr: "АТЕСТАЦІЙНА  КАМПАНІЯ -2025 В ДІЇ",
+    title: "АТЕСТАЦІЙНА  КАМПАНІЯ -2025 В ДІЇ",
+    content:
+      "21 листопада у ВСП НФК ЗВО ПДУ відбувся відкритий виховний захід, присвячений Дню Гідності та Свободи. Завідувач бібліотекою...",
+  },
+  {
+    link: "/news/den_protu_nasullya_nad_ditmu.html",
+    image: "./image/news/den_protu_nasullya_nad_ditmu/1.jpg",
+    img_descr:
+      "«Всесвітній день запобігання насильству над дітьми: мій улюблений світ без насильства»",
+    title:
+      "«Всесвітній день запобігання насильству над дітьми: мій улюблений світ без насильства»",
+    content:
+      "Щорічно 19 листопада світ відзначає Всесвітній день запобігання насильству над дітьми (World Day for Prevention of Child Abuse)...",
+  },
+  {
+    link: "/news/vidkrute_zanyattya_alonov.html",
+    image: "./image/news/vidkrute_zanyattya_alonov/1.jpg",
+    img_descr: "АТЕСТАЦІЙНА  КАМПАНІЯ -2025 В ДІЇ",
+    title: "АТЕСТАЦІЙНА  КАМПАНІЯ -2025 В ДІЇ",
+    content:
+      "В рамках АТЕСТАЦІЙНОЇ КАМПАНІЇ-2025 19 листопада 2024 року представили свої надбання педагогічної майстерності й досвіду  ...",
+  },
+  {
+    link: "/news/den_samovryadyvannya.html",
+    image: "./image/news/den_samovryadyvannya/1.jpg",
+    img_descr: "Свято студентства об’єднало молодь!",
+    title: "Свято студентства об’єднало молодь!",
+    content:
+      "Студентське самоврядування – це не лише свята та розваги. Це також можливість для кожного студента ...",
+  },
+  {
     link: "/news/den_silskogo_gospodarstva.html",
     image: "./image/news/den_silskogo_gospodarstva/1.jpg",
     img_descr: "З Днем працівників сільського господарства!",
@@ -9,6 +120,7 @@ const newsItems = [
     content:
       "Шановні працівники аграрної галузі, викладачі, студенти та випускники нашого...",
   },
+
   {
     link: "/news/vidkrute_zanyattya_kozak.html",
     image: "./image/news/vidkrute_zanyattya_kozak/1.jpg",

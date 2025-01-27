@@ -68,3 +68,4 @@
 | Графік чергувань | hrafik_cherhuvan.html |+
 | Моніторинг якості освіти | monitorynh_yakosti_osvity.html |+
 | Прозорість та публічність | prozorist_ta_publichnist.html |+
+Пацевлаштуання та кар'єрний ріст випускників
