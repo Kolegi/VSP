@@ -2,6 +2,362 @@ const newsPerPage = 6;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/istoriya_nashogo_geroya.html",
+    image: "./image/news/istoriya_nashogo_geroya/1.jpg",
+    img_descr: "Історія нашого героя",
+    title: "Історія нашого героя",
+    content:
+      "Олександр БЕВЗЮК випускник 2014 року, який пробув 2 роки та 7 місяців у полоні...",
+  },
+  {
+    link: "/news/stydrada_05_02.html",
+    image: "./image/news/stydrada_05_02/1.jpg",
+    img_descr: "5 лютого відбулось засідання студентського самоврядування",
+    title: "5 лютого відбулось засідання студентського самоврядування",
+    content:
+      "Студентська рада Новоушицького фахового коледжу - це спільнота здобувачів освіти, яка...",
+  },
+  {
+    link: "/news/pochatok_2_semestry.html",
+    image: "./image/news/pochatok_2_semestry/1.jpg",
+    img_descr: "Розпочинаємо ІІ семестр",
+    title: "Розпочинаємо ІІ семестр",
+    content:
+      "Протягом першого тижня лютого відбулися збори в студентських колективах...",
+  },
+  {
+    link: "/news/3_lutogo_2025.html",
+    image: "./image/news/3_lutogo_2025/1.jpg",
+    img_descr: "3 лютого відбулось планове засідання кураторів",
+    title: "3 лютого відбулось планове засідання кураторів",
+    content:
+      "Початок нового семестру - це нові можливості, виклики та перспективи...",
+  },
+  {
+    link: "/news/zasidannya_pedagogichnoi_radu_30_12.html",
+    image: "./image/news/zasidannya_pedagogichnoi_radu_30_12/1.jpg",
+    img_descr: "30 січня 2025 планове засідання педагогічної ради",
+    title: "30 січня 2025 планове засідання педагогічної ради",
+    content:
+      "Порядок денний: 1. Про підсумки освітнього процесу у першому півріччі 2024 -...",
+  },
+  {
+    link: "/news/den_pamyati_geroiv_kryt.html",
+    image: "./image/news/den_pamyati_geroiv_kryt/1.jpg",
+    img_descr: "День пам'яті героїв Крут: символ мужності і любові до України",
+    title: "День пам'яті героїв Крут: символ мужності і любові до України",
+    content:
+      "Цього дня ми віддаємо шану стійкості та мужності молодих хлопців...",
+  },
+  {
+    link: "/news/robochi_naradu.html",
+    image: "./image/news/robochi_naradu/1.jpg",
+    img_descr: "Відбулися робочі наради керівного складу",
+    title: "Відбулися робочі наради керівного складу",
+    content: "Серед головних питань - безпека освітнього процесу",
+  },
+  {
+    link: "/news/den_zatverdjenya_derjavnogo_prapora.html",
+    image: "./image/news/den_zatverdjenya_derjavnogo_prapora/1.jpg",
+    img_descr: "Ці кольори - уособлення нашої землі",
+    title: "Ці кольори - уособлення нашої землі",
+    content:
+      "28 січня 1992 року Верховна Рада України прийняла Постанову про затвердження...",
+  },
+  {
+    link: "/news/mijnarodnui_den_pamiyati_golokosty.html",
+    image: "./image/news/mijnarodnui_den_pamiyati_golokosty/1.jpg",
+    img_descr: "Неможливо забути",
+    title: "Неможливо забути",
+    content: "27 січня світ вшановує пам'ять жертв Голокосту...",
+  },
+  {
+    link: "/news/goduna_nacionalnoi_ednosti.html",
+    image: "./image/news/goduna_nacionalnoi_ednosti/1.jpg",
+    img_descr: "З Днем Соборності",
+    title: "З Днем Соборності",
+    content: "Година національної єдності з нагоди Дня Соборності...",
+  },
+  {
+    link: "/news/den_pamiyati_kiborgiv.html",
+    image: "./image/news/den_pamiyati_kiborgiv/1.jpg",
+    img_descr:
+      "Присвячується Дню вшанування пам'яті захисників Донецького аеропорту",
+    title:
+      "Присвячується Дню вшанування пам'яті захисників Донецького аеропорту",
+    content:
+      "20 січня у стінах нашого коледжу для усіх працівників відбулась Година Пам'яті...",
+  },
+  {
+    link: "/news/pidvuschenya_kvalifikacii_20_01.html",
+    image: "./image/news/pidvuschenya_kvalifikacii_20_01/1.jpg",
+    img_descr: "Підвищення кваліфікації у формі стажування",
+    title: "Підвищення кваліфікації у формі стажування",
+    content:
+      "З 20 січня по 24 січня 2025 року викладачі спецдисциплін спеціальності 142...",
+  },
+  {
+    link: "/news/stydentocentruzm.html",
+    image: "./image/news/stydentocentruzm/1.jpg",
+    img_descr: "Студентоцентризм",
+    title: "Студентоцентризм",
+    content: "16 грудня відбулось планове засідання стипендіальної комісії...",
+  },
+  {
+    link: "/news/navchannya_z_ohoronu_praci.html",
+    image: "./image/news/navchannya_z_ohoronu_praci/1.jpg",
+    img_descr: "Охорона праці",
+    title: "Охорона праці",
+    content:
+      "У ВСП «НФК ЗВО «ПДУ» проведено навчання та перевірку знань з охорони праці...",
+  },
+  {
+    link: "/news/zasidanya_MO_kyratoriv.html",
+    image: "./image/news/zasidanya_MO_kyratoriv/1.jpg",
+    img_descr: "Виховна робота",
+    title: "Виховна робота",
+    content:
+      "14 грудня відбулося планове засідання методичного об'єднання кураторів академічних груп...",
+  },
+  {
+    link: "/news/zystrich_z_steikholderamu_11.html",
+    image: "./image/news/zystrich_z_steikholderamu_11/1.jpg",
+    img_descr: "Відвідування ТОВ Компанія ЛАН",
+    title: "Відвідування ТОВ Компанія ЛАН",
+    content:
+      "В.о. директора коледжу Віталій ХРУСТІНСЬКИЙ здійснив візит до ТОВ ЛАН...",
+  },
+  {
+    link: "/news/stepan_bandera.html",
+    image: "./image/news/stepan_bandera/1.jpg",
+    img_descr: "Степан Бандера як символ руху нескорених",
+    title: "Степан Бандера як символ руху нескорених",
+    content:
+      "В історії кожного народу є люди, які опиняються в центрі доленосних подій, стають ініціаторами...",
+  },
+  {
+    link: "/news/kolyada.html",
+    image: "./image/news/kolyada/1.jpg",
+    img_descr: "Коляда лунає в стінах коледжу!",
+    title: "Коляда лунає в стінах коледжу!",
+    content:
+      "У другий день Різдва наповнені теплом і святковим духом віншування подарувала колежанській ...",
+  },
+  {
+    link: "/news/istorii_nashuh_geroiv.html",
+    image: "./image/news/istorii_nashuh_geroiv/1.jpg",
+    img_descr: "ІСТОРІЇ НАШИХ ГЕРОЇВ",
+    title: "ІСТОРІЇ НАШИХ ГЕРОЇВ",
+    content:
+      "Наш випускник, прикордонник Олександр Бевзюк повернувся додому під час обміну полонених...",
+  },
+  {
+    link: "/news/zystrich_z_steikholderamu_27_12.html",
+    image: "./image/news/zystrich_z_steikholderamu_27_12/1.jpg",
+    img_descr:
+      "Запорука якісної  підготовки фахівців  – діалог з роботодавцями",
+    title: "Запорука якісної  підготовки фахівців  – діалог з роботодавцями",
+    content:
+      "Одним із векторів забезпечення якості підготовки майбутніх фахівців за ОПП 208...",
+  },
+  {
+    link: "/news/mo_kyratoriv_24_grydnya.html",
+    image: "./image/news/mo_kyratoriv_24_grydnya/1.jpg",
+    img_descr: "Методичне об’єднання кураторів: підбиваємо підсумки онлайн",
+    title: "Методичне об’єднання кураторів: підбиваємо підсумки онлайн",
+    content:
+      "24 грудня відбулося підсумкове онлайн-засідання методичного об’єднання...",
+  },
+  {
+    link: "/news/oskar.html",
+    image: "./image/news/oskar/1.jpg",
+    img_descr: "Методична робота",
+    title: "Методична робота",
+    content:
+      "За рішенням конкурсної комісії відбіркового туру та педагогічної ради ВСП...",
+  },
+  {
+    link: "/news/pedrada_23_grydnya.html",
+    image: "./image/news/pedrada_23_grydnya/1.jpg",
+    img_descr: "Планове засідання педагогічної ради коледжу",
+    title: "Планове засідання педагогічної ради коледжу",
+    content:
+      "23 грудня відбулось планове засідання педагогічної ради коледжу...",
+  },
+  {
+    link: "/news/zmaganya_z_nastilnogo_tenisy.html",
+    image: "./image/news/zmaganya_z_nastilnogo_tenisy/1.jpg",
+    img_descr: "Змагання з настільного тенісу",
+    title: "Змагання з настільного тенісу",
+    content:
+      "Протягом першої декади грудня відбулися загальноколежанські  змагання...",
+  },
+  {
+    link: "/news/armresling_17_grydnya.html",
+    image: "./image/news/armresling_17_grydnya/1.jpg",
+    img_descr: "КУБОК УКРАЇНИ З АРМРЕСТЛІНГУ",
+    title: "КУБОК УКРАЇНИ З АРМРЕСТЛІНГУ",
+    content:
+      "12-16 грудня 2024 року в селищі Воловець на Закарпатті, відбувся Кубок України та Всеукраїнський турнір з армрестлінгу...",
+  },
+  {
+    link: "/news/zystrich_stydrada_groholskiy.html",
+    image: "./image/news/zystrich_stydrada_groholskiy/1.jpg",
+    img_descr: "Акредитація спеціальностей – це спільна мета",
+    title: "Акредитація спеціальностей – це спільна мета",
+    content:
+      "12 грудня студентська рада коледжу радо зібралася за круглим столом. Разом з керівником...",
+  },
+  {
+    link: "/news/stop_vil_mefodovska.html",
+    image: "./image/news/stop_vil_mefodovska/1.jpg",
+    img_descr: "«Стоп ВІЛ/СНІД»",
+    title: "«Стоп ВІЛ/СНІД»",
+    content:
+      "11 грудня куратором Валентиною МЕФОДОВСЬКОЮ проведено годину спілкування «Стоп ВІЛ/СНІД» для здобувачів освіти  М11 групи...",
+  },
+  {
+    link: "/news/olimpiadu_zahalno.html",
+    image: "./image/news/olimpiadu_zahalno/1.jpg",
+    img_descr: "Олімпіади: перший етап завершено!",
+    title: "Олімпіади: перший етап завершено!",
+    content:
+      "Навчально-освітній процес у фаховому закладі передвищої освіти завжди справа...",
+  },
+  {
+    link: "/news/zystrich_z_provaideramu.html",
+    image: "./image/news/zystrich_z_provaideramu/1.jpg",
+    img_descr: "Зустріч майбутніх агрономів з представниками VITAGRO",
+    title: "Зустріч майбутніх агрономів з представниками VITAGRO",
+    content:
+      "11 грудня студенти А-13 та А-14 груп спеціальності «Агрономія» Новоушицького фахового коледжу разом ...",
+  },
+  {
+    link: "/news/kyrsove_proektyvanya_melnik.html",
+    image: "./image/news/kyrsove_proektyvanya_melnik/1.jpg",
+    img_descr:
+      "КУРСОВИЙ ПРОЕКТ - ПЕРША НАУКОВА РОБОТА ТЕХНІКА - МЕХАНІКА  АГРОПРОМИСЛОВОГО ВИРОБНИЦТВА",
+    title:
+      "КУРСОВИЙ ПРОЕКТ - ПЕРША НАУКОВА РОБОТА ТЕХНІКА - МЕХАНІКА     АГРОПРОМИСЛОВОГО ВИРОБНИЦТВА",
+    content:
+      "Важливим етапом у формуванні майбутнього фахівця є курсове проектування, що дозволить здобувачам...",
+  },
+  {
+    link: "/news/den_prav_lydunu.html",
+    image: "./image/news/den_prav_lydunu/1.jpg",
+    img_descr: "Захищаючи права сьогодні – будуємо мирне завтра",
+    title: "Захищаючи права сьогодні – будуємо мирне завтра",
+    content:
+      "11 грудня у коледжі для студентів груп М-11 та ГДХ-11 груп відбулася змістовна лекція, присвячена ...",
+  },
+  {
+    link: "/news/andriivsi_vechornutsi.html",
+    image: "./image/news/andriivsi_vechornutsi/1.jpg",
+    img_descr: "Веселі Андріївські вечорниці в Новоушицькій бібліотеці",
+    title: "Веселі Андріївські вечорниці в Новоушицькій бібліотеці",
+    content:
+      "Сьогодні студенти групи АЛ-11 Новоушицького коледжу поринули у чарівний світ українських традицій...",
+  },
+  {
+    link: "/news/den_ykrainskoi_hystku.html",
+    image: "./image/news/den_ykrainskoi_hystku/1.jpg",
+    img_descr: "День української хустки: шануємо традиції разом",
+    title: "День української хустки: шануємо традиції разом",
+    content:
+      "Щороку, 7 грудня, в Україні та світі відзначається День української хустки – свято, що символізує...",
+  },
+  {
+    link: "/news/zystrich_pravove_vuhovanya.html",
+    image: "./image/news/zystrich_pravove_vuhovanya/1.jpg",
+    img_descr: "Правове  виховання  в дії!",
+    title: "Правове  виховання  в дії!",
+    content:
+      "В рамках Всеукраїнської акції «16 днів проти насильства» 6 грудня здобувачі освіти нашого коледжу...",
+  },
+  {
+    link: "/news/zystrich_z_ekspertamu.html",
+    image: "./image/news/zystrich_z_ekspertamu/1.jpg",
+    img_descr: "Акредитація: спільна робота на результат",
+    title: "Акредитація: спільна робота на результат",
+    content:
+      "6 грудня відбулася знакова подія для студентів, які обрали для себе інженерні спеціальності...",
+  },
+  {
+    link: "/news/zmaganya_do_dnya_zsy.html",
+    image: "./image/news/zmaganya_do_dnya_zsy/1.jpg",
+    img_descr: "ЄДНІСТЬ РОБИТЬ НАС СИЛЬНІШИМИ!",
+    title: "ЄДНІСТЬ РОБИТЬ НАС СИЛЬНІШИМИ!",
+    content:
+      "Відзначення Дня Збройних Сил України у коледжі стало не лише днем вшанування захисників, але...",
+  },
+  {
+    link: "/news/vuhovna_goduna_melnik.html",
+    image: "./image/news/vuhovna_goduna_melnik/1.jpg",
+    img_descr: "Герої живуть поруч із нами",
+    title: "Герої живуть поруч із нами",
+    content:
+      "6 грудня 2024 року коледжі відбулася зворушлива та патріотична виховна година під назвою «Герої живуть...",
+  },
+  {
+    link: "/news/vidkruttya_doshku.html",
+    image: "./image/news/vidkruttya_doshku/1.jpg",
+    img_descr: "Калина на снігу… ",
+    title: "Калина на снігу… ",
+    content:
+      "5 грудня, напередодні Дня Збройних Сил України, у ВСП НФК ЗВО ПДУ відбувся зворушливий благодійний ...",
+  },
+  {
+    link: "/news/zystrich_z_steikholderamu_04_11.html",
+    image: "./image/news/zystrich_z_steikholderamu_04_11/1.jpg",
+    img_descr:
+      "Нові зустрічі ,нові можливості, з новою освітньо-професійною програмою в навчальний рік.",
+    title:
+      "Нові зустрічі ,нові можливості, з новою освітньо-професійною програмою   в навчальний рік.",
+    content:
+      "04 листопада 2024 року  в рамках проєкту Коледж та ТОВ «Компанія ЛАН»...",
+  },
+  {
+    link: "/news/zasidanya_atestaciya_4_grydnya.html",
+    image: "./image/news/zasidanya_atestaciya_4_grydnya/1.jpg",
+    img_descr: "ПРОФЕСІЙНЕ ЗРОСТАННЯ: ЗАСІДАННЯ АТЕСТАЦІЙНОЇ КОМІСІЇ",
+    title: "ПРОФЕСІЙНЕ ЗРОСТАННЯ: ЗАСІДАННЯ АТЕСТАЦІЙНОЇ КОМІСІЇ",
+    content:
+      "4 грудня відбулося важливе засідання атестаційної комісії, де було розглянуто низку питань...",
+  },
+  {
+    link: "/news/zasidanya_mo_kyratoriv_4_grydnya.html",
+    image: "./image/news/zasidanya_mo_kyratoriv_4_grydnya/1.jpg",
+    img_descr: "Засідання методичного об’єднання кураторів",
+    title: "Засідання методичного об’єднання кураторів",
+    content:
+      "4 грудня відбулося чергове засідання методичного об’єднання кураторів академічних груп, на якому було обговорено...",
+  },
+  {
+    link: "/news/zasidanya-metodradu_4_grydnya.html",
+    image: "./image/news/zasidanya-metodradu_4_grydnya/1.jpg",
+    img_descr: "Якість освіти – наш пріоритет",
+    title: "Якість освіти – наш пріоритет",
+    content:
+      "4 грудня відбулося чергове засідання методичної ради коледжу4 грудня відбулося чергове засідання методичної ...",
+  },
+  {
+    link: "/news/zasidanya-CK-3-grydnya.html",
+    image: "./image/news/zasidanya-CK-3-grydnya/1.jpg",
+    img_descr:
+      "Спільне засідання циклових комісій: об’єднуємось для кращих результатів",
+    title: "Спільне засідання циклових комісій",
+    content:
+      "3 грудня відбулося важливе засідання циклових комісій, присвячене одній з найактуальніших задач коледжу ...",
+  },
+  {
+    link: "/news/yrok_myjnosti.html",
+    image: "./image/news/yrok_myjnosti/1.jpg",
+    img_descr: "УРОК МУЖНОСТІ",
+    title: "УРОК МУЖНОСТІ",
+    content:
+      "Сьогодні, як ніколи раніше, важливо відчувати свою причетність до великої справи захисту України...",
+  },
+  {
     link: "/news/batkivski_zboru_mefodovska.html",
     image: "./image/news/batkivski_zboru_mefodovska/1.jpg",
     img_descr: "Батьківські збори в М11 групі",
