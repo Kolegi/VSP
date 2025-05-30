@@ -2,6 +2,20 @@ const newsPerPage = 6;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/den_vidkrutuh_dverei_29_05.html",
+    image: "./image/news/den_vidkrutuh_dverei_29_05/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/tovarustskui_match_29_05.html",
+    image: "./image/news/tovarustskui_match_29_05/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/proforientaciya_27_05_2.html",
     image: "./image/news/proforientaciya_27_05_2/1.jpg",
     img_descr: "",
@@ -30,6 +44,27 @@ const newsItems = [
     content: "",
   },
   {
+    link: "/news/tujden_bezbariernosti.html",
+    image: "./image/news/tujden_bezbariernosti/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/tujden_bezbariernosti.html",
+    image: "./image/news/tujden_bezbariernosti/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/zlit_stydentiv_23_05.html",
+    image: "./image/news/zlit_stydentiv_23_05/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/den_pusemnosti_24_05.html",
     image: "./image/news/den_pusemnosti_24_05/1.jpg",
     img_descr: "",
@@ -39,6 +74,13 @@ const newsItems = [
   {
     link: "/news/proforientacya_23_05.html",
     image: "./image/news/proforientacya_23_05/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/minifootball_22_05.html",
+    image: "./image/news/minifootball_22_05/1.jpg",
     img_descr: "",
     title: "",
     content: "",
@@ -221,6 +263,13 @@ const newsItems = [
   {
     link: "/news/mijnarodnui_den_protu_bylingy_08_05.html",
     image: "./image/news/mijnarodnui_den_protu_bylingy_08_05/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/zasidannya_stydradu_08_05.html",
+    image: "./image/news/zasidannya_stydradu_08_05/1.jpg",
     img_descr: "",
     title: "",
     content: "",
