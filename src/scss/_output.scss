@@ -542,12 +542,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 20;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
 .col-span-1 {
   grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .m-0 {
@@ -1133,6 +1133,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.75rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1171,6 +1175,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 18px;
 }
 
+.text-3xl {
+  font-size: 28px;
+  line-height: 32px;
+}
+
 .text-xl {
   font-size: 20px;
   line-height: 28px;
@@ -1183,11 +1192,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[15px\] {
   font-size: 15px;
-}
-
-.text-3xl {
-  font-size: 28px;
-  line-height: 32px;
 }
 
 .text-4xl {
@@ -1353,6 +1357,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-main:hover {
   --tw-text-opacity: 1;
   color: rgb(7 159 93 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration: underline;
 }
 
 .active\:text-white-08:active {
