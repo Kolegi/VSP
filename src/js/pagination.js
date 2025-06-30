@@ -2,6 +2,48 @@ const newsPerPage = 6;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/zasidanya_MO_kyratoriv_27_06.html",
+    image: "./image/news/zasidanya_MO_kyratoriv_27_06/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/den_konstutycii_Ykrainu.html",
+    image: "./image/news/den_konstutycii_Ykrainu/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/isput_D11STN.html",
+    image: "./image/news/isput_D11STN/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/zasidanya_pedahohichnoi_radu_25_06.html",
+    image: "./image/news/zasidanya_pedahohichnoi_radu_25_06/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/zasidanya_stupendialnoi_komisii_25_06.html",
+    image: "./image/news/zasidanya_stupendialnoi_komisii_25_06/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/kluch_do_yspihy.html",
+    image: "./image/news/kluch_do_yspihy/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/zahust_duplomnuh_proektiv_201_24_06.html",
     image: "./image/news/zahust_duplomnuh_proektiv_201_24_06/1.jpg",
     img_descr: "",
