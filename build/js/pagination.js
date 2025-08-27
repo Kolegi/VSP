@@ -2,6 +2,13 @@ const newsPerPage = 6;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/vupysk_2025.html",
+    image: "./image/news/vupysk_2025/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/zasidanya_MO_kyratoriv_27_06.html",
     image: "./image/news/zasidanya_MO_kyratoriv_27_06/1.jpg",
     img_descr: "",
@@ -249,6 +256,13 @@ const newsItems = [
   {
     link: "/news/zystrich_z_durektorom.html",
     image: "./image/news/zystrich_z_durektorom/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/1_chervnya.html",
+    image: "./image/news/1_chervnya/1.jpg",
     img_descr: "",
     title: "",
     content: "",
