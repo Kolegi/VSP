@@ -2,6 +2,34 @@ const newsPerPage = 6;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/olimpyada_ykrmova_05_11.html",
+    image: "./image/news/olimpyada_ykrmova_05_11/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/blagodiynui_koncert_05_11.html",
+    image: "./image/news/blagodiynui_koncert_05_11/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/olimpiada_informatuka_04_11.html",
+    image: "./image/news/olimpiada_informatuka_04_11/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/den_ekologii_03_11.html",
+    image: "./image/news/den_ekologii_03_11/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/vsesvitniy_den_ekologii_03_11.html",
     image: "./image/news/vsesvitniy_den_ekologii_03_11/1.jpg",
     img_descr: "",
