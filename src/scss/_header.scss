@@ -1,0 +1,110 @@
+.header-desk {
+  // background-color: #3b82f6;
+  width: 100%;
+  min-height: 60px;
+  background-image: url("./image/header-bg.png");
+  background-size: cover;
+  border-radius: 0 0 32px 32px;
+  // overflow: hidden;
+}
+
+.nav-separetor {
+  display: flex;
+  min-height: 100%;
+  width: 1px;
+  background: #e2e2e2;
+}
+
+.nav-hover {
+  &:hover #svg-icon-down-arrow {
+    transform: rotate(180deg) translateY(-1px);
+    fill: #079f5d;
+  }
+}
+
+.nav-list-lv-2 {
+  position: absolute;
+  left: -17px;
+  top: 58px;
+  display: none;
+  flex-direction: column;
+  padding: 8px;
+  border: 1px solid var(--08, #e2e2e2);
+  background: #fff;
+  border-radius: 12px;
+  z-index: 5;
+}
+
+.item-list-lv-2 {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-radius: 5px;
+  &:hover {
+    background: var(--09, #f8f8f8);
+  }
+}
+
+.nav-list-lv-3 {
+  position: absolute;
+  left: 216px;
+  top: -1px;
+  display: none;
+  flex-direction: column;
+  padding: 8px;
+  border: 1px solid var(--08, #e2e2e2);
+  background: #fff;
+  background-origin: border-box;
+  border-radius: 12px;
+  z-index: 5;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    transform: translateX(-100%);
+    background-color: transparent;
+  }
+}
+
+.nav-list-lv-3__dialnist {
+  position: absolute;
+  left: 288px;
+  top: -1px;
+  display: none;
+  flex-direction: column;
+  padding: 8px;
+  border: 1px solid var(--08, #e2e2e2);
+  background: #fff;
+  background-origin: border-box;
+  border-radius: 12px;
+  z-index: 5;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    transform: translateX(-100%);
+    background-color: transparent;
+  }
+}
+
+.item-list-lv-3 {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-radius: 5px;
+  &:hover {
+    background: var(--09, #f8f8f8);
+  }
+}
+
+.nav-border-inside {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}

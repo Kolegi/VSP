@@ -1,0 +1,32 @@
+@import "./normalize";
+@import "../font/font.scss";
+@import "./footer";
+@import "./header";
+@import "./icon-svg";
+@import "./input";
+@import "./news";
+@import "./output";
+@import "./slider";
+@import "./grid-block";
+@import "./temp";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1140px;
+}
+
+.wrapper-800 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+.wrapper-for-absolute {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1220px;
+}

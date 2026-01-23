@@ -1,0 +1,18 @@
+.news-acticle-conteiner {
+  margin-top: 60px;
+}
+
+.grid-block {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr repeat(4, 0);
+  grid-column-gap: 59px;
+  grid-row-gap: 0px;
+}
+
+.grid-main-content {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.grid-aside-content {
+  grid-area: 1 / 2 / 6 / 3;
+}
