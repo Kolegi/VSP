@@ -2,6 +2,62 @@ const newsPerPage = 6;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/pedrada_30_01_26.html",
+    image: "./image/news/pedrada_30_01_26/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/den_pamiyati_geroiv_kryt_26.html",
+    image: "./image/news/den_pamiyati_geroiv_kryt_26/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/seminar_den_2_27_01.html",
+    image: "./image/news/seminar_den_2_27_01/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/den_pamiyati_jertv_holokosty_26.html",
+    image: "./image/news/den_pamiyati_jertv_holokosty_26/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/seminar_den_1_26_01.html",
+    image: "./image/news/seminar_den_1_26_01/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/pedahohichni_chutannya_24_01.html",
+    image: "./image/news/pedahohichni_chutannya_24_01/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/maxum_sova_vidznaka.html",
+    image: "./image/news/maxum_sova_vidznaka/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/den_sobornosti_25.html",
+    image: "./image/news/den_sobornosti_25/1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/den_sobornosti_26.html",
     image: "./image/news/den_sobornosti_26/1.jpg",
     img_descr: "",

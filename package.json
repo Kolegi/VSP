@@ -15,7 +15,7 @@
     "url": "https://github.com/Dmytro-Shyn/Hillel-IT-school-Lesson-14/issues"
   },
   "homepage": "https://github.com/Dmytro-Shyn/Hillel-IT-school-Lesson-14#readme",
-  "description": "",
+  "description": "Ви можете знайти великі файли для цього проєкту за цим посиланням: [Посилання на файли в хмарі](https://drive.google.com/drive/u/0/folders/1wjgnQdAYM7jhGzkIuq2eT6MshP3AAx8Y)\r [Документація] https://drive.google.com/file/d/11hNPPmnVRiRXrH2W8JdxnOfoMvZJVYNs/view?usp=drive_link",
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-clean": "^0.4.0",
@@ -29,6 +29,7 @@
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.0",
     "browser-sync": "^3.0.2",
+    "cheerio": "^1.2.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^10.0.0",
     "jquery": "^3.7.1",
@@ -36,5 +37,6 @@
   },
   "browserslist": [
     "cover 99.5%"
-  ]
+  ],
+  "keywords": []
 }

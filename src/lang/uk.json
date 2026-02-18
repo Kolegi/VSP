@@ -1,0 +1,52 @@
+
+  "header": {
+    "fullTitle": "«Відокремлений структурний підрозділ «Новоушицький фаховий коледж Закладу вищої освіти «Подільський державний університет»",
+    "header.addressShort": "вул. Подільська, 34, Нова Ушиця",
+    "header.contacts": "Контакти",
+    "header.previousVersion":  "Попередня версія сайту",
+}
+  "tabs"{ 
+    "home": "Коледж",
+    "Applicants": "Абітурієнтам",
+    "To the student": "Студенту",
+    "Educational process": "Освітній процес",
+    "Transparency and informational openness": "Прозорість та інформаційна відкритість",
+}
+  "home"{
+    "aboutCollege": "Про коледж",
+    "history": "Історія коледжу",
+
+    "structure": "Структура коледжу",
+    "administration": "Адміністрація коледжу",
+    "academicCouncil": "Педагогічна рада",
+    
+    "programs": "Спеціальності",
+    "applicants": "Абітурієнтам",
+    "admissionsOffice": "Приймальна комісія",
+    "students": "Студенту",
+    "schedule": "Розклад занять",
+    "activities": "Діяльність",
+    "news": "Новини",
+    "contacts": "Контакти"
+  },
+{
+  "footer": {
+    "addressLabel": "Адреса",
+    "address": "вул. Подільська, 34, смт Нова Ушиця, Хмельницька область, 32600, Україна",
+
+    "phoneLabel": "Телефон",
+    "phones": {
+      "reception": "(03847) 2-18-06 (Приймальня директора)",
+      "accounting": "(03847) 3-00-64 (Бухгалтерія)",
+      "dutyOffice": "(03847) 3-00-67 (Черговий)"
+    },
+
+    "emailLabel": "Електронна пошта",
+    "email": "ntpudatu@gmail.com",
+
+    "websiteLabel": "Вебсайт",
+    "website": "https://www.ntpu.org.ua",
+
+    "copyright": "© Новоушицький фаховий коледж. Усі права захищено."
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "header.fullTitle":  "Separate structural unit «Novoushych Professional
+  College of the Institution of Higher Education «Podilsk State University»",
+},
+{
+  "header": {
+    "header.addressShort": "Podilska St., 34, Nova Ushytsia",
+    "header.contacts": "Contacts",
+    "header.previousVersion":  "Previous version of the site",
+    "home": "Home",
+    "aboutCollege": "About the College",
+    "history": "College History",
+    "structure": "College Structure",
+    "administration": "Administration",
+    "academicCouncil": "Academic Council",
+    "programs": "Programs",
+    "applicants": "For Applicants",
+    "admissionsOffice": "Admissions Office",
+    "students": "For Students",
+    "schedule": "Class Schedule",
+    "activities": "Activities",
+    "news": "News",
+    "contacts": "Contacts"
+  },
+
+  "footer": {
+    "addressLabel": "Address",
+    "address": "34 Podilska St., Nova Ushytsia, Khmelnytskyi Region, 32600, Ukraine",
+
+    "phoneLabel": "Phone",
+    "phones": {
+      "reception": "+380 3847 2-18-06 (Director’s Reception)",
+      "accounting": "+380 3847 3-00-64 (Accounting Office)",
+      "dutyOffice": "+380 3847 3-00-67 (Duty Office)"
+    },
+
+    "emailLabel": "Email",
+    "email": "ntpudatu@gmail.com",
+
+    "websiteLabel": "Website",
+    "website": "https://www.ntpu.org.ua",
+
+    "copyright": "© Nova Ushytsia Vocational College. All rights reserved."
+  }
+}
