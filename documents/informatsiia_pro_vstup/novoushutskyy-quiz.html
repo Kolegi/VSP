@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ким ти станеш через 4 роки? — Новоушицький фаховий коледж ЗВО «Подільський державний університет»</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  /* NTPU brand colors - green/white theme from website */
+  --ntpu-green:#2d6a2d;
+  --ntpu-green2:#3a8a3a;
+  --ntpu-green3:#4caf50;
+  --ntpu-green-light:#81c784;
+  --ntpu-gold:#c8a013;
+  --ntpu-gold2:#f0c030;
+  --bg:#112211;
+  --navy:#0d200d;
+  --card:#1a2e1a;
+  --accent:#4caf50;
+  --accent2:#66bb6a;
+  --cyan:#80cbc4;
+  --gold:#f0c030;
+  --gold2:#ffca28;
+  --white:#f0f8f0;
+  --dim:rgba(240,248,240,.55);
+  --border:rgba(255,255,255,.09);
+}
+
+body{
+  font-family:'Nunito',sans-serif;
+  background:var(--bg);
+  color:var(--white);
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:16px 16px 60px;
+  overflow-x:hidden;
+}
+
+/* ── HEADER ── */
+.site-header{
+  width:100%;max-width:1020px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0 18px;
+  border-bottom:1px solid rgba(76,175,80,.2);
+  margin-bottom:28px;
+}
+.logo-row{display:flex;align-items:center;gap:13px;}
+.logo-emblem{
+  width:52px;height:52px;border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(45,106,45,.55);
+  flex-shrink:0;
+  background:#fff;
+  display:flex;align-items:center;justify-content:center;
+}
+
+.logo-txt{line-height:1.35;}
+.logo-name{
+  font-family:'Unbounded',sans-serif;
+  font-size:11px;font-weight:700;
+  color:var(--white);letter-spacing:.02em;
+}
+.logo-sub{font-size:10px;color:var(--dim);margin-top:2px;}
+.header-badge{
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);border:1px solid rgba(240,192,48,.3);
+  padding:5px 14px;border-radius:100px;
+  background:rgba(240,192,48,.07);
+  animation:glow 3s ease-in-out infinite;
+}
+.header-links{display:flex;gap:10px;align-items:center;}
+.hdr-btn{
+  font-size:11px;color:var(--dim);
+  background:rgba(76,175,80,.1);border:1px solid rgba(76,175,80,.25);
+  padding:6px 14px;border-radius:100px;cursor:pointer;
+  text-decoration:none;transition:all .2s;
+}
+.hdr-btn:hover{background:rgba(76,175,80,.2);color:var(--white);}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(240,192,48,.3);}50%{box-shadow:0 0 0 7px rgba(240,192,48,0);}}
+
+/* ── SLIDE WRAPPER ── */
+.slider-wrap{width:100%;max-width:1020px;position:relative;overflow:hidden;border-radius:22px;}
+.slides{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1);will-change:transform;}
+.slide{min-width:100%;position:relative;border-radius:22px;overflow:hidden;}
+
+/* ── SLIDE BASE ── */
+.s-box{
+  background:linear-gradient(145deg,#1a2e1a 0%,#112211 100%);
+  min-height:420px;display:flex;flex-direction:column;
+  padding:38px 44px;position:relative;overflow:hidden;
+}
+.s-box::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 55% 55% at 90% 10%, rgba(76,175,80,.12) 0%,transparent 60%),
+    radial-gradient(ellipse 40% 40% at 5% 90%, rgba(45,106,45,.1) 0%,transparent 55%);
+}
+
+/* Slide number badge */
+.slide-num{
+  position:absolute;top:16px;left:16px;
+  width:28px;height:28px;border-radius:50%;
+  background:rgba(76,175,80,.18);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;
+  color:var(--dim);
+}
+
+/* Step pill */
+.step-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(128,203,196,.1);border:1px solid rgba(128,203,196,.3);
+  color:var(--cyan);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  padding:5px 16px;border-radius:100px;margin:0 auto 22px;align-self:center;
+}
+
+/* ── SLIDE 1: INTRO ── */
+#slide0 .s-box{
+  align-items:center;justify-content:center;text-align:center;
+  background:linear-gradient(145deg,#1e3a1e 0%,#152815 60%,#0a1a0a 100%);
+  min-height:520px;
+}
+#slide0 .s-box::after{
+  content:'';position:absolute;
+  width:420px;height:420px;border-radius:50%;
+  border:1px solid rgba(76,175,80,.1);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.intro-logo-row{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:28px;
+}
+.intro-emblem{
+  width:72px;height:72px;border-radius:16px;
+  background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 32px rgba(45,106,45,.5);
+  overflow:hidden;flex-shrink:0;
+}
+
+.intro-college-name{
+  font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;
+  line-height:1.4;text-align:left;color:var(--white);
+}
+.intro-college-sub{font-size:10px;color:var(--dim);margin-top:3px;text-align:left;}
+.intro-h{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(30px,6.5vw,60px);font-weight:900;
+  line-height:1.0;margin-bottom:10px;color:var(--white);
+}
+.intro-h span{display:block;color:var(--gold);text-shadow:0 0 50px rgba(240,192,48,.4);}
+.intro-sub{
+  font-size:15px;color:var(--dim);line-height:1.65;
+  max-width:420px;margin:14px auto 20px;
+}
+/* 4 YEARS badge */
+.intro-4yr{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(240,192,48,.1);border:1px solid rgba(240,192,48,.3);
+  border-radius:12px;padding:10px 22px;margin-bottom:28px;
+  font-size:13px;font-weight:700;color:var(--gold2);
+}
+.intro-4yr span{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;}
+.btn-start{
+  display:inline-flex;align-items:center;gap:12px;
+  background:linear-gradient(135deg,#2d6a2d,#1a4a1a);
+  color:var(--white);
+  font-family:'Unbounded',sans-serif;font-size:17px;font-weight:700;
+  padding:18px 52px;border-radius:100px;border:none;cursor:pointer;
+  letter-spacing:.04em;
+  box-shadow:0 12px 36px rgba(45,106,45,.6), 0 0 0 2px rgba(76,175,80,.25);
+  transition:all .25s;position:relative;z-index:1;
+}
+.btn-start:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(45,106,45,.75);}
+.arrow{font-size:22px;transition:transform .2s;}
+.btn-start:hover .arrow{transform:translateX(6px);}
+/* CTA row below start button */
+.intro-cta-row{display:flex;gap:12px;margin-top:18px;justify-content:center;flex-wrap:wrap;}
+.intro-mini-btn{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  color:var(--dim);font-size:12px;font-weight:600;
+  padding:9px 18px;border-radius:100px;cursor:pointer;
+  text-decoration:none;transition:all .2s;
+}
+.intro-mini-btn:hover{background:rgba(76,175,80,.15);border-color:rgba(76,175,80,.35);color:var(--white);}
+.touch-hint{font-size:12px;color:var(--dim);margin-top:16px;display:flex;align-items:center;justify-content:center;gap:5px;opacity:.7;}
+
+/* Spec preview strip on intro */
+.intro-specs-strip{
+  display:flex;gap:10px;margin-top:26px;justify-content:center;flex-wrap:wrap;
+}
+.isp{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;padding:8px 14px;
+  font-size:11px;font-weight:600;color:var(--dim);
+  display:flex;align-items:center;gap:6px;
+}
+
+/* ── Q SLIDES ── */
+.q-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;}
+.back-link{
+  font-size:12px;color:var(--dim);
+  display:flex;align-items:center;gap:5px;
+  background:rgba(255,255,255,.07);border:1px solid var(--border);
+  padding:5px 14px;border-radius:100px;cursor:pointer;transition:all .2s;
+}
+.back-link:hover{background:rgba(255,255,255,.12);color:var(--white);}
+.progress-dots{display:flex;gap:8px;align-items:center;}
+.pd{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.18);transition:all .3s;}
+.pd.done{background:var(--gold);}
+.pd.active{background:var(--accent);width:26px;border-radius:4px;}
+
+.q-title{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(22px,4.5vw,38px);font-weight:900;
+  text-align:center;margin-bottom:30px;line-height:1.1;
+}
+
+/* Option cards grid */
+.opt-grid{display:grid;gap:13px;}
+.opt-grid.col3{grid-template-columns:repeat(3,1fr);}
+.opt-grid.col2{grid-template-columns:repeat(2,1fr);}
+.opt-card{
+  border-radius:18px;padding:20px 16px 18px;cursor:pointer;text-align:center;
+  border:2px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);
+  transition:all .22s ease;display:flex;flex-direction:column;align-items:center;gap:11px;
+  position:relative;overflow:hidden;
+}
+.opt-card::before{content:'';position:absolute;inset:0;background:var(--cc,rgba(76,175,80,.18));opacity:0;transition:opacity .22s;border-radius:16px;}
+.opt-card:hover::before{opacity:1;}
+.opt-card:hover{border-color:var(--cb,rgba(76,175,80,.5));transform:translateY(-5px);box-shadow:0 14px 32px rgba(0,0,0,.35);}
+.opt-icon-wrap{
+  width:64px;height:64px;border-radius:18px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;background:var(--ib,rgba(76,175,80,.2));
+  border:1px solid var(--cb,rgba(76,175,80,.3));transition:transform .2s;flex-shrink:0;
+}
+.opt-card:hover .opt-icon-wrap{transform:scale(1.12);}
+.opt-text{font-size:13px;font-weight:700;line-height:1.35;color:var(--white);}
+.q-hint{text-align:center;margin-top:18px;font-size:12px;color:var(--dim);display:flex;align-items:center;justify-content:center;gap:5px;}
+
+/* ── RESULT ANNOUNCE ── */
+#slide3 .s-box{background:linear-gradient(145deg,#1a301a 0%,#102010 100%);min-height:480px;justify-content:center;}
+.res-announce{display:flex;gap:36px;align-items:center;margin-bottom:28px;}
+.res-emoji-big{font-size:88px;line-height:1;animation:wobble 3s ease-in-out infinite;flex-shrink:0;}
+@keyframes wobble{0%,100%{transform:rotate(-5deg) scale(1);}50%{transform:rotate(5deg) scale(1.08);}}
+.res-ann-sub{font-size:13px;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;}
+.res-spec-code{font-size:11px;color:var(--dim);margin-bottom:6px;line-height:1.5;}
+.res-spec-name{font-family:'Unbounded',sans-serif;font-size:clamp(20px,3.5vw,34px);font-weight:900;line-height:1.1;color:var(--white);}
+.res-tagline{
+  font-size:14px;line-height:1.7;color:var(--dim);
+  max-width:580px;margin-bottom:20px;padding-left:18px;
+  border-left:3px solid var(--result-color,var(--accent));
+}
+.jobs-row{display:flex;gap:12px;flex-wrap:wrap;}
+.jr-chip{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:100px;padding:8px 16px;font-size:13px;font-weight:600;
+}
+.jr-chip .ji{font-size:18px;}
+/* Result action buttons */
+.res-actions{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;}
+.res-btn{
+  display:flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--ntpu-green),var(--ntpu-green));
+  color:var(--white);font-family:'Unbounded',sans-serif;
+  font-size:11px;font-weight:700;letter-spacing:.04em;
+  padding:12px 22px;border-radius:100px;border:none;cursor:pointer;
+  box-shadow:0 8px 24px rgba(45,106,45,.4);transition:all .2s;
+}
+.res-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(45,106,45,.55);}
+.res-btn.outline{
+  background:transparent;border:1.5px solid rgba(76,175,80,.4);
+  box-shadow:none;color:var(--accent2);
+}
+.res-btn.outline:hover{background:rgba(76,175,80,.1);}
+
+/* ── STUDY SLIDE ── */
+#slide4 .s-box{background:linear-gradient(145deg,#162816 0%,#102010 100%);min-height:480px;}
+.study-layout{display:flex;gap:32px;align-items:flex-start;}
+.study-left{flex:1;}
+.study-title{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:700;margin-bottom:16px;color:var(--white);}
+.study-items{display:flex;flex-direction:column;gap:11px;}
+.si{display:flex;align-items:center;gap:12px;font-size:13.5px;color:rgba(240,248,240,.85);}
+.si-check{
+  width:22px;height:22px;border-radius:6px;
+  background:linear-gradient(135deg,var(--result-color,var(--accent)),rgba(255,255,255,.3));
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;flex-shrink:0;color:#fff;font-weight:700;
+}
+/* 4-year timeline */
+.year-timeline{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+  margin-top:20px;
+}
+.yr-card{
+  background:rgba(76,175,80,.06);border:1px solid rgba(76,175,80,.2);
+  border-radius:12px;padding:12px 10px;text-align:center;
+}
+.yr-num{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;color:var(--accent);margin-bottom:4px;}
+.yr-label{font-size:10px;color:var(--dim);line-height:1.3;}
+.study-right{
+  width:200px;flex-shrink:0;
+  background:linear-gradient(135deg,rgba(76,175,80,.12),rgba(76,175,80,.04));
+  border:1px solid rgba(76,175,80,.22);border-radius:18px;padding:22px 20px;text-align:center;
+}
+.prac-icon{font-size:36px;margin-bottom:10px;}
+.prac-title{font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;}
+.prac-desc{font-size:12px;color:var(--dim);line-height:1.55;}
+.sk-wrap{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;}
+.sk{font-size:11px;padding:4px 12px;border-radius:100px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(240,248,240,.75);}
+
+/* ── CAREERS & SALARY ── */
+#slide5 .s-box{min-height:480px;}
+.careers-layout{display:flex;gap:28px;}
+.careers-left{flex:1;}
+.careers-title{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;color:var(--dim);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
+.career-items{display:flex;flex-direction:column;gap:10px;}
+.ci{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,.04);border:1px solid var(--border);
+  border-radius:12px;padding:10px 14px;
+  font-size:13px;color:rgba(240,248,240,.85);transition:background .2s;
+}
+.ci:hover{background:rgba(76,175,80,.08);}
+.ci-icon{font-size:20px;flex-shrink:0;}
+.salary-panel{
+  width:220px;flex-shrink:0;
+  background:linear-gradient(135deg,rgba(240,192,48,.1),rgba(240,192,48,.04));
+  border:1px solid rgba(240,192,48,.25);border-radius:18px;padding:22px 18px;
+}
+.sp-title{font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.sp-sub{font-size:10px;color:var(--dim);margin-bottom:16px;}
+.sp-item{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.sp-role{font-size:11px;color:var(--dim);line-height:1.35;flex:1;padding-right:8px;}
+.sp-range{font-family:'Unbounded',sans-serif;font-size:12px;font-weight:700;color:var(--gold2);text-align:right;flex-shrink:0;}
+.sp-note{font-size:9px;color:var(--dim);margin-top:12px;line-height:1.4;}
+
+/* ── DEMAND BARS ── */
+.demand-section{margin-bottom:20px;}
+.ds-title{font-family:'Unbounded',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.ds-title::before{content:'';display:block;width:14px;height:2px;background:var(--result-color,var(--accent));border-radius:2px;}
+.d-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.d-name{font-size:12px;color:var(--dim);width:155px;flex-shrink:0;}
+.d-track{flex:1;height:7px;background:rgba(255,255,255,.08);border-radius:100px;overflow:hidden;}
+.d-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--result-color,var(--accent)),rgba(240,248,240,.7));width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);}
+.d-pct{font-size:11px;color:var(--white);font-family:'Unbounded',sans-serif;width:32px;text-align:right;}
+
+/* ── STATS ROW ── */
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px;}
+.st{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px 12px;text-align:center;}
+.st-n{font-family:'Unbounded',sans-serif;font-size:22px;font-weight:700;background:linear-gradient(135deg,var(--result-color,var(--accent)),var(--white));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.st-l{font-size:11px;color:var(--dim);margin-top:3px;line-height:1.35;}
+
+/* ── OTHER SPECS ── */
+#slide6 .s-box{min-height:480px;}
+.others-title{font-family:'Unbounded',sans-serif;font-size:clamp(16px,3vw,24px);font-weight:700;text-align:center;margin-bottom:22px;}
+.spec-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.spec-mini{
+  border-radius:16px;padding:20px 14px;text-align:center;cursor:pointer;
+  border:2px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);
+  transition:all .22s;overflow:hidden;position:relative;
+}
+.spec-mini::before{content:'';position:absolute;inset:0;background:var(--sc,rgba(76,175,80,.15));opacity:0;transition:opacity .22s;}
+.spec-mini:hover::before{opacity:1;}
+.spec-mini:hover{border-color:var(--sb,rgba(76,175,80,.4));transform:translateY(-4px);}
+.sm-num{font-family:'Unbounded',sans-serif;font-size:24px;font-weight:900;color:var(--sb,var(--accent));margin-bottom:4px;}
+.sm-img{font-size:32px;margin-bottom:8px;}
+.sm-name{font-size:12px;font-weight:700;line-height:1.35;color:var(--white);}
+.sm-salary{font-size:10px;color:var(--gold2);margin-top:6px;font-weight:700;}
+
+/* ── CTA SLIDE ── */
+#slide7 .s-box{
+  align-items:center;text-align:center;min-height:520px;justify-content:center;
+  background:linear-gradient(145deg,#1a301a 0%,#102010 100%);
+}
+.cta-title{font-family:'Unbounded',sans-serif;font-size:clamp(20px,3.5vw,32px);font-weight:700;margin-bottom:22px;}
+.cta-benefits{display:flex;gap:16px;justify-content:center;margin-bottom:24px;flex-wrap:wrap;}
+.ctab{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(76,175,80,.18);
+  border-radius:16px;padding:18px 20px;min-width:130px;
+  transition:all .2s;cursor:default;
+}
+.ctab:hover{background:rgba(76,175,80,.1);border-color:rgba(76,175,80,.3);}
+.ctab-icon{font-size:28px;}
+.ctab-label{font-size:12px;font-weight:600;color:var(--dim);line-height:1.3;}
+/* Big action buttons row */
+.cta-actions{display:flex;gap:14px;justify-content:center;margin:20px 0;flex-wrap:wrap;}
+.cta-main-btn{
+  display:flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,#2d6a2d,#1a4a1a);
+  color:var(--white);font-family:'Unbounded',sans-serif;
+  font-size:13px;font-weight:700;letter-spacing:.04em;
+  padding:15px 28px;border-radius:100px;border:none;cursor:pointer;
+  box-shadow:0 10px 28px rgba(45,106,45,.5);transition:all .2s;
+  text-decoration:none;
+}
+.cta-main-btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(45,106,45,.65);}
+.cta-main-btn.gold{
+  background:linear-gradient(135deg,#b8860b,#8b6508);
+  box-shadow:0 10px 28px rgba(184,134,11,.4);
+}
+.cta-main-btn.gold:hover{box-shadow:0 16px 36px rgba(184,134,11,.55);}
+.cta-main-btn.outline{
+  background:transparent;border:1.5px solid rgba(76,175,80,.4);
+  box-shadow:none;color:var(--accent2);
+}
+.cta-main-btn.outline:hover{background:rgba(76,175,80,.1);}
+.qr-row{display:flex;align-items:center;gap:20px;justify-content:center;margin-bottom:16px;}
+.qr-box{width:100px;height:100px;border-radius:14px;background:white;display:flex;align-items:center;justify-content:center;}
+.qr-info{text-align:left;}
+.qr-info .qi-title{font-family:'Unbounded',sans-serif;font-size:14px;font-weight:700;color:var(--accent);margin-bottom:6px;}
+.qr-info .qi-sub{font-size:13px;color:var(--dim);line-height:1.5;}
+.site-links{display:flex;align-items:center;gap:18px;justify-content:center;font-size:13px;color:var(--dim);margin-top:4px;}
+.site-links a{color:var(--accent);text-decoration:none;font-weight:600;}
+.site-links a:hover{color:var(--white);}
+.site-links .sl-d{width:1px;height:14px;background:var(--border);}
+/* Admission info box */
+.admission-box{
+  background:rgba(240,192,48,.08);border:1px solid rgba(240,192,48,.25);
+  border-radius:16px;padding:18px 24px;margin:16px 0;
+  display:flex;gap:24px;justify-content:center;flex-wrap:wrap;
+}
+.adm-item{text-align:center;}
+.adm-val{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:900;color:var(--gold2);}
+.adm-label{font-size:10px;color:var(--dim);margin-top:3px;}
+
+/* ── FINAL SLIDE ── */
+#slide8 .s-box{
+  background:linear-gradient(145deg,#1e3a1e 0%,#152815 60%,#0a1a0a 100%);
+  min-height:480px;align-items:center;justify-content:center;text-align:center;
+}
+.final-h{font-family:'Unbounded',sans-serif;font-size:clamp(24px,5.5vw,50px);font-weight:900;line-height:1.05;margin-bottom:8px;}
+.final-h span{display:block;color:var(--gold);text-shadow:0 0 40px rgba(240,192,48,.4);}
+.final-icons{display:flex;gap:22px;justify-content:center;margin:24px 0;flex-wrap:wrap;}
+.fi{display:flex;flex-direction:column;align-items:center;gap:7px;}
+.fi-icon{font-size:34px;}
+.fi-label{font-size:12px;color:var(--dim);font-weight:600;}
+.final-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px;}
+.photo-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,#2d6a2d,#1a4a1a);color:var(--white);
+  font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;
+  padding:14px 32px;border-radius:100px;border:none;cursor:pointer;
+  box-shadow:0 10px 28px rgba(45,106,45,.5);letter-spacing:.03em;transition:all .2s;
+}
+.photo-cta:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(45,106,45,.65);}
+.photo-cta.secondary{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);box-shadow:none;color:var(--dim);}
+.photo-cta.secondary:hover{background:rgba(255,255,255,.12);color:var(--white);}
+
+/* ── NAV CONTROLS ── */
+.nav-bar{width:100%;max-width:1020px;display:flex;align-items:center;justify-content:space-between;margin-top:20px;padding:0 4px;}
+.nav-btn{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.07);border:1px solid var(--border);color:var(--dim);font-size:13px;font-weight:600;padding:10px 22px;border-radius:100px;cursor:pointer;transition:all .2s;font-family:'Nunito',sans-serif;}
+.nav-btn:hover{background:rgba(76,175,80,.15);color:var(--white);}
+.nav-btn:disabled{opacity:.3;cursor:default;pointer-events:none;}
+.nav-dots{display:flex;gap:7px;align-items:center;}
+.nd{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .25s;}
+.nd.active{background:var(--gold);width:22px;border-radius:4px;}
+.nd:hover{background:rgba(255,255,255,.45);}
+
+/* Progress bar */
+.prog-bar{height:2px;background:linear-gradient(90deg,var(--accent),var(--gold));transition:width .4s ease;position:absolute;bottom:0;left:0;border-radius:2px;}
+
+/* Skill tags */
+.sk-wrap{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
+
+/* Responsive */
+@media(max-width:680px){
+  .s-box{padding:24px 18px;}
+  .opt-grid.col3{grid-template-columns:repeat(2,1fr);}
+  .spec-cards-grid{grid-template-columns:repeat(2,1fr);}
+  .study-layout{flex-direction:column;}
+  .study-right{width:100%;}
+  .careers-layout{flex-direction:column;}
+  .salary-panel{width:100%;}
+  .res-announce{flex-direction:column;text-align:center;gap:16px;}
+  .cta-benefits{gap:10px;}
+  .ctab{min-width:100px;padding:14px 12px;}
+  .qr-row{flex-direction:column;}
+  .qr-info{text-align:center;}
+  .intro-logo-row{flex-direction:column;gap:8px;}
+  .intro-college-name,.intro-college-sub{text-align:center;}
+  .year-timeline{grid-template-columns:repeat(2,1fr);}
+  .header-links{display:none;}
+  .cta-actions{flex-direction:column;align-items:center;}
+  .res-actions{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="logo-row">
+    <div class="logo-emblem"><svg style="width:100%;height:100%;" viewBox="0 0 439 590" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M307.199 160.64V216.64L289.579 225.45L283.199 228.64L219.199 260.64L155.209 228.64V228.63L155.199 228.64L131.199 216.64V160.64L219.199 204.64L307.199 160.64Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M134.149 154.1L70.1394 122.1L219.199 47.5703L219.25 47.5903L273.829 74.9102L273.81 74.9404L368.26 122.1L304.26 154.1L219.199 196.63L134.149 154.1Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M219.198 385.86L251.198 369.86H251.208L283.198 353.86L368.259 311.33V370.6C368.119 399.39 359.789 426.26 345.499 449.01C330.479 472.92 308.858 492.27 283.198 504.5C264.798 513.27 244.319 518.37 222.719 518.88H215.678C194.078 518.37 173.598 513.27 155.208 504.5C129.548 492.27 107.918 472.92 92.8984 449.01C78.4784 426.07 70.1384 398.93 70.1384 369.86V311.33L80.0684 316.3L155.208 353.86L219.198 385.86ZM151.198 359.86V393.66C151.198 397.46 153.349 400.94 156.749 402.64C172.309 410.42 215.198 431.86 215.198 431.86C215.198 431.86 215.198 409.3 215.198 398.07C215.198 394.26 213.048 390.79 209.648 389.09C194.088 381.31 151.198 359.86 151.198 359.86ZM287.198 359.86C287.198 359.86 244.309 381.31 228.749 389.09C225.349 390.79 223.198 394.26 223.198 398.07C223.198 409.3 223.198 431.86 223.198 431.86C223.198 431.86 266.088 410.42 281.648 402.64C285.048 400.94 287.198 397.46 287.198 393.66C287.198 382.42 287.198 359.86 287.198 359.86ZM151.198 407.86V441.65C151.198 445.46 153.349 448.93 156.749 450.63C172.309 458.41 215.198 479.86 215.198 479.86C215.198 479.86 215.198 457.3 215.198 446.07C215.198 442.26 213.048 438.79 209.648 437.08C194.088 429.31 151.198 407.86 151.198 407.86ZM287.198 407.86C287.198 407.86 244.309 429.31 228.749 437.09C225.349 438.79 223.198 442.26 223.198 446.07V479.86C223.198 479.86 266.088 458.41 281.648 450.63C285.048 448.93 287.198 445.46 287.198 441.65V407.86Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27.1985 370.26V95.9702L219.198 0L411.198 95.9702L411.128 144L411.198 370.26H411.229C411.229 376.68 410.899 383.1 410.259 389.49C410.029 391.67 411.249 393.75 413.269 394.61C418.809 396.97 429.688 401.62 435.358 404.04C437.498 404.95 438.728 407.21 438.328 409.5C436.108 421.87 432.848 434.02 428.588 445.84C427.788 448.02 425.599 449.37 423.289 449.09C417.169 448.35 405.418 446.93 399.438 446.2C397.268 445.94 395.169 447.13 394.279 449.13C391.249 455.85 387.848 462.38 384.078 468.7C381.268 473.41 378.249 477.99 375.049 482.45C373.759 484.22 373.778 486.63 375.098 488.38C378.708 493.2 385.809 502.66 389.509 507.59C390.909 509.45 390.838 512.03 389.348 513.81C381.238 523.41 372.349 532.31 362.739 540.41C360.959 541.9 358.389 541.97 356.529 540.57C351.599 536.87 342.138 529.77 337.318 526.15C335.568 524.84 333.158 524.82 331.388 526.11C320.948 533.62 309.788 540.06 298.068 545.34C296.068 546.23 294.878 548.33 295.148 550.5C295.868 556.48 297.289 568.23 298.029 574.35C298.309 576.66 296.959 578.85 294.779 579.65C290.949 581.03 287.089 582.3 283.198 583.47C275.068 585.91 266.798 587.89 258.438 589.38C256.148 589.79 253.889 588.56 252.979 586.42C250.559 580.75 245.909 569.87 243.549 564.33C242.689 562.31 240.608 561.09 238.428 561.32C232.038 561.96 225.618 562.29 219.198 562.29C212.778 562.29 206.358 561.96 199.968 561.32C197.778 561.09 195.708 562.31 194.848 564.33C192.488 569.87 187.838 580.75 185.418 586.42C184.508 588.56 182.248 589.79 179.958 589.39C171.598 587.89 163.328 585.91 155.208 583.47C151.308 582.3 147.448 581.03 143.618 579.65C141.438 578.85 140.088 576.66 140.368 574.35C141.108 568.23 142.529 556.48 143.249 550.5C143.519 548.33 142.328 546.23 140.328 545.34C128.598 540.06 117.439 533.62 107.009 526.11C105.239 524.82 102.828 524.84 101.078 526.16C96.2584 529.77 86.7884 536.87 81.8684 540.57C80.0084 541.97 77.4284 541.9 75.6484 540.41C66.0484 532.31 57.1486 523.41 49.0486 513.81C47.5586 512.03 47.4884 509.45 48.8884 507.6C52.5884 502.66 59.6886 493.2 63.3086 488.38C64.6186 486.63 64.6384 484.22 63.3484 482.45C60.1384 477.99 57.1283 473.41 54.3183 468.7C50.5483 462.38 47.1384 455.85 44.1184 449.13C43.2184 447.13 41.1285 445.95 38.9485 446.21C32.9785 446.93 21.2284 448.35 15.1084 449.09C12.7984 449.37 10.5986 448.02 9.80858 445.84C5.54858 434.02 2.28835 421.87 0.0783545 409.5C-0.331645 407.21 0.89856 404.95 3.03856 404.04C8.70856 401.62 19.5884 396.97 25.1284 394.61C27.1484 393.75 28.3684 391.67 28.1384 389.49C27.4884 383.1 27.1684 376.68 27.1684 370.26H27.1985ZM386.208 111.44L219.168 27.9204L52.1885 111.41V370.35C52.1885 401.53 61.0084 431.61 76.8284 457.45C94.7984 486.81 121.808 510.69 155.208 524.51C161.878 527.27 168.818 529.63 175.979 531.55C187.398 534.61 198.868 536.41 210.218 537.03C213.218 537.19 216.218 537.27 219.198 537.27C222.198 537.27 225.198 537.19 228.178 537.03C247.298 536 265.888 531.67 283.198 524.46C315.308 511.11 343.018 487.87 361.628 457.48C369.808 444.12 376.229 429.37 380.489 413.48C384.359 399.04 386.208 384.53 386.208 370.26V111.44Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M287.198 255.87C287.198 255.87 287.198 278.46 287.198 289.68C287.198 293.47 285.058 296.93 281.668 298.63C266.128 306.4 223.198 327.86 223.198 327.86C223.198 327.86 223.198 305.27 223.198 294.05C223.198 290.26 225.339 286.8 228.729 285.1C244.269 277.33 287.198 255.87 287.198 255.87Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M151.201 255.87V289.68C151.201 293.47 153.341 296.93 156.731 298.63C172.271 306.4 215.201 327.86 215.201 327.86C215.201 327.86 215.201 305.27 215.201 294.05C215.201 290.26 213.061 286.8 209.671 285.1C194.131 277.33 151.201 255.87 151.201 255.87Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M287.198 303.86V337.68C287.198 341.47 285.058 344.93 281.668 346.63C266.128 354.4 223.198 375.86 223.198 375.86C223.198 375.86 223.198 353.27 223.198 342.04C223.198 338.26 225.339 334.79 228.729 333.1C244.269 325.33 287.198 303.86 287.198 303.86Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M151.201 303.86C151.201 303.86 151.201 326.46 151.201 337.68C151.201 341.47 153.341 344.93 156.731 346.63C172.271 354.4 215.201 375.86 215.201 375.86C215.201 375.86 215.201 353.27 215.201 342.04C215.201 338.26 213.061 334.79 209.671 333.1C194.131 325.33 151.201 303.86 151.201 303.86Z" fill="#4caf50"/>
+<path d="M80.9915 233.451L70.1582 228.035V218.368L77.2415 220.951L81.5749 219.868L84.4082 214.618L91.3249 218.035V304.368L80.9915 299.368V233.451Z" fill="#4caf50"/>
+<path d="M118.498 318.701C113.498 316.285 109.748 312.618 107.165 307.701C104.248 302.118 103.248 295.868 103.248 289.701V288.118L112.915 292.785V295.285C112.915 299.535 113.915 304.201 118.248 306.285L122.498 306.035L123.915 298.535V282.118L123.748 282.035C121.831 286.451 118.498 286.951 114.415 284.951C110.415 283.035 107.748 279.785 105.915 275.785C103.748 270.785 102.998 265.035 102.998 259.702V244.368C102.998 240.202 103.498 233.618 107.081 230.368C110.498 227.285 115.165 228.785 118.665 230.452C123.748 233.035 127.498 236.868 130.165 241.868C133.081 247.452 134.165 253.535 134.165 259.785V304.035C134.165 314.285 130.498 324.535 118.498 318.701ZM118.665 274.785C123.415 277.118 123.915 272.035 123.915 268.868V253.702C123.915 249.452 122.915 244.868 118.665 242.785C113.831 240.368 113.331 245.202 113.331 248.452V263.702C113.331 267.951 114.331 272.618 118.665 274.785Z" fill="#4caf50"/>
+<path d="M317.571 319.548C312.988 321.798 310.571 322.048 306.321 319.548C301.821 316.715 301.654 304.881 301.654 302.465L301.904 295.631C304.738 297.798 315.738 291.965 312.488 293.631L312.404 301.298C312.404 304.048 312.654 309.631 317.404 307.215L321.238 303.298L322.571 294.965L322.654 287.965L321.238 280.298C319.904 278.715 317.821 279.465 316.321 280.215L313.071 281.798L313.154 269.548L316.738 267.798L321.071 263.548L322.654 255.798L322.738 249.548L321.404 243.798L317.904 243.465C314.071 245.381 313.238 249.881 313.154 253.715V259.381C309.988 260.881 299.738 261.965 303.154 262.631L303.238 258.215C303.488 251.965 304.738 247.298 307.738 241.881C310.404 237.048 313.404 233.631 318.404 231.131C321.571 229.465 325.904 228.215 328.904 231.298C332.154 234.548 332.404 241.215 332.404 245.048V248.131L330.654 260.215L325.404 268.798V269.048C327.988 269.131 329.738 270.381 330.821 272.715L332.404 283.131V290.798C332.321 296.881 331.321 303.131 328.571 308.631C326.071 313.465 322.404 317.048 317.571 319.548Z" fill="#4caf50"/>
+<path d="M353.578 301.465C350.244 303.215 345.744 304.548 342.578 301.381C339.161 297.965 338.744 291.298 338.828 287.215L339.078 242.132C339.078 236.048 340.078 229.882 342.911 224.382C345.411 219.548 348.994 215.798 353.828 213.382C357.161 211.715 361.578 210.382 364.744 213.465C367.994 216.632 368.661 223.465 368.661 227.298L368.494 272.382C368.494 278.715 367.578 284.632 364.744 290.298C362.244 295.215 358.578 299.048 353.578 301.465ZM353.661 289.132C357.828 287.048 358.744 282.215 358.744 278.132L358.828 231.382C358.828 228.632 358.494 223.132 353.828 225.548C349.661 227.548 348.744 232.298 348.744 236.382L348.578 283.215C348.578 285.965 348.911 291.548 353.661 289.132Z" fill="#4caf50"/>
+</svg>
+</div>
+    <div class="logo-txt">
+      <div class="logo-name" style="font-size:9px;line-height:1.3;">ВІДОКРЕМЛЕНИЙ СТРУКТУРНИЙ ПІДРОЗДІЛ</div>
+      <div class="logo-sub" style="font-size:9px;line-height:1.3;">&laquo;Новоушицький фаховий коледж&raquo; ЗВО &laquo;Подільський держ. університет&raquo;</div>
+    </div>
+  </div>
+  <div class="header-links">
+    <a href="https://www.ntpu.org.ua" target="_blank" class="hdr-btn">🌐 Сайт коледжу</a>
+    <div class="header-badge">Вибір спеціальності 2026</div>
+  </div>
+</header>
+
+<!-- SLIDER -->
+<div class="slider-wrap" id="slider">
+  <div class="slides" id="slidesTrack">
+
+    <!-- ── SLIDE 1: INTRO ── -->
+    <div class="slide" id="slide0">
+      <div class="s-box" style="min-height:520px;">
+        <div class="slide-num">1</div>
+        <div class="intro-logo-row">
+          <div class="intro-emblem"><svg style="width:100%;height:100%;" viewBox="0 0 439 590" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M307.199 160.64V216.64L289.579 225.45L283.199 228.64L219.199 260.64L155.209 228.64V228.63L155.199 228.64L131.199 216.64V160.64L219.199 204.64L307.199 160.64Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M134.149 154.1L70.1394 122.1L219.199 47.5703L219.25 47.5903L273.829 74.9102L273.81 74.9404L368.26 122.1L304.26 154.1L219.199 196.63L134.149 154.1Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M219.198 385.86L251.198 369.86H251.208L283.198 353.86L368.259 311.33V370.6C368.119 399.39 359.789 426.26 345.499 449.01C330.479 472.92 308.858 492.27 283.198 504.5C264.798 513.27 244.319 518.37 222.719 518.88H215.678C194.078 518.37 173.598 513.27 155.208 504.5C129.548 492.27 107.918 472.92 92.8984 449.01C78.4784 426.07 70.1384 398.93 70.1384 369.86V311.33L80.0684 316.3L155.208 353.86L219.198 385.86ZM151.198 359.86V393.66C151.198 397.46 153.349 400.94 156.749 402.64C172.309 410.42 215.198 431.86 215.198 431.86C215.198 431.86 215.198 409.3 215.198 398.07C215.198 394.26 213.048 390.79 209.648 389.09C194.088 381.31 151.198 359.86 151.198 359.86ZM287.198 359.86C287.198 359.86 244.309 381.31 228.749 389.09C225.349 390.79 223.198 394.26 223.198 398.07C223.198 409.3 223.198 431.86 223.198 431.86C223.198 431.86 266.088 410.42 281.648 402.64C285.048 400.94 287.198 397.46 287.198 393.66C287.198 382.42 287.198 359.86 287.198 359.86ZM151.198 407.86V441.65C151.198 445.46 153.349 448.93 156.749 450.63C172.309 458.41 215.198 479.86 215.198 479.86C215.198 479.86 215.198 457.3 215.198 446.07C215.198 442.26 213.048 438.79 209.648 437.08C194.088 429.31 151.198 407.86 151.198 407.86ZM287.198 407.86C287.198 407.86 244.309 429.31 228.749 437.09C225.349 438.79 223.198 442.26 223.198 446.07V479.86C223.198 479.86 266.088 458.41 281.648 450.63C285.048 448.93 287.198 445.46 287.198 441.65V407.86Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27.1985 370.26V95.9702L219.198 0L411.198 95.9702L411.128 144L411.198 370.26H411.229C411.229 376.68 410.899 383.1 410.259 389.49C410.029 391.67 411.249 393.75 413.269 394.61C418.809 396.97 429.688 401.62 435.358 404.04C437.498 404.95 438.728 407.21 438.328 409.5C436.108 421.87 432.848 434.02 428.588 445.84C427.788 448.02 425.599 449.37 423.289 449.09C417.169 448.35 405.418 446.93 399.438 446.2C397.268 445.94 395.169 447.13 394.279 449.13C391.249 455.85 387.848 462.38 384.078 468.7C381.268 473.41 378.249 477.99 375.049 482.45C373.759 484.22 373.778 486.63 375.098 488.38C378.708 493.2 385.809 502.66 389.509 507.59C390.909 509.45 390.838 512.03 389.348 513.81C381.238 523.41 372.349 532.31 362.739 540.41C360.959 541.9 358.389 541.97 356.529 540.57C351.599 536.87 342.138 529.77 337.318 526.15C335.568 524.84 333.158 524.82 331.388 526.11C320.948 533.62 309.788 540.06 298.068 545.34C296.068 546.23 294.878 548.33 295.148 550.5C295.868 556.48 297.289 568.23 298.029 574.35C298.309 576.66 296.959 578.85 294.779 579.65C290.949 581.03 287.089 582.3 283.198 583.47C275.068 585.91 266.798 587.89 258.438 589.38C256.148 589.79 253.889 588.56 252.979 586.42C250.559 580.75 245.909 569.87 243.549 564.33C242.689 562.31 240.608 561.09 238.428 561.32C232.038 561.96 225.618 562.29 219.198 562.29C212.778 562.29 206.358 561.96 199.968 561.32C197.778 561.09 195.708 562.31 194.848 564.33C192.488 569.87 187.838 580.75 185.418 586.42C184.508 588.56 182.248 589.79 179.958 589.39C171.598 587.89 163.328 585.91 155.208 583.47C151.308 582.3 147.448 581.03 143.618 579.65C141.438 578.85 140.088 576.66 140.368 574.35C141.108 568.23 142.529 556.48 143.249 550.5C143.519 548.33 142.328 546.23 140.328 545.34C128.598 540.06 117.439 533.62 107.009 526.11C105.239 524.82 102.828 524.84 101.078 526.16C96.2584 529.77 86.7884 536.87 81.8684 540.57C80.0084 541.97 77.4284 541.9 75.6484 540.41C66.0484 532.31 57.1486 523.41 49.0486 513.81C47.5586 512.03 47.4884 509.45 48.8884 507.6C52.5884 502.66 59.6886 493.2 63.3086 488.38C64.6186 486.63 64.6384 484.22 63.3484 482.45C60.1384 477.99 57.1283 473.41 54.3183 468.7C50.5483 462.38 47.1384 455.85 44.1184 449.13C43.2184 447.13 41.1285 445.95 38.9485 446.21C32.9785 446.93 21.2284 448.35 15.1084 449.09C12.7984 449.37 10.5986 448.02 9.80858 445.84C5.54858 434.02 2.28835 421.87 0.0783545 409.5C-0.331645 407.21 0.89856 404.95 3.03856 404.04C8.70856 401.62 19.5884 396.97 25.1284 394.61C27.1484 393.75 28.3684 391.67 28.1384 389.49C27.4884 383.1 27.1684 376.68 27.1684 370.26H27.1985ZM386.208 111.44L219.168 27.9204L52.1885 111.41V370.35C52.1885 401.53 61.0084 431.61 76.8284 457.45C94.7984 486.81 121.808 510.69 155.208 524.51C161.878 527.27 168.818 529.63 175.979 531.55C187.398 534.61 198.868 536.41 210.218 537.03C213.218 537.19 216.218 537.27 219.198 537.27C222.198 537.27 225.198 537.19 228.178 537.03C247.298 536 265.888 531.67 283.198 524.46C315.308 511.11 343.018 487.87 361.628 457.48C369.808 444.12 376.229 429.37 380.489 413.48C384.359 399.04 386.208 384.53 386.208 370.26V111.44Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M287.198 255.87C287.198 255.87 287.198 278.46 287.198 289.68C287.198 293.47 285.058 296.93 281.668 298.63C266.128 306.4 223.198 327.86 223.198 327.86C223.198 327.86 223.198 305.27 223.198 294.05C223.198 290.26 225.339 286.8 228.729 285.1C244.269 277.33 287.198 255.87 287.198 255.87Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M151.201 255.87V289.68C151.201 293.47 153.341 296.93 156.731 298.63C172.271 306.4 215.201 327.86 215.201 327.86C215.201 327.86 215.201 305.27 215.201 294.05C215.201 290.26 213.061 286.8 209.671 285.1C194.131 277.33 151.201 255.87 151.201 255.87Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M287.198 303.86V337.68C287.198 341.47 285.058 344.93 281.668 346.63C266.128 354.4 223.198 375.86 223.198 375.86C223.198 375.86 223.198 353.27 223.198 342.04C223.198 338.26 225.339 334.79 228.729 333.1C244.269 325.33 287.198 303.86 287.198 303.86Z" fill="#4caf50"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M151.201 303.86C151.201 303.86 151.201 326.46 151.201 337.68C151.201 341.47 153.341 344.93 156.731 346.63C172.271 354.4 215.201 375.86 215.201 375.86C215.201 375.86 215.201 353.27 215.201 342.04C215.201 338.26 213.061 334.79 209.671 333.1C194.131 325.33 151.201 303.86 151.201 303.86Z" fill="#4caf50"/>
+<path d="M80.9915 233.451L70.1582 228.035V218.368L77.2415 220.951L81.5749 219.868L84.4082 214.618L91.3249 218.035V304.368L80.9915 299.368V233.451Z" fill="#4caf50"/>
+<path d="M118.498 318.701C113.498 316.285 109.748 312.618 107.165 307.701C104.248 302.118 103.248 295.868 103.248 289.701V288.118L112.915 292.785V295.285C112.915 299.535 113.915 304.201 118.248 306.285L122.498 306.035L123.915 298.535V282.118L123.748 282.035C121.831 286.451 118.498 286.951 114.415 284.951C110.415 283.035 107.748 279.785 105.915 275.785C103.748 270.785 102.998 265.035 102.998 259.702V244.368C102.998 240.202 103.498 233.618 107.081 230.368C110.498 227.285 115.165 228.785 118.665 230.452C123.748 233.035 127.498 236.868 130.165 241.868C133.081 247.452 134.165 253.535 134.165 259.785V304.035C134.165 314.285 130.498 324.535 118.498 318.701ZM118.665 274.785C123.415 277.118 123.915 272.035 123.915 268.868V253.702C123.915 249.452 122.915 244.868 118.665 242.785C113.831 240.368 113.331 245.202 113.331 248.452V263.702C113.331 267.951 114.331 272.618 118.665 274.785Z" fill="#4caf50"/>
+<path d="M317.571 319.548C312.988 321.798 310.571 322.048 306.321 319.548C301.821 316.715 301.654 304.881 301.654 302.465L301.904 295.631C304.738 297.798 315.738 291.965 312.488 293.631L312.404 301.298C312.404 304.048 312.654 309.631 317.404 307.215L321.238 303.298L322.571 294.965L322.654 287.965L321.238 280.298C319.904 278.715 317.821 279.465 316.321 280.215L313.071 281.798L313.154 269.548L316.738 267.798L321.071 263.548L322.654 255.798L322.738 249.548L321.404 243.798L317.904 243.465C314.071 245.381 313.238 249.881 313.154 253.715V259.381C309.988 260.881 299.738 261.965 303.154 262.631L303.238 258.215C303.488 251.965 304.738 247.298 307.738 241.881C310.404 237.048 313.404 233.631 318.404 231.131C321.571 229.465 325.904 228.215 328.904 231.298C332.154 234.548 332.404 241.215 332.404 245.048V248.131L330.654 260.215L325.404 268.798V269.048C327.988 269.131 329.738 270.381 330.821 272.715L332.404 283.131V290.798C332.321 296.881 331.321 303.131 328.571 308.631C326.071 313.465 322.404 317.048 317.571 319.548Z" fill="#4caf50"/>
+<path d="M353.578 301.465C350.244 303.215 345.744 304.548 342.578 301.381C339.161 297.965 338.744 291.298 338.828 287.215L339.078 242.132C339.078 236.048 340.078 229.882 342.911 224.382C345.411 219.548 348.994 215.798 353.828 213.382C357.161 211.715 361.578 210.382 364.744 213.465C367.994 216.632 368.661 223.465 368.661 227.298L368.494 272.382C368.494 278.715 367.578 284.632 364.744 290.298C362.244 295.215 358.578 299.048 353.578 301.465ZM353.661 289.132C357.828 287.048 358.744 282.215 358.744 278.132L358.828 231.382C358.828 228.632 358.494 223.132 353.828 225.548C349.661 227.548 348.744 232.298 348.744 236.382L348.578 283.215C348.578 285.965 348.911 291.548 353.661 289.132Z" fill="#4caf50"/>
+</svg>
+</div>
+          <div>
+            <div class="intro-college-name" style="font-size:9px;line-height:1.4;">ВІДОКРЕМЛЕНИЙ СТРУКТУРНИЙ ПІДРОЗДІЛ «НОВОУШИЦЬКИЙ ФАХОВИЙ КОЛЕДЖ ЗАКЛАДУ ВИЩОЇ ОСВІТИ «ПОДІЛЬСЬКИЙ ДЕРЖАВНИЙ УНІВЕРСИТЕТ»</div>
+            
+          </div>
+        </div>
+        <div class="intro-h">
+          КИМ ТИ СТАНЕШ
+          <span>ЧЕРЕЗ 4 РОКИ?</span>
+        </div>
+        <div class="intro-sub">Дай відповідь на 3 питання і знайди свою ідеальну спеціальність серед 6 напрямків</div>
+        <div class="intro-4yr">
+          <span>4</span> роки навчання · Диплом фахового молодшого бакалавра · 6 спеціальностей
+        </div>
+        <button class="btn-start" onclick="nextSlide()">ПРОЙТИ ТЕСТ <span class="arrow">→</span></button>
+        <div class="intro-cta-row">
+          <a href="https://www.ntpu.org.ua" target="_blank" class="intro-mini-btn">🌐 Сайт коледжу</a>
+          <a href="tel:+380978594401" class="intro-mini-btn">📞 Зателефонувати</a>
+          <span class="intro-mini-btn" onclick="currentSlide=SLIDES.length-3;renderSlide()">📋 Всі спеціальності</span>
+        </div>
+        <div class="intro-specs-strip">
+          <div class="isp">🌾 Агрономія</div>
+          <div class="isp">🌲 Лісове господарство</div>
+          <div class="isp">🚜 Агроінженерія</div>
+          <div class="isp">❄️ Холодильні технології</div>
+          <div class="isp">🔥 Газопостачання</div>
+          <div class="isp">🚗 Транспорт</div>
+        </div>
+        <div class="prog-bar" id="pb0" style="width:11%"></div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 2: Q1 ── -->
+    <div class="slide" id="slide1">
+      <div class="s-box">
+        <div class="slide-num">2</div>
+        <div class="step-pill">Питання 1 / 3</div>
+        <div class="q-title">ЩО ТОБІ ЦІКАВІШЕ?</div>
+        <div class="opt-grid col3">
+          <div class="opt-card" style="--cc:rgba(239,108,0,.18);--cb:rgba(239,108,0,.45);--ib:rgba(239,108,0,.2)" onclick="answer(1,'tech')">
+            <div class="opt-icon-wrap">🔧</div>
+            <div class="opt-text">Техніка, ремонт і робота з технікою</div>
+          </div>
+          <div class="opt-card" style="--cc:rgba(76,175,80,.18);--cb:rgba(76,175,80,.45);--ib:rgba(76,175,80,.2)" onclick="answer(1,'nature')">
+            <div class="opt-icon-wrap">🌿</div>
+            <div class="opt-text">Земля, рослини, фермерство</div>
+          </div>
+          <div class="opt-card" style="--cc:rgba(33,150,243,.18);--cb:rgba(33,150,243,.45);--ib:rgba(33,150,243,.2)" onclick="answer(1,'transport')">
+            <div class="opt-icon-wrap">🚗</div>
+            <div class="opt-text">Авто, дороги, логістика</div>
+          </div>
+          <div class="opt-card" style="--cc:rgba(156,39,176,.18);--cb:rgba(156,39,176,.45);--ib:rgba(156,39,176,.2)" onclick="answer(1,'build')">
+            <div class="opt-icon-wrap">🔥</div>
+            <div class="opt-text">Газові системи, монтаж, інженерні мережі</div>
+          </div>
+          <div class="opt-card" style="--cc:rgba(38,166,154,.18);--cb:rgba(38,166,154,.45);--ib:rgba(38,166,154,.2)" onclick="answer(1,'eco')">
+            <div class="opt-icon-wrap">🌲</div>
+            <div class="opt-text">Природа, ліси, екологія</div>
+          </div>
+          <div class="opt-card" style="--cc:rgba(240,192,48,.18);--cb:rgba(240,192,48,.45);--ib:rgba(240,192,48,.2)" onclick="answer(1,'heavy')">
+            <div class="opt-icon-wrap">🚜</div>
+            <div class="opt-text">Великі машини та механізми</div>
+          </div>
+        </div>
+        <div class="q-hint">👆 Обери одну відповідь — і ми підберемо спеціальність</div>
+        <div class="prog-bar" id="pb1" style="width:22%"></div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 3: Q2 ── -->
+    <div class="slide" id="slide2">
+      <div class="s-box">
+        <div class="slide-num">3</div>
+        <div class="q-header">
+          <div class="back-link" onclick="prevSlide()">← Назад</div>
+          <div class="step-pill">Питання 2 / 3</div>
+          <div class="progress-dots">
+            <div class="pd done"></div>
+            <div class="pd active"></div>
+            <div class="pd"></div>
+          </div>
+        </div>
+        <div class="q-title">ЩО ТОБІ БЛИЖЧЕ?</div>
+        <div class="opt-grid col3" id="q2grid"></div>
+        <div class="q-hint">👆 Обери одну відповідь</div>
+        <div class="prog-bar" style="width:44%"></div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 4: Q3 ── -->
+    <div class="slide" id="slide3q3" style="display:none;">
+      <div class="s-box">
+        <div class="slide-num">3</div>
+        <div class="q-header">
+          <div class="back-link" onclick="prevSlide()">← Назад</div>
+          <div class="step-pill">Питання 3 / 3</div>
+          <div class="progress-dots">
+            <div class="pd done"></div>
+            <div class="pd done"></div>
+            <div class="pd active"></div>
+          </div>
+        </div>
+        <div class="q-title">ЯК ТИ ЛЮБИШ ПРАЦЮВАТИ?</div>
+        <div class="opt-grid col3" id="q3grid"></div>
+        <div class="q-hint">👆 Обери одну відповідь</div>
+        <div class="prog-bar" style="width:55%"></div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 5: RESULT ANNOUNCE ── -->
+    <div class="slide" id="slide3">
+      <div class="s-box" style="min-height:480px;" id="slide3box">
+        <div class="slide-num">4</div>
+        <div style="margin-bottom:10px;">
+          <span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);">ТОБІ ПІДІЙДЕ</span>
+        </div>
+        <div class="res-announce">
+          <div class="res-emoji-big" id="r0emoji">🚗</div>
+          <div class="res-ann-right">
+            <div class="res-spec-code" id="r0code">275 ТРАНСПОРТНІ ТЕХНОЛОГІЇ</div>
+            <div class="res-spec-name" id="r0name">Транспортні технології</div>
+          </div>
+        </div>
+        <div class="res-tagline" id="r0desc">Ти любиш авто, рух і хочеш працювати у сфері перевезень, логістики та сучасного транспорту.</div>
+        <div class="jobs-row" id="r0jobs"></div>
+        <div class="res-actions">
+          <button class="res-btn" onclick="nextSlide()">📚 Що буду вивчати →</button>
+          <button class="res-btn outline" onclick="currentSlide=SLIDES.indexOf('slide6');renderSlide()">🔀 Інші спеціальності</button>
+          <a href="https://www.ntpu.org.ua" target="_blank" class="res-btn outline">🌐 Сайт коледжу</a>
+        </div>
+        <div class="prog-bar" style="width:66%"></div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 6: WHAT YOU'LL STUDY ── -->
+    <div class="slide" id="slide4">
+      <div class="s-box">
+        <div class="slide-num">5</div>
+        <div class="q-title" style="text-align:left;font-size:clamp(16px,3vw,24px);margin-bottom:18px;">ЩО ТИ БУДЕШ ВИВЧАТИ?</div>
+        <div class="study-layout">
+          <div class="study-left">
+            <div class="study-title">Програма навчання</div>
+            <div class="study-items" id="r1study"></div>
+            <div class="study-title" style="margin-top:18px;font-size:14px;color:var(--dim);">4 РОКИ НАВЧАННЯ — ПО КУРСАХ:</div>
+            <div class="year-timeline" id="yearTimeline">
+              <div class="yr-card"><div class="yr-num">1</div><div class="yr-label">Базові дисципліни та адаптація</div></div>
+              <div class="yr-card"><div class="yr-num">2</div><div class="yr-label">Профільні предмети та перша практика</div></div>
+              <div class="yr-card"><div class="yr-num">3</div><div class="yr-label">Спеціалізація та виробнича практика</div></div>
+              <div class="yr-card"><div class="yr-num">4</div><div class="yr-label">Переддипломна практика та захист</div></div>
+            </div>
+          </div>
+          <div class="study-right">
+            <div class="prac-icon">🎓</div>
+            <div class="prac-title">Практика з 1 курсу</div>
+            <div class="prac-desc">Стажування на підприємствах та профільних організаціях</div>
+            <div class="sk-wrap" id="r1skills" style="justify-content:center;"></div>
+          </div>
+        </div>
+        <div class="prog-bar" style="width:77%"></div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 7: CAREERS & SALARY ── -->
+    <div class="slide" id="slide5">
+      <div class="s-box">
+        <div class="slide-num">6</div>
+        <div class="q-title" style="text-align:left;font-size:clamp(15px,3vw,22px);margin-bottom:18px;">КИМ ТИ МОЖЕШ ПРАЦЮВАТИ?</div>
+        <div class="careers-layout">
+          <div class="careers-left">
+            <div class="careers-title">Посади після 4 років навчання</div>
+            <div class="career-items" id="r2jobs"></div>
+            <div class="demand-section" style="margin-top:18px;" id="r2demand"></div>
+          </div>
+          <div class="salary-panel">
+            <div class="sp-title">Зарплата (грн)</div>
+            <div class="sp-sub">Приблизна в Україні</div>
+            <div id="r2salaryItems"></div>
+            <div class="sp-note">Після 4 років навчання в коледжі. Зарплата залежить від досвіду та регіону.</div>
+          </div>
+        </div>
+        <div class="prog-bar" style="width:88%"></div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 8: OTHER SPECS ── -->
+    <div class="slide" id="slide6">
+      <div class="s-box">
+        <div class="slide-num">7</div>
+        <div class="others-title">ВСІХ 6 СПЕЦІАЛЬНОСТЕЙ КОЛЕДЖУ</div>
+        <div style="text-align:center;font-size:12px;color:var(--dim);margin-bottom:16px;">Термін навчання: 3–4 роки · Диплом фахового молодшого бакалавра</div>
+        <div class="spec-cards-grid" id="otherGrid"></div>
+        <div style="text-align:center;margin-top:14px;font-size:12px;color:var(--dim);">👆 Натисни на картку, щоб дізнатися більше про спеціальність</div>
+        <div class="prog-bar" style="width:88%"></div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 9: CTA ── -->
+    <div class="slide" id="slide7">
+      <div class="s-box">
+        <div class="slide-num">8</div>
+        <div class="cta-title">ХОЧЕШ ВСТУПИТИ?</div>
+        <div class="cta-benefits">
+          <div class="ctab"><div class="ctab-icon">🏫</div><div class="ctab-label">Сучасна матеріальна база</div></div>
+          <div class="ctab"><div class="ctab-icon">📅</div><div class="ctab-label">4 роки — диплом фахового молодшого бакалавра</div></div>
+          <div class="ctab"><div class="ctab-icon">🤝</div><div class="ctab-label">Практика на підприємствах</div></div>
+          <div class="ctab"><div class="ctab-icon">👥</div><div class="ctab-label">Активне студентське життя</div></div>
+          <div class="ctab"><div class="ctab-icon">📈</div><div class="ctab-label">95%+ випускників знаходять роботу</div></div>
+          <div class="ctab"><div class="ctab-icon">🇺🇦</div><div class="ctab-label">Відновлення та розбудова країни</div></div>
+        </div>
+        <div class="admission-box">
+          <div class="adm-item"><div class="adm-val">6</div><div class="adm-label">спеціальностей</div></div>
+          <div class="adm-item"><div class="adm-val">4р</div><div class="adm-label">термін навчання</div></div>
+          
+          <div class="adm-item"><div class="adm-val">Гурт.</div><div class="adm-label">є гуртожиток</div></div>
+        </div>
+        <div class="cta-actions">
+          <a href="https://www.ntpu.org.ua" target="_blank" class="cta-main-btn">🌐 Сайт коледжу</a>
+          <a href="https://www.ntpu.org.ua" target="_blank" class="cta-main-btn gold">📝 Подати документи</a>
+          <a href="tel:+380978594401" class="cta-main-btn outline">📞 Зателефонувати</a>
+        </div>
+        <div class="qr-row">
+          <a href="https://www.ntpu.org.ua/" target="_blank" style="display:block;text-decoration:none;">
+            <div class="qr-box" style="cursor:pointer;transition:transform .2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAIAAAAG+WgKAAAEDklEQVR4nO3d22llORRAwelhInD+MToFdwCCQYilxzVV3+32tb0QbHSO9Ofn5+cf6Px7+wPw20iKmKSISYqYpIhJipikiEmKmKSISYqYpIj9N/OPvr6+dn+O//H9/b3wVeNnXvt/1sz8xsbPM/OZ3/9bWKWISYqYpIhJipikiE1NfKN909PaRLM23619r7WffW2+2/d5Zqz9fqxSxCRFTFLEJEVMUsQWJ77Ryemp2gurdtDu7ieOTv4tRlYpYpIiJilikiImKWLZxHfXyT2+ffPm72CVIiYpYpIiJilikiL2kRPfvllpbU5cmwFf2xmsWKWISYqYpIhJipikiGUT3/vTysy+2769ubVZ8rU3+2ZYpYhJipikiEmKmKSILU58d0+MXNtT23c2ZvW91tz9W4ysUsQkRUxSxCRFTFLE/vyOG9ir9/g+8SaI11iliEmKmKSISYqYpIhtnPj2nZZ58uaFfVPhzHevnPzuVilikiImKWKSIiYpYs+d3HJyd2zfc577ntjcdyd7NdtapYhJipikiEmKmKSILe7xnbwNoXJyvnt/Z3Dfk6hWKWKSIiYpYpIiJiliU3t81eklM07uqb12EubJ0132vedolSImKWKSIiYpYpIilu3xzaimjJNvCJ7czXz/CdIZVilikiImKWKSIiYpYlMT390zWGbcvfvg7l0M+55WHdnj4wJJEZMUMUkRkxSxjSe3zEwZ+2bJ0b4ZZ+ar9r3DuO82wLXPbJUiJilikiImKWKSIpbdzvDa3DF67enQma9ac3K2HVmliEmKmKSISYqYpIht3ON7fyduxr4p9bXnPNf+55FVipikiEmKmKSISYrY4lmd+yasap46+ZnXVFPhvrcIndzCEyRFTFLEJEVMUsQW9/ju7ivtu4Hu5I3nldduFbRKEZMUMUkRkxQxSRHLzuoc3X2XbZ+TT0jevQVjjVWKmKSISYqYpIhJilj2Ht9r57SMTs5l1S7kmrs/hVWKmKSISYqYpIhJilh2VudJd++bm/k8lZOfxx4fj5IUMUkRkxQxSRFbPLnlpH2njlSniZ7cu1z77iffRrRKEZMUMUkRkxQxSRFbfI/v/dsQPvHug9G+Pb59f0GrFDFJEZMUMUkRkxSx7D2+u09R3j2dcrRvR2/NyfNwrFLEJEVMUsQkRUxSxDbewH7XzDR396nOk7uQM181cnILT5AUMUkRkxQxSRH7yInv7kRz9y6GfXcazkzE7uPjAkkRkxQxSRGTFLGNtzOctPac58lnJk9OYTM/177zTq1SxCRFTFLEJEVMUsQWJ767p3fOeO0NuGoqrObWtRM+Z1iliEmKmKSISYqYpIh95H18vMwqRUxSxCRFTFLEJEVMUsQkRUxSxCRFTFLEJEXsL/hqKkkYZtgYAAAAAElFTkSuQmCC" width="88" height="88" alt="QR-код сайту коледжу" style="display:block;border-radius:8px;"/>
+            </div>
+          </a>
+          <div class="qr-info">
+            <div class="qi-title">СКАНУЙ QR-КОД</div>
+            <div class="qi-sub">або переходь на сайт<br>www.ntpu.org.ua</div>
+          </div>
+        </div>
+        <div class="site-links">
+          <span>🌐</span>
+          <a href="https://www.ntpu.org.ua" target="_blank">www.ntpu.org.ua</a>
+          <div class="sl-d"></div>
+          <a href="https://www.facebook.com/nkpdatu?locale=uk_UA" target="_blank">📘 Facebook</a>
+        </div>
+        <div class="prog-bar" style="width:99%"></div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 10: FINAL ── -->
+    <div class="slide" id="slide8">
+      <div class="s-box" style="min-height:480px;">
+        <div class="slide-num">9</div>
+        <div class="final-h">
+          ТВОЄ МАЙБУТНЄ
+          <span>ПОЧИНАЄТЬСЯ ТУТ!</span>
+        </div>
+        <div style="font-size:13px;color:var(--dim);margin-bottom:4px;">Новоушицький фаховий коледж · 4 роки · Диплом</div>
+        <div class="final-icons">
+          <div class="fi"><div class="fi-icon">📚</div><div class="fi-label">Якісна освіта</div></div>
+          <div class="fi"><div class="fi-icon">🔨</div><div class="fi-label">Практика з 1 курсу</div></div>
+          <div class="fi"><div class="fi-icon">👫</div><div class="fi-label">Нові друзі</div></div>
+          <div class="fi"><div class="fi-icon">📈</div><div class="fi-label">Кар'єра</div></div>
+          <div class="fi"><div class="fi-icon">🎓</div><div class="fi-label">Диплом</div></div>
+          <div class="fi"><div class="fi-icon">🇺🇦</div><div class="fi-label">Будуй країну</div></div>
+        </div>
+        <div class="final-actions">
+          <button class="photo-cta" onclick="currentSlide=0;renderSlide();">↩ Пройти знову</button>
+          <a href="https://www.ntpu.org.ua" target="_blank" class="photo-cta">🌐 Сайт коледжу</a>
+          <button class="photo-cta secondary" onclick="currentSlide=SLIDES.indexOf('slide6');renderSlide();">📋 Всі спеціальності</button>
+        </div>
+        <div style="margin-top:20px;background:linear-gradient(135deg,#2d6a2d,#1a4a1a);border-radius:14px;padding:14px 24px;font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;text-align:center;letter-spacing:.03em;">
+          ЗРОБИ ФОТО ЦЬОГО ЕКРАНА ТА ПОКАЖИ БАТЬКАМ 😊
+        </div>
+        <div class="prog-bar" style="width:100%"></div>
+      </div>
+    </div>
+
+  </div><!-- /slides -->
+</div><!-- /slider-wrap -->
+
+<!-- NAV BAR -->
+<div class="nav-bar">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()">← Назад</button>
+  <div class="nav-dots" id="navDots"></div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()">Далі →</button>
+</div>
+
+<script>
+// ── DATA ──
+const specs = {
+  agro:{id:'agro',emoji:'🌾',code:'H1 · Агрономія',name:'Агрономія',color:'#4caf50',salary:'18 000–35 000',
+    short:'Ти любиш землю та природу — агрономія дасть тобі знання для управління урожаєм від посіву до збору.',
+    study:['Агрохімія та ґрунтознавство','Технології вирощування культур','GPS-точне землеробство','Захист рослин від хвороб','Зрошення та меліорація','Органічне землеробство'],
+    skills:['GPS-землеробство','Агрохімія','Зрошення','Фітопатологія','1С Агро'],
+    jobs:['🌾 Агроном-технолог','👨‍🌾 Фермер / власний бізнес','💼 Агент агрохімічних компаній','🏢 Менеджер агропідприємства'],
+    salaryItems:[['Агроном','18 000–28 000'],['Агроном-технолог','22 000–35 000'],['Менеджер','25 000–40 000']],
+    demand:[{name:'Агрохолдинги',pct:90},{name:'Фермерства',pct:85},{name:'Держпідприємства',pct:70},{name:'Експорт (ЄС)',pct:75}],
+    stats:[{val:'94%',l:'Працевлаштування'},{val:'4р',l:'Навчання'},{val:'↑28%',l:'Попит за 3 роки'}],
+    years:['Ботаніка, хімія, математика','Агрохімія, ґрунтознавство, виробнича практика','GPS-землеробство, захист рослин, стажування','Переддипломна практика, захист диплома'],
+    num:'H1'},
+  forest:{id:'forest',emoji:'🌲',code:'H4 · Лісове господарство',name:'Лісове господарство',color:'#26a69a',salary:'16 000–28 000',
+    short:'Ти любиш природу та ліс — лісівники охороняють зелений легень країни та відновлюють ліси.',
+    study:['Таксація та лісовпорядкування','Лісозахист від шкідників','ГІС-картографія лісів','Відтворення деревостанів','Пожежна безпека','Дендрологія та екологія'],
+    skills:['Таксація лісу','ГІС-картографія','Лісозахист','Дендрологія','Пожежна безпека'],
+    jobs:['🌲 Лісник / майстер лісу','🌿 Лісничий','🔬 Еколог-аналітик','📋 Інспектор охорони лісу'],
+    salaryItems:[['Лісник','14 000–20 000'],['Лісничий','18 000–28 000'],['Еколог','20 000–32 000']],
+    demand:[{name:'Держлісфонд',pct:88},{name:'Природоохорона',pct:72},{name:'Приватний сектор',pct:60},{name:'Міжнар. екопроєкти',pct:55}],
+    stats:[{val:'89%',l:'Працевлаштування'},{val:'3р',l:'Навчання'},{val:'↑40%',l:'Держзамовлення'}],
+    years:['Екологія, дендрологія, хімія','Таксація, лісовпорядкування, практика','ГІС-картографія, лісозахист, стажування','Переддипломна практика, захист диплома'],
+    num:'H4'},
+  agroe:{id:'agroe',emoji:'🚜',code:'H7 · Агроінженерія',name:'Агроінженерія',color:'#ef6c00',salary:'20 000–42 000',
+    short:'Ти любиш техніку та поле разом — агроінженери обслуговують комбайни, GPS-системи та автоматику.',
+    study:['Діагностика тракторів і комбайнів','GPS-автопілот та точне землеробство','Гідравлічні системи техніки','Електроніка сільгосптехніки','Дрони-обприскувачі','Ремонт та налагодження'],
+    skills:['Діагностика двигунів','GPS-автопілот','Гідравліка','Електроніка','Дрони'],
+    jobs:['🚜 Механізатор / оператор техніки','🔧 Майстер з ремонту','📡 Технік точного землеробства','🤝 Представник CLAAS / John Deere'],
+    salaryItems:[['Механізатор','18 000–28 000'],['Майстер МТС','22 000–38 000'],['Сервіс дилера','28 000–42 000']],
+    demand:[{name:'Агрохолдинги',pct:95},{name:'МТС (сервіс)',pct:88},{name:'Дилери техніки',pct:80},{name:'Фермери',pct:75}],
+    stats:[{val:'97%',l:'Працевлаштування'},{val:'4р',l:'Навчання'},{val:'↑45%',l:'Зарплата за 5р'}],
+    years:['Фізика, математика, креслення','Двигуни, гідравліка, перша практика на МТС','GPS-системи, електроніка, стажування','Переддипломна практика, захист диплома'],
+    num:'H7'},
+  energy:{id:'energy',emoji:'❄️',code:'G4 · Енерговиробництво (за спеціалізацією) G4.04 · Холодильні та кліматичні технології',name:'Холодильні та кліматичні технології',color:'#29b6f6',salary:'22 000–50 000',
+    short:'Ти любиш техніку та монтаж — фахівці з клімату монтують і обслуговують системи кондиціонування та холодильне обладнання.',
+    study:['Монтаж кондиціонерів та вентиляції','Холодильні агенти (фреони)','Теплові насоси та геотермаль','AutoCAD MEP — проєктування','Промислова холодильна техніка','Автоматика клімат-систем'],
+    skills:['Монтаж AC','Фреони','AutoCAD MEP','Теплові насоси','Промислова автоматика'],
+    jobs:['❄️ Монтажник клімат-систем','🔧 Технік холодильних установок','⚙️ Сервісний інженер','💼 Приватний підприємець'],
+    salaryItems:[['Монтажник','20 000–32 000'],['Технік','25 000–42 000'],['Інженер','32 000–50 000']],
+    demand:[{name:'Торгові мережі',pct:93},{name:'Будівельні компанії',pct:90},{name:'АПК (зберігання)',pct:85},{name:'Медичні заклади',pct:80}],
+    stats:[{val:'98%',l:'Працевлаштування'},{val:'3р',l:'Навчання'},{val:'×2.5',l:'Зарплата за 3 роки'}],
+    years:['Фізика, електротехніка, термодинаміка','Холодильні системи, монтаж, практика','AutoCAD MEP, автоматика, стажування','Переддипломна практика, захист диплома'],
+    num:'G4.04'},
+  build:{id:'build',emoji:'🔥',code:'G19 · Будівництво та цивільна інженерія',name:'Будівництво та цивільна інженерія',color:'#7e57c2',salary:'22 000–55 000',
+    short:'Ти хочеш монтувати та обслуговувати газові системи — фахівці з газопостачання затребувані скрізь, де є інфраструктура, промисловість та житловий сектор.',
+    study:['Монтаж газопровідних мереж і систем','Обслуговування газового устаткування','Технічна діагностика та контроль безпеки','Безпека газових систем (НПАОП)','AutoCAD — проєктування газових мереж','Котельні установки та теплопостачання'],
+    skills:['Монтаж газопроводів','AutoCAD','Діагностика систем','НПАОП/нормативи','Котельне обладнання'],
+    jobs:['🔧 Монтажник систем газопостачання','🛠️ Технік з обслуговування газового устаткування','📋 Майстер газової служби','⚙️ Інженер з газопостачання'],
+    salaryItems:[['Монтажник','20 000–32 000'],['Технік газової служби','25 000–42 000'],['Інженер','32 000–55 000']],
+    demand:[{name:'Газопостачальні компанії',pct:95},{name:'ЖКГ та комунальні служби',pct:90},{name:'Будівельні компанії',pct:88},{name:'Промислові підприємства',pct:85}],
+    stats:[{val:'97%',l:'Працевлаштування'},{val:'3р',l:'Навчання'},{val:'↑50%',l:'Попит на фахівців'}],
+    years:['Фізика, хімія, технічне креслення','Газові мережі, устаткування, перша практика','AutoCAD, діагностика, стажування','Переддипломна практика, захист диплома'],
+    num:'G19'},
+  transport:{id:'transport',emoji:'🚗',code:'J8 · Автомобільний транспорт',name:'Автомобільний транспорт',color:'#f9a825',salary:'18 000–40 000',
+    short:'Ти любиш авто, рух і хочеш працювати у сфері перевезень, логістики та сучасного транспорту.',
+    study:['Транспорт і перевезення','Вантажні та пасажирські перевезення','Логістику та маршрутизацію','Сучасні технології транспорту','Безпеку дорожнього руху','Організацію роботи підприємства'],
+    skills:['Логістика 1С','GPS-моніторинг','Транспортне право','Діагностика авто','Маршрутизація'],
+    jobs:['🚛 Диспетчер перевезень','📍 Логіст','🔧 Механік автосервісу','📋 Організатор транспорту'],
+    salaryItems:[['Диспетчер','18 000–25 000'],['Логіст','20 000–35 000'],['Менеджер транспорту','25 000–40 000']],
+    demand:[{name:'Логістичні компанії',pct:92},{name:'Агрохолдинги',pct:82},{name:'Держструктури',pct:70},{name:'Міжнар. перевезення',pct:78}],
+    stats:[{val:'95%',l:'Працевлаштування'},{val:'3р',l:'Навчання'},{val:'↑35%',l:'Ринок логістики'}],
+    years:['Математика, фізика, право','Транспортні системи, логістика, перша практика','GPS-моніторинг, організація перевезень, стажування','Переддипломна практика, захист диплома'],
+    num:'J8'},
+};
+
+const specList = ['agro','forest','agroe','energy','build','transport'];
+
+const q2map = {
+  tech:[{i:'🔩',l:'Ремонтувати і налагоджувати машини',v:'repair'},{i:'❄️',l:'Монтувати клімат-системи та холодильники',v:'climate'},{i:'📐',l:'Проєктувати конструкції та будівлі',v:'design'}],
+  nature:[{i:'🌾',l:'Вирощувати урожай і управляти полем',v:'field'},{i:'🌲',l:'Захищати ліс та відновлювати природу',v:'forest_q'},{i:'🚜',l:'Обслуговувати сільгосптехніку',v:'machinery'}],
+  transport:[{i:'🚛',l:'Їздити та організовувати перевезення',v:'logistics'},{i:'🔧',l:'Розбиратися в автомобілях',v:'autofix'},{i:'📍',l:'Планувати маршрути й керувати рухом',v:'plan'}],
+  build:[{i:'🔥',l:'Монтувати газові системи та трубопроводи',v:'construct'},{i:'📐',l:'Проєктувати газові мережі по кресленнях',v:'project'},{i:'⚙️',l:'Обслуговувати газове устаткування та котли',v:'systems'}],
+  eco:[{i:'🌿',l:'Охороняти та відновлювати ліс',v:'eco_prot'},{i:'🌾',l:'Вирощувати еко-продукцію',v:'eco_farm'},{i:'🔬',l:'Досліджувати та аналізувати',v:'eco_res'}],
+  heavy:[{i:'🚜',l:'Керувати і ремонтувати техніку',v:'drive_fix'},{i:'⚙️',l:'Налагоджувати GPS та автопілот',v:'gps'},{i:'🌾',l:'Поєднувати техніку і агро',v:'agro_tech'}],
+};
+
+const resultMap = {
+  tech:{repair:'agroe',climate:'energy',design:'build'},
+  nature:{field:'agro',forest_q:'forest',machinery:'agroe'},
+  transport:{logistics:'transport',autofix:'agroe',plan:'transport'},
+  build:{construct:'build',project:'build',systems:'energy'},
+  eco:{eco_prot:'forest',eco_farm:'agro',eco_res:'forest'},
+  heavy:{drive_fix:'agroe',gps:'agroe',agro_tech:'agroe'},
+};
+
+// ── STATE ──
+let currentSlide = 0;
+let ans = {q1:null, q2:null};
+
+const SLIDES = ['slide0','slide1','slide2','slide3q3','slide3','slide4','slide5','slide6','slide7','slide8'];
+
+function renderSlide(){
+  SLIDES.forEach((id,i)=>{
+    const el = document.getElementById(id);
+    if(el) el.style.display = i===currentSlide ? '' : 'none';
+  });
+  renderDots();
+  document.getElementById('prevBtn').disabled = (currentSlide===0);
+  document.getElementById('nextBtn').style.display = (currentSlide===SLIDES.length-1) ? 'none' : '';
+  if(currentSlide===6){
+    setTimeout(()=>{
+      document.querySelectorAll('#slide5 .d-fill').forEach(el=>{el.style.width=el.dataset.pct+'%';});
+    },150);
+  }
+}
+
+function renderDots(){
+  const c = document.getElementById('navDots');
+  c.innerHTML='';
+  SLIDES.forEach((_,i)=>{
+    const d = document.createElement('div');
+    d.className='nd'+(i===currentSlide?' active':'');
+    d.onclick=()=>{currentSlide=i;renderSlide();};
+    c.appendChild(d);
+  });
+}
+
+function nextSlide(){if(currentSlide<SLIDES.length-1){currentSlide++;renderSlide();}}
+function prevSlide(){if(currentSlide>0){currentSlide--;renderSlide();}}
+
+function answer(q, val){
+  if(q===1){
+    ans.q1=val;buildQ2();currentSlide=2;renderSlide();
+  } else if(q===2){
+    ans.q2=val;buildQ3();currentSlide=3;renderSlide();
+  } else if(q===3){
+    buildResult(val);currentSlide=4;renderSlide();
+    setTimeout(()=>{document.querySelectorAll('#slide3 .d-fill').forEach(el=>{el.style.width=el.dataset.pct+'%';});},200);
+  }
+}
+
+function buildQ2(){
+  const grid=document.getElementById('q2grid');
+  grid.innerHTML='';
+  const colors=['#e8773d','#1e88e5','#8e6de8','#43a047','#26a69a','#f9a825'];
+  q2map[ans.q1].forEach((o,idx)=>{
+    const c=colors[idx%colors.length];
+    const d=document.createElement('div');
+    d.className='opt-card';
+    d.style.cssText=`--cc:${c}28;--cb:${c}88;--ib:${c}28`;
+    d.innerHTML=`<div class="opt-icon-wrap">${o.i}</div><div class="opt-text">${o.l}</div>`;
+    d.onclick=()=>answer(2,o.v);
+    grid.appendChild(d);
+  });
+}
+
+function buildQ3(){
+  const grid=document.getElementById('q3grid');
+  grid.innerHTML='';
+  const q3=[{i:'🤝',l:'У команді, з людьми',v:'team',c:'#1e88e5'},{i:'🔩',l:'Руками, з технікою',v:'hands',c:'#ef6c00'},{i:'💻',l:'З комп\'ютером та документами',v:'desk',c:'#7e57c2'}];
+  q3.forEach(o=>{
+    const d=document.createElement('div');
+    d.className='opt-card';
+    d.style.cssText=`--cc:${o.c}28;--cb:${o.c}88;--ib:${o.c}28`;
+    d.innerHTML=`<div class="opt-icon-wrap">${o.i}</div><div class="opt-text">${o.l}</div>`;
+    d.onclick=()=>answer(3,o.v);
+    grid.appendChild(d);
+  });
+}
+
+function buildResult(q3val){
+  const specId = resultMap[ans.q1]?.[ans.q2] || 'transport';
+  applySpec(specId);
+}
+
+function applySpec(specId){
+  const s = specs[specId];
+  const col = s.color;
+
+  // Slide result
+  document.getElementById('slide3').style.setProperty('--result-color',col);
+  document.getElementById('r0emoji').textContent=s.emoji;
+  document.getElementById('r0code').textContent=s.code;
+  document.getElementById('r0name').textContent=s.name;
+  document.getElementById('r0desc').textContent=s.short;
+  document.getElementById('r0desc').style.borderLeftColor=col;
+  document.getElementById('r0jobs').innerHTML=s.jobs.slice(0,3).map(j=>`<div class="jr-chip"><span class="ji">${j.split(' ')[0]}</span>${j.slice(j.indexOf(' ')+1)}</div>`).join('');
+
+  // Stats
+  let statsEl=document.getElementById('r0stats');
+  if(!statsEl){statsEl=document.createElement('div');statsEl.id='r0stats';statsEl.className='stats3';statsEl.style.marginTop='14px';document.getElementById('slide3box').insertBefore(statsEl,document.getElementById('r0jobs'));}
+  statsEl.innerHTML=s.stats.map(st=>`<div class="st"><div class="st-n" style="background:linear-gradient(135deg,${col},#eef4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${st.val}</div><div class="st-l">${st.l}</div></div>`).join('');
+
+  // Study slide
+  document.getElementById('slide4').style.setProperty('--result-color',col);
+  document.getElementById('r1study').innerHTML=s.study.map(i=>`<div class="si"><div class="si-check">✓</div>${i}</div>`).join('');
+  document.getElementById('r1skills').innerHTML=s.skills.map(sk=>`<span class="sk" style="border-color:${col}55;color:rgba(240,248,240,.85)">${sk}</span>`).join('');
+  // Year timeline
+  if(s.years){
+    const yt=document.getElementById('yearTimeline');
+    if(yt) yt.innerHTML=s.years.map((y,i)=>`<div class="yr-card"><div class="yr-num" style="color:${col}">${i+1}</div><div class="yr-label">${y}</div></div>`).join('');
+  }
+
+  // Careers
+  document.getElementById('slide5').style.setProperty('--result-color',col);
+  document.getElementById('r2jobs').innerHTML=s.jobs.map(j=>`<div class="ci"><div class="ci-icon">${j.split(' ')[0]}</div>${j.slice(j.indexOf(' ')+1)}</div>`).join('');
+  document.getElementById('r2demand').innerHTML=`<div class="ds-title" style="--result-color:${col}">Попит на ринку праці</div>`+s.demand.map(d=>`<div class="d-row"><div class="d-name">${d.name}</div><div class="d-track"><div class="d-fill" data-pct="${d.pct}" style="background:linear-gradient(90deg,${col},rgba(240,248,240,.7))"></div></div><div class="d-pct">${d.pct}%</div></div>`).join('');
+  document.getElementById('r2salaryItems').innerHTML=s.salaryItems.map(([role,range])=>`<div class="sp-item"><div class="sp-role">${role}</div><div class="sp-range">${range}</div></div>`).join('');
+
+  // Others grid - show ALL specs
+  const colors2={agro:'#4caf50',forest:'#26a69a',agroe:'#ef6c00',energy:'#29b6f6',build:'#7e57c2',transport:'#f9a825'};
+  document.getElementById('otherGrid').innerHTML=specList.map(id=>{
+    const sp=specs[id]; const c=colors2[id];
+    const isActive = id===specId;
+    const numHtml = id==='energy'
+      ? `<div class="sm-num" style="color:${c};font-size:11px;line-height:1.4;">G4 Енерговиробництво<br><span style="font-size:16px;font-weight:900;">G4.04</span></div>`
+      : `<div class="sm-num" style="color:${c}">${sp.num}</div>`;
+    return `<div class="spec-mini" style="--sc:${c}22;--sb:${c}88;${isActive?`border-color:${c};background:${c}18`:''}" onclick="switchResult('${id}')">
+      <div class="sm-img">${sp.emoji}</div>
+      ${numHtml}
+      <div class="sm-name">${sp.name}</div>
+    </div>`;
+  }).join('');
+}
+
+function switchResult(id){
+  ans.q1='transport';ans.q2='logistics';
+  applySpec(id);
+  currentSlide=SLIDES.indexOf('slide3');renderSlide();
+  setTimeout(()=>{document.querySelectorAll('#slide3 .d-fill').forEach(el=>{el.style.width=el.dataset.pct+'%';});},200);
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  applySpec('transport');
+  currentSlide=0;
+  renderSlide();
+});
+
+let ts=0,tx=0;
+document.getElementById('slider').addEventListener('touchstart',e=>{ts=e.touches[0].clientY;tx=e.touches[0].clientX;},{passive:true});
+document.getElementById('slider').addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].clientX-tx;
+  const dy=e.changedTouches[0].clientY-ts;
+  if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>50){
+    if(dx<0) nextSlide(); else prevSlide();
+  }
+},{passive:true});
+</script>
+</body>
+</html>

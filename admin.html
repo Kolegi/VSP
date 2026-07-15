@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Адмін-панель — Додати новину</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+      .loader { border: 3px solid #e5e7eb; border-top: 3px solid #2563eb; border-radius: 50%; width: 20px; height: 20px; animation: spin 0.8s linear infinite; display: inline-block; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .fade-in { animation: fadeIn 0.3s ease-in; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+      input:focus, textarea:focus { outline: none; box-shadow: 0 0 0 2px #3b82f6; }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+
+    <!-- ===== LOGIN SCREEN ===== -->
+    <div id="login-screen" class="max-w-md mx-auto mt-20 p-8 bg-white rounded-xl shadow-lg">
+      <h1 class="text-2xl font-bold text-gray-800 mb-2">Адмін-панель</h1>
+      <p class="text-gray-500 mb-6">Введіть GitHub токен для доступу</p>
+
+      <label class="block text-sm font-medium text-gray-700 mb-1">GitHub Personal Access Token</label>
+      <input
+        id="token-input"
+        type="password"
+        placeholder="ghp_xxxxxxxxxxxx"
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm mb-2"
+      />
+      <p class="text-xs text-gray-400 mb-4">
+        Токен потрібен для запису файлів у репозиторій.
+        Створити: Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token (scope: <code>repo</code>)
+      </p>
+      <p id="login-error" class="text-sm text-red-500 mb-4 hidden"></p>
+
+      <button
+        id="login-btn"
+        onclick="login()"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition"
+      >
+        Увійти
+      </button>
+    </div>
+
+    <!-- ===== ADMIN PANEL ===== -->
+    <div id="admin-panel" class="hidden max-w-2xl mx-auto mt-10 p-8 bg-white rounded-xl shadow-lg">
+
+      <!-- Header -->
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h1 class="text-2xl font-bold text-gray-800">Додати новину</h1>
+          <p class="text-sm text-gray-400 mt-1" id="repo-info"></p>
+        </div>
+        <button onclick="logout()" class="text-sm text-gray-400 hover:text-red-500 transition">
+          Вийти
+        </button>
+      </div>
+
+      <!-- Form -->
+      <div class="space-y-5">
+
+        <!-- Title -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Назва новини *</label>
+          <input
+            id="news-title"
+            type="text"
+            placeholder="Наприклад: День відкритих дверей"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm"
+            oninput="updateSlug()"
+          />
+          <p class="text-xs text-gray-400 mt-1">Slug: <span id="slug-preview" class="font-mono text-gray-600">—</span></p>
+        </div>
+
+        <!-- Content -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Текст прев'ю *</label>
+          <textarea
+            id="news-content"
+            rows="3"
+            placeholder="Короткий опис новини (відображається під карткою у списку новин)"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Image -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Зображення</label>
+          <input
+            id="news-image"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+            onchange="previewImage()"
+          />
+          <div id="image-preview-wrapper" class="hidden mt-3">
+            <img id="image-preview" class="max-h-48 rounded-lg border" />
+            <p id="image-info" class="text-xs text-gray-400 mt-1"></p>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="pt-2">
+          <button
+            id="publish-btn"
+            onclick="publish()"
+            class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition text-base"
+          >
+            Опублікувати
+          </button>
+        </div>
+      </div>
+
+      <!-- Status -->
+      <div id="status-area" class="hidden mt-6 p-4 rounded-lg text-sm"></div>
+
+      <!-- Progress -->
+      <div id="progress-area" class="hidden mt-6 space-y-3">
+        <div id="progress-image" class="flex items-center gap-2 text-sm text-gray-500">
+          <span class="loader"></span> Завантаження зображення...
+        </div>
+        <div id="progress-html" class="flex items-center gap-2 text-sm text-gray-500">
+          <span class="loader"></span> Створення HTML-файлу...
+        </div>
+        <div id="progress-pagination" class="flex items-center gap-2 text-sm text-gray-500">
+          <span class="loader"></span> Оновлення pagination.js...
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== CONFIG =====
+      const REPO_OWNER = 'Kolegi';
+      const REPO_NAME = 'VSP';
+      const PAGINATION_PATH = 'src/js/pagination.js';
+      const NEWS_DIR = 'src/news';
+      const IMAGE_DIR = 'src/image/news';
+
+      // ===== TRANSLITERATION =====
+      const UA_TO_EN = {
+        'а':'a','б':'b','в':'v','г':'h','ґ':'g',
+        'д':'d','е':'e','є':'ye','ж':'zh','з':'z',
+        'и':'y','і':'i','ї':'yi','й':'y','к':'k',
+        'л':'l','м':'m','н':'n','о':'o','п':'p',
+        'р':'r','с':'s','т':'t','у':'u','ф':'f',
+        'х':'kh','ц':'ts','ч':'ch','ш':'sh','щ':'shch',
+        'ь':'','ю':'yu','я':'ya',
+        'А':'A','Б':'B','В':'V','Г':'H','Ґ':'G',
+        'Д':'D','Е':'E','Є':'Ye','Ж':'Zh','З':'Z',
+        'И':'Y','І':'I','Ї':'Yi','Й':'Y','К':'K',
+        'Л':'L','М':'M','Н':'N','О':'O','П':'P',
+        'Р':'R','С':'S','Т':'T','У':'U','Ф':'F',
+        'Х':'Kh','Ц':'Ts','Ч':'Ch','Ш':'Sh','Щ':'Shch',
+        'Ь':'','Ю':'Yu','Я':'Ya'
+      };
+
+      function generateSlug(title) {
+        let slug = '';
+        for (const ch of title) {
+          slug += UA_TO_EN[ch] !== undefined ? UA_TO_EN[ch] : ch;
+        }
+        return slug
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '_')
+          .replace(/^_|_$/g, '')
+          .replace(/_{2,}/g, '_');
+      }
+
+      function updateSlug() {
+        const title = document.getElementById('news-title').value;
+        const slugEl = document.getElementById('slug-preview');
+        if (title.trim()) {
+          slugEl.textContent = generateSlug(title);
+        } else {
+          slugEl.textContent = '—';
+        }
+      }
+
+      // ===== AUTH =====
+      function getToken() {
+        return localStorage.getItem('gh_token') || '';
+      }
+
+      async function login() {
+        const token = document.getElementById('token-input').value.trim();
+        const errorEl = document.getElementById('login-error');
+        const btn = document.getElementById('login-btn');
+
+        if (!token) {
+          errorEl.textContent = 'Введіть токен';
+          errorEl.classList.remove('hidden');
+          return;
+        }
+
+        btn.disabled = true;
+        btn.innerHTML = '<span class="loader"></span> Перевірка...';
+        errorEl.classList.add('hidden');
+
+        try {
+          const resp = await fetch('https://api.github.com/user', {
+            headers: { 'Authorization': `token ${token}` }
+          });
+          if (!resp.ok) throw new Error('Невірний токен');
+          const user = await resp.json();
+
+          localStorage.setItem('gh_token', token);
+          localStorage.setItem('gh_user', user.login);
+          showAdmin(user.login);
+        } catch (e) {
+          errorEl.textContent = 'Помилка: ' + e.message;
+          errorEl.classList.remove('hidden');
+        } finally {
+          btn.disabled = false;
+          btn.textContent = 'Увійти';
+        }
+      }
+
+      function logout() {
+        localStorage.removeItem('gh_token');
+        localStorage.removeItem('gh_user');
+        document.getElementById('admin-panel').classList.add('hidden');
+        document.getElementById('login-screen').classList.remove('hidden');
+        document.getElementById('token-input').value = '';
+      }
+
+      function showAdmin(user) {
+        document.getElementById('login-screen').classList.add('hidden');
+        document.getElementById('admin-panel').classList.remove('hidden');
+        document.getElementById('repo-info').textContent =
+          `${REPO_OWNER}/${REPO_NAME} • користувач: ${user}`;
+      }
+
+      // ===== IMAGE PREVIEW =====
+      let imageDataUrl = null;
+      let imageFile = null;
+
+      function previewImage() {
+        const file = document.getElementById('news-image').files[0];
+        if (!file) {
+          document.getElementById('image-preview-wrapper').classList.add('hidden');
+          imageDataUrl = null;
+          imageFile = null;
+          return;
+        }
+
+        if (file.size > 5 * 1024 * 1024) {
+          alert('Файл занадто великий (макс. 5MB)');
+          document.getElementById('news-image').value = '';
+          return;
+        }
+
+        imageFile = file;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          imageDataUrl = e.target.result;
+          document.getElementById('image-preview').src = imageDataUrl;
+          document.getElementById('image-info').textContent =
+            `${file.name} (${(file.size / 1024).toFixed(0)} KB)`;
+          document.getElementById('image-preview-wrapper').classList.remove('hidden');
+        };
+        reader.readAsDataURL(file);
+      }
+
+      // ===== GITHUB API =====
+      async function githubGetFile(path) {
+        const token = getToken();
+        const resp = await fetch(
+          `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`,
+          { headers: { 'Authorization': `token ${token}` } }
+        );
+        if (!resp.ok) {
+          if (resp.status === 404) return null;
+          throw new Error(`GitHub API помилка: ${resp.status}`);
+        }
+        return await resp.json();
+      }
+
+      async function githubCreateFile(path, content, message) {
+        const token = getToken();
+        const body = {
+          message: message,
+          content: btoa(unescape(encodeURIComponent(content)))
+        };
+        const resp = await fetch(
+          `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`,
+          {
+            method: 'PUT',
+            headers: {
+              'Authorization': `token ${token}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+          }
+        );
+        if (!resp.ok) {
+          const err = await resp.json();
+          throw new Error(err.message || `HTTP ${resp.status}`);
+        }
+        return await resp.json();
+      }
+
+      async function githubUpdateFile(path, newContent, message) {
+        const token = getToken();
+        const existing = await githubGetFile(path);
+        if (!existing) {
+          return await githubCreateFile(path, newContent, message);
+        }
+        const body = {
+          message: message,
+          content: btoa(unescape(encodeURIComponent(newContent))),
+          sha: existing.sha
+        };
+        const resp = await fetch(
+          `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`,
+          {
+            method: 'PUT',
+            headers: {
+              'Authorization': `token ${token}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+          }
+        );
+        if (!resp.ok) {
+          const err = await resp.json();
+          throw new Error(err.message || `HTTP ${resp.status}`);
+        }
+        return await resp.json();
+      }
+
+      async function githubUploadImage(slug, dataUrl) {
+        const base64 = dataUrl.split(',')[1];
+        const token = getToken();
+        const resp = await fetch(
+          `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${IMAGE_DIR}/${slug}/1.jpg`,
+          {
+            method: 'PUT',
+            headers: {
+              'Authorization': `token ${token}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: `Додано зображення для новини: ${slug}`,
+              content: base64
+            })
+          }
+        );
+        if (!resp.ok) {
+          const err = await resp.json();
+          throw new Error(err.message || `HTTP ${resp.status}`);
+        }
+        return await resp.json();
+      }
+
+      // ===== HTML TEMPLATE =====
+      function generateNewsHtml(slug) {
+        return `<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новини</title>
+
+    <meta name="description" content="Новоушицький коледж" />
+    <meta
+      name="keywords"
+      content="Новини, Новоушицький коледж, ВСП НФК ЗВО ПДУ"
+    />
+    <meta name="author" content="Новоушицький фаховий коледж" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="header-container"></div>
+
+    <div class="breadcrumbs">
+      <div class="wrapper">
+        <div class="flex items-center gap-2">
+          <a href="https://www.ntpu.org.ua/" class="text-xs text-grey-03">
+            Головна
+          </a>
+          <p class="text-xs text-grey-03">/</p>
+          <span class="text-xs text-grey-05">Новини</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="title-page">
+      <div class="wrapper flex flex-col gap-6">
+        <h1 class="text-6xl text-grey-02">Новини</h1>
+
+        <!-- ===== LIGHTBOX IMAGE ===== -->
+
+        <!-- hidden checkbox -->
+        <input type="checkbox" id="img-modal-1" class="peer hidden" />
+
+        <!-- preview image -->
+        <label for="img-modal-1" class="cursor-zoom-in">
+          <img
+            class="rounded-xl transition hover:scale-[1.02] mb-16"
+            src="../image/news/${slug}/1.jpg"
+            alt="Новина"
+          />
+        </label>
+
+        <!-- fullscreen overlay -->
+        <div
+          class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition"
+        >
+          <!-- close area -->
+          <label
+            for="img-modal-1"
+            class="absolute inset-0 cursor-zoom-out"
+          ></label>
+
+          <!-- full image -->
+          <img
+            src="../image/news/${slug}/1.jpg"
+            alt="Новина"
+            class="w-auto h-auto max-w-screen max-h-screen object-contain rounded-xl shadow-2xl"
+          />
+        </div>
+
+        <!-- ===== /LIGHTBOX IMAGE ===== -->
+      </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="../js/componets.js"><\/script>
+    <script src="../js/javascript.js"><\/script>
+    <script src="../js/slick.min.js"><\/script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"><\/script>
+    <script>
+      AOS.init();
+    <\/script>
+  </body>
+</html>`;
+      }
+
+      // ===== PAGINATION UPDATE =====
+      async function updatePagination(slug, title, content) {
+        const fileData = await githubGetFile(PAGINATION_PATH);
+        if (!fileData) throw new Error('pagination.js не знайдено');
+
+        const decoded = decodeURIComponent(escape(atob(fileData.content)));
+        const newEntry = `  {
+    link: "/news/${slug}.html",
+    image: "./image/news/${slug}/1.jpg",
+    img_descr: "",
+    title: "${title.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}",
+    content: "${content.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}",
+  },\n`;
+
+        const marker = 'const newsItems = [';
+        const idx = decoded.indexOf(marker);
+        if (idx === -1) throw new Error('Не знайдено newsItems у pagination.js');
+
+        const insertAt = idx + marker.length + 1;
+        const updated = decoded.slice(0, insertAt) + '\n' + newEntry + decoded.slice(insertAt);
+
+        return await githubUpdateFile(
+          PAGINATION_PATH,
+          updated,
+          `Оновлено pagination.js: додано новину "${title}"`
+        );
+      }
+
+      // ===== PUBLISH =====
+      async function publish() {
+        const title = document.getElementById('news-title').value.trim();
+        const content = document.getElementById('news-content').value.trim();
+
+        if (!title) { alert('Введіть назву новини'); return; }
+        if (!content) { alert('Введіть текст прев\'ю'); return; }
+
+        const slug = generateSlug(title);
+        if (!slug) { alert('Не вдалося згенерувати slug з назви'); return; }
+
+        const btn = document.getElementById('publish-btn');
+        const progressArea = document.getElementById('progress-area');
+        const statusArea = document.getElementById('status-area');
+
+        btn.disabled = true;
+        btn.innerHTML = '<span class="loader"></span> Публікація...';
+        progressArea.classList.remove('hidden');
+        statusArea.classList.add('hidden');
+
+        const steps = {
+          image: document.getElementById('progress-image'),
+          html: document.getElementById('progress-html'),
+          pagination: document.getElementById('progress-pagination')
+        };
+
+        try {
+          // Step 1: Image
+          if (imageDataUrl) {
+            steps.image.classList.remove('hidden');
+            steps.image.innerHTML = '<span class="loader"></span> Завантаження зображення...';
+            await githubUploadImage(slug, imageDataUrl);
+            steps.image.innerHTML = '<span class="text-green-600">✓</span> Зображення завантажено';
+          } else {
+            steps.image.classList.add('hidden');
+          }
+
+          // Step 2: HTML
+          steps.html.classList.remove('hidden');
+          steps.html.innerHTML = '<span class="loader"></span> Створення HTML-файлу...';
+          const htmlContent = generateNewsHtml(slug);
+          await githubCreateFile(
+            `${NEWS_DIR}/${slug}.html`,
+            htmlContent,
+            `Додано новину: ${title}`
+          );
+          steps.html.innerHTML = '<span class="text-green-600">✓</span> HTML-файл створено';
+
+          // Step 3: Pagination
+          steps.pagination.classList.remove('hidden');
+          steps.pagination.innerHTML = '<span class="loader"></span> Оновлення pagination.js...';
+          await updatePagination(slug, title, content);
+          steps.pagination.innerHTML = '<span class="text-green-600">✓</span> pagination.js оновлено';
+
+          // Success
+          statusArea.className = 'mt-6 p-4 rounded-lg text-sm bg-green-50 text-green-800 border border-green-200 fade-in';
+          statusArea.innerHTML = `
+            <strong>✅ Успішно опубліковано!</strong><br>
+            <span class="text-green-700">Новина: ${title}</span><br>
+            <a href="https://www.ntpu.org.ua/news/${slug}.html" target="_blank"
+               class="underline text-green-600 hover:text-green-800">
+              Переглянути на сайті →
+            </a>
+          `;
+          statusArea.classList.remove('hidden');
+
+          // Reset form
+          document.getElementById('news-title').value = '';
+          document.getElementById('news-content').value = '';
+          document.getElementById('news-image').value = '';
+          document.getElementById('image-preview-wrapper').classList.add('hidden');
+          document.getElementById('slug-preview').textContent = '—';
+          imageDataUrl = null;
+          imageFile = null;
+
+        } catch (e) {
+          statusArea.className = 'mt-6 p-4 rounded-lg text-sm bg-red-50 text-red-800 border border-red-200 fade-in';
+          statusArea.innerHTML = `<strong>❌ Помилка:</strong> ${e.message}`;
+          statusArea.classList.remove('hidden');
+        } finally {
+          btn.disabled = false;
+          btn.textContent = 'Опублікувати';
+          setTimeout(() => { progressArea.classList.add('hidden'); }, 2000);
+        }
+      }
+
+      // ===== INIT =====
+      document.addEventListener('DOMContentLoaded', () => {
+        const token = getToken();
+        if (token) {
+          showAdmin(localStorage.getItem('gh_user') || 'користувач');
+        }
+        // Enter key on token input
+        document.getElementById('token-input').addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') login();
+        });
+      });
+    </script>
+
+  </body>
+</html>
