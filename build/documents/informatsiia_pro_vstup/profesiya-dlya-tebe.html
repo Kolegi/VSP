@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>День відкритих дверей — Новоушицький фаховий коледж</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Geologica:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d6a2d;
+    --green-light: #4a9e4a;
+    --gold: #c8931a;
+    --gold-light: #f0b429;
+    --cream: #f7f3e8;
+    --dark: #1a1a0f;
+    --text: #2c2c1a;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Geologica', sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* Custom cursor */
+  .cursor {
+    width: 20px; height: 20px;
+    border: 2px solid var(--gold-light);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease, background 0.15s ease;
+    transform: translate(-50%, -50%);
+  }
+  .cursor.hover { transform: translate(-50%,-50%) scale(2); background: rgba(240,180,41,0.3); }
+
+  /* BG pattern */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 20%, rgba(45,106,45,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 90% 80%, rgba(200,147,26,0.15) 0%, transparent 60%),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,0.015) 40px,
+        rgba(255,255,255,0.015) 41px
+      );
+    z-index: 0;
+  }
+
+  .page {
+    display: none;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+  }
+  .page.active { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+  /* ===== SCREEN 0: INTRO ===== */
+  #screen-intro {
+    text-align: center;
+    padding: 40px 20px;
+    gap: 24px;
+  }
+
+  .college-badge {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: rgba(45,106,45,0.3);
+    border: 1px solid rgba(74,158,74,0.4);
+    border-radius: 100px;
+    padding: 8px 20px;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green-light);
+    backdrop-filter: blur(10px);
+    animation: fadeDown 0.6s ease both;
+  }
+  .badge-dot { width: 8px; height: 8px; background: var(--green-light); border-radius: 50%; animation: pulse 2s infinite; }
+
+  @keyframes pulse { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:0.5; transform:scale(1.3); } }
+  @keyframes fadeDown { from{ opacity:0; transform:translateY(-20px); } to{ opacity:1; transform:translateY(0); } }
+  @keyframes fadeUp   { from{ opacity:0; transform:translateY(30px);  } to{ opacity:1; transform:translateY(0); } }
+  @keyframes fadeIn   { from{ opacity:0; } to{ opacity:1; } }
+  @keyframes scaleIn  { from{ opacity:0; transform:scale(0.8); } to{ opacity:1; transform:scale(1); } }
+  @keyframes shimmer  { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+  @keyframes float    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+  @keyframes spin     { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+
+  .intro-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(32px, 6vw, 80px);
+    font-weight: 900;
+    line-height: 1.05;
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+  .intro-title .line-green {
+    display: block;
+    background: linear-gradient(90deg, var(--green-light), var(--gold-light), var(--green-light));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeUp 0.7s 0.1s ease both, shimmer 4s 1s linear infinite;
+  }
+  .intro-title .line-white { display: block; color: var(--white); }
+
+  .intro-subtitle {
+    font-size: clamp(14px, 2vw, 18px);
+    color: rgba(255,255,255,0.65);
+    max-width: 540px;
+    line-height: 1.6;
+    animation: fadeUp 0.7s 0.3s ease both;
+  }
+
+  .start-btn {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 20px 52px;
+    background: linear-gradient(135deg, var(--green), var(--green-light));
+    border: none;
+    border-radius: 100px;
+    color: white;
+    cursor: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 32px rgba(45,106,45,0.5);
+    animation: fadeUp 0.7s 0.5s ease both;
+    letter-spacing: 0.04em;
+  }
+  .start-btn::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.15));
+    opacity: 0; transition: opacity 0.2s;
+  }
+  .start-btn:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 16px 48px rgba(45,106,45,0.6); }
+  .start-btn:hover::before { opacity: 1; }
+  .start-btn:active { transform: scale(0.97); }
+
+  .intro-deco {
+    position: absolute;
+    font-size: 120px;
+    opacity: 0.04;
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .intro-deco:nth-child(1) { top: 5%; left: 3%; animation-delay: 0s; }
+  .intro-deco:nth-child(2) { top: 15%; right: 5%; animation-delay: 1.5s; }
+  .intro-deco:nth-child(3) { bottom: 10%; left: 8%; animation-delay: 3s; }
+  .intro-deco:nth-child(4) { bottom: 20%; right: 10%; animation-delay: 2s; }
+
+  /* ===== SCREEN 1: QUIZ ===== */
+  #screen-quiz {
+    padding: 30px 20px;
+    gap: 0;
+  }
+
+  .quiz-header {
+    width: 100%; max-width: 760px;
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 32px;
+  }
+  .progress-bar-wrap {
+    flex: 1; height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 100px; overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green-light), var(--gold-light));
+    border-radius: 100px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .progress-label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    white-space: nowrap;
+  }
+
+  .question-card {
+    width: 100%; max-width: 760px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 28px;
+    padding: 44px 48px;
+    backdrop-filter: blur(20px);
+    animation: scaleIn 0.4s ease;
+  }
+
+  .question-emoji {
+    font-size: 52px;
+    display: block;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .question-text {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(18px, 3vw, 26px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 32px;
+    color: var(--white);
+  }
+
+  .answers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .answers-grid.cols-1 { grid-template-columns: 1fr; }
+  .answers-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+  @media (max-width: 660px) {
+    .answers-grid, .answers-grid.cols-3 { grid-template-columns: 1fr; }
+    .question-card { padding: 28px 24px; }
+  }
+
+  .answer-btn {
+    background: rgba(255,255,255,0.06);
+    border: 2px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+    padding: 20px 24px;
+    color: var(--white);
+    font-family: 'Geologica', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: none;
+    text-align: left;
+    transition: all 0.2s ease;
+    display: flex; align-items: center; gap: 14px;
+    line-height: 1.4;
+  }
+  .answer-btn .ans-icon { font-size: 24px; flex-shrink: 0; }
+  .answer-btn:hover {
+    background: rgba(74,158,74,0.2);
+    border-color: var(--green-light);
+    transform: translateX(6px);
+    box-shadow: 0 4px 20px rgba(45,106,45,0.3);
+  }
+  .answer-btn:active { transform: scale(0.97); }
+  .answer-btn.selected {
+    background: rgba(74,158,74,0.35);
+    border-color: var(--green-light);
+    box-shadow: 0 0 0 4px rgba(74,158,74,0.15);
+  }
+
+  /* ===== SCREEN 2: LOADING ===== */
+  #screen-loading {
+    text-align: center;
+    gap: 28px;
+    padding: 40px;
+  }
+  .loading-ring {
+    width: 80px; height: 80px;
+    border: 4px solid rgba(255,255,255,0.1);
+    border-top-color: var(--gold-light);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  .loading-text {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    animation: fadeIn 0.5s ease;
+  }
+  .loading-dots span {
+    display: inline-block;
+    animation: fadeIn 1s ease infinite;
+  }
+  .loading-dots span:nth-child(2){ animation-delay:0.2s; }
+  .loading-dots span:nth-child(3){ animation-delay:0.4s; }
+
+  /* ===== SCREEN 3: RESULT ===== */
+  #screen-result {
+    padding: 40px 20px;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  .result-card {
+    width: 100%; max-width: 700px;
+    position: relative;
+    animation: scaleIn 0.6s cubic-bezier(0.34,1.56,0.64,1);
+  }
+
+  .result-glow {
+    position: absolute; inset: -2px;
+    border-radius: 32px;
+    background: linear-gradient(135deg, var(--green), var(--gold-light), var(--green-light));
+    z-index: -1;
+    filter: blur(0px);
+    animation: shimmer 3s linear infinite;
+    background-size: 200% auto;
+  }
+
+  .result-inner {
+    background: var(--dark);
+    border-radius: 30px;
+    padding: 52px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .result-inner::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(200,147,26,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .result-emoji {
+    font-size: 72px;
+    display: block;
+    margin-bottom: 16px;
+    animation: float 3s ease-in-out infinite;
+  }
+  .result-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+  }
+  .result-specialty {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(20px, 4vw, 34px);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--white), rgba(255,255,255,0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .result-code {
+    display: inline-block;
+    background: rgba(200,147,26,0.15);
+    border: 1px solid rgba(200,147,26,0.3);
+    border-radius: 100px;
+    padding: 4px 16px;
+    font-size: 13px;
+    color: var(--gold-light);
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+  }
+  .result-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 36px;
+    max-width: 500px;
+    margin-left: auto; margin-right: auto;
+  }
+  .result-jobs {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .job-tag {
+    background: rgba(45,106,45,0.3);
+    border: 1px solid rgba(74,158,74,0.3);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 13px;
+    color: var(--green-light);
+  }
+
+  .result-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+  .btn-primary {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, var(--green), var(--green-light));
+    border: none; border-radius: 100px;
+    color: white; cursor: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 6px 24px rgba(45,106,45,0.4);
+    letter-spacing: 0.04em;
+    text-decoration: none; display: inline-block;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(45,106,45,0.5); }
+
+  .btn-secondary {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 16px 36px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 100px;
+    color: rgba(255,255,255,0.7);
+    cursor: none;
+    transition: all 0.2s;
+    letter-spacing: 0.04em;
+  }
+  .btn-secondary:hover { border-color: var(--gold-light); color: var(--gold-light); transform: translateY(-2px); }
+
+  .college-footer {
+    margin-top: 28px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.5;
+  }
+  .college-footer strong { color: rgba(255,255,255,0.55); }
+
+  /* Confetti */
+  .confetti-piece {
+    position: fixed;
+    width: 10px; height: 10px;
+    border-radius: 2px;
+    pointer-events: none;
+    z-index: 100;
+    animation: confettiFall linear forwards;
+  }
+  @keyframes confettiFall {
+    0%   { opacity:1; transform: translateY(-60px) rotate(0deg); }
+    100% { opacity:0; transform: translateY(100vh) rotate(720deg); }
+  }
+
+  /* Countdown restart */
+  .restart-hint {
+    margin-top: 16px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.25);
+  }
+  #countdown-num { color: var(--gold-light); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<!-- Decorative floats -->
+<div class="intro-deco">🌾</div>
+<div class="intro-deco">⚡</div>
+<div class="intro-deco">🌲</div>
+<div class="intro-deco">🚜</div>
+
+<!-- ===== SCREEN 0: INTRO ===== -->
+<div class="page active" id="screen-intro">
+  <div class="college-badge">
+    <div class="badge-dot"></div>
+    Новоушицький фаховий коледж · День відкритих дверей
+  </div>
+
+  <h1 class="intro-title">
+    <span class="line-green">Яка професія</span>
+    <span class="line-white">чекає на тебе?</span>
+  </h1>
+
+  <p class="intro-subtitle">
+    Пройди короткий квіз з 6 питань — і ми підберемо спеціальність,
+    яка підходить саме тобі. Це займе лише 2 хвилини!
+  </p>
+
+  <button class="start-btn" onclick="startQuiz()">
+    ▶ Почати квіз
+  </button>
+</div>
+
+<!-- ===== SCREEN 1: QUIZ ===== -->
+<div class="page" id="screen-quiz">
+  <div class="quiz-header">
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+    </div>
+    <div class="progress-label" id="progress-label">1 / 6</div>
+  </div>
+
+  <div class="question-card" id="question-card">
+    <span class="question-emoji" id="q-emoji">🌱</span>
+    <div class="question-text" id="q-text">Питання завантажується…</div>
+    <div class="answers-grid" id="q-answers"></div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 2: LOADING ===== -->
+<div class="page" id="screen-loading">
+  <div class="loading-ring"></div>
+  <div class="loading-text">Аналізуємо твої відповіді<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></div>
+</div>
+
+<!-- ===== SCREEN 3: RESULT ===== -->
+<div class="page" id="screen-result">
+  <div class="result-card">
+    <div class="result-glow"></div>
+    <div class="result-inner">
+      <span class="result-emoji" id="r-emoji">🌾</span>
+      <div class="result-label">Твоя спеціальність</div>
+      <div class="result-specialty" id="r-specialty">—</div>
+      <div class="result-code" id="r-code">—</div>
+      <p class="result-desc" id="r-desc">—</p>
+      <div class="result-jobs" id="r-jobs"></div>
+      <div class="result-actions">
+        <a href="https://www.ntpu.org.ua/" target="_blank" class="btn-primary">🌐 Більше про коледж</a>
+        <button class="btn-secondary" onclick="restartQuiz()">↩ Пройти знову</button>
+      </div>
+    </div>
+  </div>
+  <div class="college-footer">
+    <strong>Новоушицький фаховий коледж</strong><br>
+    смт. Нова Ушиця, вул. Подільська, 34 · ntpu.org.ua
+  </div>
+  <div class="restart-hint">Автоматичний перезапуск через <span id="countdown-num">30</span> сек</div>
+</div>
+
+<script>
+// Custom cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY  + 'px';
+});
+document.addEventListener('mouseover', e => {
+  if(e.target.matches('button, a, .answer-btn')) cursor.classList.add('hover');
+  else cursor.classList.remove('hover');
+});
+
+// ===== DATA =====
+const questions = [
+  {
+    emoji: '🌅',
+    text: 'Уяви ідеальний робочий день. Де ти знаходишся?',
+    answers: [
+      { icon: '🌾', text: 'На полі або в лісі — свіже повітря, природа навколо', tags: ['agro','forest'] },
+      { icon: '🔧', text: 'У майстерні або цеху — розбираю та налагоджую техніку', tags: ['agroe','energy'] },
+      { icon: '🏗️', text: 'На будівельному об\'єкті — бачу результат своїх рук', tags: ['build'] },
+      { icon: '🚛', text: 'В дорозі або на підприємстві — організовую рух і перевезення', tags: ['transport'] },
+    ]
+  },
+  {
+    emoji: '🧩',
+    text: 'Яке завдання тобі було б найцікавіше вирішити?',
+    answers: [
+      { icon: '🌱', text: 'Як отримати рекордний урожай пшениці на виснаженому ґрунті', tags: ['agro'] },
+      { icon: '🌲', text: 'Як відновити вирублену ділянку лісу й захистити її від шкідників', tags: ['forest'] },
+      { icon: '⚙️', text: 'Чому зупинився комбайн і як швидко його полагодити в полі', tags: ['agroe'] },
+      { icon: '❄️', text: 'Чому в холодильній камері супермаркету стало тепло', tags: ['energy'] },
+      { icon: '📐', text: 'Як розрахувати фундамент для нового будинку', tags: ['build'] },
+      { icon: '🗺️', text: 'Як спланувати маршрут для 20 вантажівок, щоб зекономити час', tags: ['transport'] },
+    ]
+  },
+  {
+    emoji: '🎓',
+    text: 'Які шкільні предмети давались найкраще і подобались?',
+    answers: [
+      { icon: '🔬', text: 'Біологія та хімія — люблю живу природу і реакції', tags: ['agro','forest'] },
+      { icon: '⚡', text: 'Фізика та математика — схеми, формули, розрахунки', tags: ['energy','agroe','build'] },
+      { icon: '✏️', text: 'Креслення та геометрія — малюю плани і схеми', tags: ['build','agroe'] },
+      { icon: '🌍', text: 'Географія та екологія — цікавлюсь природою і довкіллям', tags: ['forest','agro'] },
+      { icon: '🚗', text: 'Праця та фізика — практика, механіка, все що рухається', tags: ['transport','agroe'] },
+    ]
+  },
+  {
+    emoji: '💰',
+    text: 'Через 5 років після коледжу — як ти уявляєш свою кар\'єру?',
+    answers: [
+      { icon: '🌾', text: 'Власна ферма або посада агронома у великому господарстві', tags: ['agro'] },
+      { icon: '🌲', text: 'Лісничий або еколог — охороняю природу держави', tags: ['forest'] },
+      { icon: '🚜', text: 'Майстер або інженер машинного двору агрохолдингу', tags: ['agroe'] },
+      { icon: '🏢', text: 'Монтую кліматичні системи, маю власних клієнтів', tags: ['energy'] },
+      { icon: '🏗️', text: 'Прораб або виконроб на будівництві', tags: ['build'] },
+      { icon: '🚛', text: 'Логіст або диспетчер у транспортній компанії', tags: ['transport'] },
+    ]
+  },
+  {
+    emoji: '🔥',
+    text: 'Що з цього викликає у тебе реальний інтерес?',
+    answers: [
+      { icon: '🧬', text: 'Як живуть рослини, що їм потрібно для росту', tags: ['agro','forest'] },
+      { icon: '🔩', text: 'Як влаштовані двигуни, гідравліка, механізми', tags: ['agroe','transport'] },
+      { icon: '🌡️', text: 'Як працює холодильник, кондиціонер, теплообмін', tags: ['energy'] },
+      { icon: '🏛️', text: 'Як стоять будинки, з чого зроблені конструкції', tags: ['build'] },
+    ]
+  },
+  {
+    emoji: '🤝',
+    text: 'Обери ситуацію, де ти почуваєшся найкомфортніше:',
+    answers: [
+      { icon: '🌿', text: 'Сам(-а) на полі або в лісі — спокій, природа, без поспіху', tags: ['agro','forest'] },
+      { icon: '🔨', text: 'Ремонтую техніку в майстерні — все розібрав(-ла) і зібрав(-ла)', tags: ['agroe','energy'] },
+      { icon: '👷', text: 'На будмайданчику — щодня бачу як росте будівля', tags: ['build'] },
+      { icon: '📋', text: 'Координую, планую, вирішую — люблю організовувати процеси', tags: ['transport','agro'] },
+    ]
+  },
+];
+
+const specialties = {
+  agro: {
+    emoji: '🌾',
+    name: 'Агрономія',
+    code: 'H1 Агрономія',
+    desc: 'Агрономи — це фахівці, які відповідають за виробництво рослинницької продукції. Ти навчишся розуміти ґрунт, добирати культури, планувати сівозміни та досягати рекордних врожаїв.',
+    jobs: ['Агроном', 'Технолог рослинництва', 'Агент з продажу засобів захисту', 'Фермер'],
+  },
+  forest: {
+    emoji: '🌲',
+    name: 'Лісове господарство',
+    code: 'H4 Лісове господарство',
+    desc: 'Фахівці лісового господарства охороняють і примножують ліси України. Тебе чекає робота просто неба: лісовпорядкування, захист екосистем і управління природними ресурсами.',
+    jobs: ['Лісник', 'Лісовпорядник', 'Еколог', 'Інспектор з охорони лісу'],
+  },
+  agroe: {
+    emoji: '🚜',
+    name: 'Агроінженерія',
+    code: 'H7 Агроінженерія',
+    desc: 'Агроінженери обслуговують і ремонтують сільськогосподарську техніку: трактори, комбайни, сівалки. Це поєднання любові до техніки та сільського господарства в одній спеціальності.',
+    jobs: ['Механізатор', 'Інженер-механік', 'Майстер з ремонту техніки', 'Технолог'],
+  },
+  energy: {
+    emoji: '❄️',
+    name: 'Холодильні та кліматичні технології',
+    code: 'G4.04 · G4 Енерговиробництво',
+    desc: 'Монтаж і обслуговування холодильно-компресорних машин, кондиціонерів та кліматичного обладнання. Ти вивчиш сучасні системи збереження холоду і клімат-контролю — затребувана спеціалізація в промисловості та АПК.',
+    jobs: ['Механік-монтажник', 'Фахівець з кліматичних систем', 'Технолог холодильних установок', 'Інженер-енергетик'],
+  },
+  build: {
+    emoji: '🏗️',
+    name: 'Будівництво та цивільна інженерія',
+    code: 'G19 Будівництво та цивільна інженерія',
+    desc: 'Будівельники створюють усе довкола нас — від будинків до мостів. Ти навчишся проєктувати, розраховувати конструкції та керувати будівельними роботами.',
+    jobs: ['Будівельник', 'Прораб', 'Технік-будівельник', 'Кошторисник'],
+  },
+  transport: {
+    emoji: '🚗',
+    name: 'Автомобільний транспорт',
+    code: 'J8 Автомобільний транспорт',
+    desc: 'Фахівці автомобільного транспорту організовують перевезення людей і вантажів, обслуговують і ремонтують автомобілі. Ти вивчиш логістику, правила безпечного перевезення та будову сучасного автотранспорту.',
+    jobs: ['Диспетчер', 'Логіст', 'Механік автосервісу', 'Організатор перевезень'],
+  },
+};
+
+// ===== STATE =====
+let currentQ = 0;
+let scores = { agro:0, forest:0, agroe:0, energy:0, build:0, transport:0 };
+let countdownTimer = null;
+
+// ===== FUNCTIONS =====
+function showScreen(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function startQuiz() {
+  currentQ = 0;
+  scores = { agro:0, forest:0, agroe:0, energy:0, build:0, transport:0 };
+  showScreen('screen-quiz');
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = questions[currentQ];
+  const total = questions.length;
+  const pct = (currentQ / total) * 100;
+
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-label').textContent = (currentQ+1) + ' / ' + total;
+  document.getElementById('q-emoji').textContent = q.emoji;
+  document.getElementById('q-text').textContent = q.text;
+
+  const grid = document.getElementById('q-answers');
+  grid.innerHTML = '';
+  const count = q.answers.length;
+  grid.className = 'answers-grid' + (count === 3 ? ' cols-3' : count === 1 ? ' cols-1' : '');
+  q.answers.forEach((a, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'answer-btn';
+    btn.innerHTML = `<span class="ans-icon">${a.icon}</span><span>${a.text}</span>`;
+    btn.style.animationDelay = (i * 0.08) + 's';
+    btn.style.animation = 'fadeUp 0.4s ' + (i*0.07) + 's ease both';
+    btn.onclick = () => selectAnswer(a.tags, btn);
+    grid.appendChild(btn);
+  });
+
+  // Animate card
+  const card = document.getElementById('question-card');
+  card.style.animation = 'none';
+  setTimeout(() => card.style.animation = 'scaleIn 0.35s ease', 10);
+}
+
+function selectAnswer(tags, btn) {
+  document.querySelectorAll('.answer-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  tags.forEach(t => scores[t]++);
+
+  setTimeout(() => {
+    currentQ++;
+    if (currentQ < questions.length) {
+      renderQuestion();
+    } else {
+      showLoading();
+    }
+  }, 350);
+}
+
+function showLoading() {
+  showScreen('screen-loading');
+  setTimeout(showResult, 2200);
+}
+
+function showResult() {
+  // Find best specialty
+  const best = Object.entries(scores).sort((a,b) => b[1]-a[1])[0][0];
+  const sp = specialties[best];
+
+  document.getElementById('r-emoji').textContent = sp.emoji;
+  document.getElementById('r-specialty').textContent = sp.name;
+  document.getElementById('r-code').textContent = sp.code;
+  document.getElementById('r-desc').textContent = sp.desc;
+
+  const jobsDiv = document.getElementById('r-jobs');
+  jobsDiv.innerHTML = sp.jobs.map(j => `<span class="job-tag">💼 ${j}</span>`).join('');
+
+  showScreen('screen-result');
+  launchConfetti();
+  startCountdown();
+}
+
+function launchConfetti() {
+  const colors = ['#4a9e4a','#f0b429','#ffffff','#2d6a2d','#c8931a'];
+  for(let i = 0; i < 60; i++) {
+    setTimeout(() => {
+      const el = document.createElement('div');
+      el.className = 'confetti-piece';
+      el.style.cssText = `
+        left: ${Math.random()*100}vw;
+        top: 0;
+        background: ${colors[Math.floor(Math.random()*colors.length)]};
+        width: ${6+Math.random()*10}px;
+        height: ${6+Math.random()*10}px;
+        border-radius: ${Math.random()>0.5?'50%':'2px'};
+        animation-duration: ${1.5+Math.random()*2}s;
+        animation-delay: ${Math.random()*0.5}s;
+        opacity: 1;
+      `;
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 3500);
+    }, i * 30);
+  }
+}
+
+function startCountdown() {
+  clearInterval(countdownTimer);
+  let t = 30;
+  document.getElementById('countdown-num').textContent = t;
+  countdownTimer = setInterval(() => {
+    t--;
+    document.getElementById('countdown-num').textContent = t;
+    if(t <= 0) {
+      clearInterval(countdownTimer);
+      restartQuiz();
+    }
+  }, 1000);
+}
+
+function restartQuiz() {
+  clearInterval(countdownTimer);
+  showScreen('screen-intro');
+}
+</script>
+</body>
+</html>

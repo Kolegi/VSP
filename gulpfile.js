@@ -104,7 +104,7 @@ exports.clear = clear;
 exports.copyfolder = copyfolder;
 exports.copyfolderNews = copyfolderNews;
 
-exports.build = gulp.series(clear, tailwind, gulp.parallel(css, html, copy));
+exports.build = gulp.series(clear, tailwind, gulp.parallel(css, html, copy, copyfolder, copyfolderNews));
 
 exports.start = gulp.series(
   clear,

@@ -1,9 +1,3 @@
 node_modules
-build
 
-/image/
-*.jpg
-*.png
-*.webp
-*.mp4*.pdf
-*.pdf
+

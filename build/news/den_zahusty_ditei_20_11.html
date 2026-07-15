@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новини</title>
+
+    <meta name="description" content="Новоушицький коледж" />
+    <meta
+      name="keywords"
+      content="Новини, Новоушицький коледж, ВСП НФК ЗВО ПДУ"
+    />
+    <meta name="author" content="Новоушицький фаховий коледж" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="header-container"></div>
+
+    <div class="breadcrumbs">
+      <div class="wrapper">
+        <div class="flex items-center gap-2">
+          <a href="https://www.ntpu.org.ua/" class="text-xs text-grey-03"
+            >Головна</a
+          >
+          <p class="text-xs text-grey-03">/</p>
+          <span class="text-xs text-grey-05">Новини</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="title-page">
+      <div class="wrapper flex flex-col gap-6">
+        <h1 class="text-6xl text-grey-02">Новини</h1>
+
+        <!-- ===== LIGHTBOX GALLERY ===== -->
+
+        <!-- modal toggle -->
+        <input type="checkbox" id="img-modal-1" class="peer hidden" />
+
+        <!-- slides -->
+        <input type="radio" name="slides" id="slide-1" class="hidden" checked />
+        <input type="radio" name="slides" id="slide-2" class="hidden" />
+
+        <!-- preview -->
+        <label for="img-modal-1" class="cursor-zoom-in">
+          <img
+            class="rounded-xl transition hover:scale-[1.02] mb-16"
+            src="../image/news/den_zahusty_ditei_20_11/1.jpg"
+            alt="Новина"
+          />
+        </label>
+
+        <!-- overlay -->
+        <div
+          class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition"
+        >
+          <!-- close background -->
+          <label
+            for="img-modal-1"
+            class="absolute inset-0 cursor-zoom-out"
+          ></label>
+
+          <!-- SLIDER AREA -->
+          <div class="relative flex flex-col items-center">
+            <!-- arrows -->
+            <div
+              class="absolute inset-0 flex items-center justify-between px-6 pointer-events-none"
+            >
+              <label
+                for="slide-1"
+                class="pointer-events-auto text-white text-5xl bg-black/40 hover:bg-black/70 w-14 h-14 flex items-center justify-center rounded-full cursor-pointer"
+                >‹</label
+              >
+
+              <label
+                for="slide-2"
+                class="pointer-events-auto text-white text-5xl bg-black/40 hover:bg-black/70 w-14 h-14 flex items-center justify-center rounded-full cursor-pointer"
+                >›</label
+              >
+            </div>
+
+            <!-- images -->
+            <img
+              src="../image/news/den_zahusty_ditei_20_11/1.jpg"
+              class="max-w-screen max-h-screen object-contain hidden rounded-xl shadow-2xl"
+              data-slide="1"
+            />
+            <img
+              src="../image/news/den_zahusty_ditei_20_11/2.jpg"
+              class="max-w-screen max-h-screen object-contain hidden rounded-xl shadow-2xl"
+              data-slide="2"
+            />
+
+            <!-- counter -->
+            <div
+              class="mt-6 text-white text-sm bg-black/50 px-4 py-1 rounded-full"
+            >
+              <span class="counter"></span>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          #slide-1:checked ~ .fixed img[data-slide="1"] {
+            display: block;
+          }
+          #slide-2:checked ~ .fixed img[data-slide="2"] {
+            display: block;
+          }
+
+          #slide-1:checked ~ .fixed .counter::after {
+            content: "1 / 2";
+          }
+          #slide-2:checked ~ .fixed .counter::after {
+            content: "2 / 2";
+          }
+        </style>
+
+        <!-- ===== /LIGHTBOX GALLERY ===== -->
+      </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="../js/componets.js"></script>
+    <script src="../js/javascript.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
