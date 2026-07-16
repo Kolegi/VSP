@@ -1,4 +1,4 @@
-const newsPerPage = 6;
+const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
   {
@@ -4698,27 +4698,46 @@ function displayNews() {
   });
 
   updatePagination();
-  scrollToNewsTop();
+  // scrollToNewsTop();
+}
+
+function getPageNumbers(current, total) {
+  if (total <= 7) {
+    return Array.from({ length: total }, (_, i) => i + 1);
+  }
+  const pages = [];
+  pages.push(1);
+  if (current > 3) pages.push("...");
+  for (let i = Math.max(2, current - 1); i <= Math.min(total - 1, current + 1); i++) {
+    pages.push(i);
+  }
+  if (current < total - 2) pages.push("...");
+  pages.push(total);
+  return pages;
 }
 
 function updatePagination() {
-  const currentPageElement = document.getElementById("current-page");
-  const totalPagesElement = document.getElementById("total-pages");
-  const prevButton = document.getElementById("prev");
-  const nextButton = document.getElementById("next");
-
-  if (!currentPageElement || !totalPagesElement || !prevButton || !nextButton) {
-    console.error("Не знайдено необхідні елементи пагінації");
-    return;
-  }
+  const pagination = document.getElementById("pagination");
+  if (!pagination) return;
 
   const totalPages = Math.ceil(newsItems.length / newsPerPage);
+  const pages = getPageNumbers(currentPage, totalPages);
 
-  currentPageElement.textContent = currentPage;
-  totalPagesElement.textContent = totalPages;
+  let html = "";
+  html += `<button type="button" data-page="prev" class="px-3 py-2 rounded-lg text-sm ${currentPage === 1 ? "text-grey-03 cursor-not-allowed" : "text-grey-02 hover:bg-[#F5F3F0]"}"${currentPage === 1 ? " disabled" : ""}>← Назад</button>`;
 
-  prevButton.disabled = currentPage === 1;
-  nextButton.disabled = currentPage === totalPages;
+  pages.forEach((p) => {
+    if (p === "...") {
+      html += `<span class="px-2 py-2 text-sm text-grey-03">...</span>`;
+    } else {
+      const active = p === currentPage;
+      html += `<button type="button" data-page="${p}" class="w-9 h-9 rounded-lg text-sm ${active ? "bg-main text-white" : "text-grey-02 hover:bg-[#F5F3F0]"}">${p}</button>`;
+    }
+  });
+
+  html += `<button type="button" data-page="next" class="px-3 py-2 rounded-lg text-sm ${currentPage === totalPages ? "text-grey-03 cursor-not-allowed" : "text-grey-02 hover:bg-[#F5F3F0]"}"${currentPage === totalPages ? " disabled" : ""}>Вперед →</button>`;
+
+  pagination.innerHTML = html;
 }
 
 function scrollToNewsTop() {
@@ -4729,26 +4748,27 @@ function scrollToNewsTop() {
 }
 
 function setupPaginationListeners() {
-  const prevButton = document.getElementById("prev");
-  const nextButton = document.getElementById("next");
+  const pagination = document.getElementById("pagination");
+  if (!pagination) return;
 
-  if (prevButton) {
-    prevButton.addEventListener("click", () => {
-      if (currentPage > 1) {
-        currentPage--;
-        displayNews();
-      }
-    });
-  }
+  const totalPages = Math.ceil(newsItems.length / newsPerPage);
 
-  if (nextButton) {
-    nextButton.addEventListener("click", () => {
-      if (currentPage < Math.ceil(newsItems.length / newsPerPage)) {
-        currentPage++;
-        displayNews();
-      }
-    });
-  }
+  pagination.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-page]");
+    if (!btn) return;
+
+    const action = btn.dataset.page;
+    if (action === "prev" && currentPage > 1) {
+      currentPage--;
+      displayNews();
+    } else if (action === "next" && currentPage < totalPages) {
+      currentPage++;
+      displayNews();
+    } else if (action !== "prev" && action !== "next") {
+      currentPage = parseInt(action);
+      displayNews();
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function () {

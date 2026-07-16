@@ -1,5 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/rm -rf ~/public_html/*
     - /bin/cp -r build/* ~/public_html/
