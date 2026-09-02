@@ -1,7 +1,49 @@
 const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
-    {
+  {
+    link: "/news/Den_ Znan_Vytannya.html",
+    image: "https://ntpu.org.ua/image/news/Den_ Znan_Vytannya/Den_ Znan_Vytannya_dyrektora.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/01_09_26_pershyi_urok.html",
+    image: "https://ntpu.org.ua/image/news/01_09_26_pershyi_urok/01_09_26_pershyi_urok_I_kurs.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/01_09_26_pershyi_dzvonyk.html",
+    image: "https://ntpu.org.ua/image/news/01_09_26_pershyi_dzvonyk/01_09_26_pershyi_dzvonyk.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/31_08_26_Navchannya.html",
+    image: "https://ntpu.org.ua/image/news/31_08_26_Navchannya/31_08_26_Navchannya.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/31_08_26_Pedrada.html",
+    image: "https://ntpu.org.ua/image/news/31_08_26_Pedrada/31_08_26_Pedrada.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/28_08_26_metod_rada.html",
+    image: "https://ntpu.org.ua/image/news/28_08_26_metod_rada/28_08_26_metod_rada.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/29_09_26_Den_pamyati _zakhysnykiv.html",
     image: "https://ntpu.org.ua/image/news/29_09_26_Den_pamyati _zakhysnykiv/29_09_26_Den_pamyati _zakhysnykiv.jpg",
     img_descr: "",
