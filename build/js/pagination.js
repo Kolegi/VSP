@@ -1,6 +1,13 @@
 const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
+    {
+    link: "/news/29_09_26_Den_pamyati _zakhysnykiv.html",
+    image: "https://ntpu.org.ua/image/news/29_09_26_Den_pamyati _zakhysnykiv/29_09_26_Den_pamyati _zakhysnykiv.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
   {
     link: "/news/vstyp_2026.html",
     image: "./image/news/vstyp_2026/1.jpg",
