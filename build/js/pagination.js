@@ -1,6 +1,13 @@
 const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
+    {
+    link: "/news/Furman Serhii.html",
+    image: "https://ntpu.org.ua/image/news/Furman Serhii/Furman Serhii.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
   {
     link: "/news/Den_ Znan_Vytannya.html",
     image: "https://ntpu.org.ua/image/news/Den_ Znan_Vytannya/Den_ Znan_Vytannya_dyrektora.jpg",
