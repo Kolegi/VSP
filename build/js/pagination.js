@@ -1,7 +1,21 @@
 const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
-    {
+  {
+    link: "/news/08 09 26 den hramotnosti.html",
+    image: "https://ntpu.org.ua/image/news/08 09 26 den hramotnosti/08 09 26 den hramotnosti.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/08 09 26 hodyna medychnoi sestry.html",
+    image: "https://ntpu.org.ua/image/news/08 09 26 hodyna medychnoi sestry/08 09 26 hodyna medychnoi sestry.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/Furman Serhii.html",
     image: "https://ntpu.org.ua/image/news/Furman Serhii/Furman Serhii.jpg",
     img_descr: "",
