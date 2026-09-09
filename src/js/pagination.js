@@ -16,6 +16,13 @@ const newsItems = [
     content: "",
   },
   {
+    link: "/news/03_09_2026_studrada.html",
+    image: "https://ntpu.org.ua/image/news/03_09_2026_studrada/03_09_2026_studrada.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/Furman Serhii.html",
     image: "https://ntpu.org.ua/image/news/Furman Serhii/Furman Serhii.jpg",
     img_descr: "",
