@@ -2,6 +2,20 @@ const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/09_09_2026_den_zapobihannia_samohubstvam.html",
+    image: "https://ntpu.org.ua/image/news/09_09_2026_den_zapobihannia_samohubstvam/09_09_2026_den_zapobihannia_samohubstvam.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/09_09_26_sotsialnyi_zakhyst.html",
+    image: "https://ntpu.org.ua/image/news/09_09_26_sotsialnyi_zakhyst/09_09_26_sotsialnyi_zakhyst.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/08 09 26 den hramotnosti.html",
     image: "https://ntpu.org.ua/image/news/08 09 26 den hramotnosti/08 09 26 den hramotnosti.jpg",
     img_descr: "",
