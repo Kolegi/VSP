@@ -1,6 +1,13 @@
 const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
+    {
+    link: "/news/14_09_26_zasidania_AK.html",
+    image: "https://ntpu.org.ua/image/news/14_09_26_zasidania_AK/14_09_26_zasidania_AK.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
   {
     link: "/news/09_09_2026_den_zapobihannia_samohubstvam.html",
     image: "https://ntpu.org.ua/image/news/09_09_2026_den_zapobihannia_samohubstvam/09_09_2026_den_zapobihannia_samohubstvam.jpg",
