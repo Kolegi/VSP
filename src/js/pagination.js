@@ -1,7 +1,14 @@
 const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
-    {
+      {
+    link: "/news/zasidannya_z_vykh_i_sport.html",
+    image: "https://ntpu.org.ua/image/news/zasidannya_z_vykh_i_sport/zasidannya_z_vykh_i_sport.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },  
+  {
     link: "/news/14_09_26_zasidania_AK.html",
     image: "https://ntpu.org.ua/image/news/14_09_26_zasidania_AK/14_09_26_zasidania_AK.jpg",
     img_descr: "",
