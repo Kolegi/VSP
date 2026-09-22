@@ -2,6 +2,34 @@ const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/21_09_26_zabih_za_heroiv.html",
+    image: "https://ntpu.org.ua/image/news/21_09_26_zabih_za_heroiv/21_09_26_zabih_za_heroiv.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/21_09_26_liniika_den_myru.html",
+    image: "https://ntpu.org.ua/image/news/21_09_26_liniika_den_myru/21_09_26_liniika_den_myru.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/Z_DNEM_pratsivnyka_lisu.html",
+    image: "https://ntpu.org.ua/image/news/Z_DNEM_pratsivnyka_lisu/Z_DNEM_pratsivnyka_lisu.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/18_09_26_tyzhden_hromadyanske_susp.html",
+    image: "https://ntpu.org.ua/image/news/18_09_26_tyzhden_hromadyanske_susp/18_09_26_tyzhden_hromadyanske_susp.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/Chelendzh_kompyuternoi_hramotnosti.html",
     image: "https://ntpu.org.ua/image/news/Chelendzh_kompyuternoi_hramotnosti/Chelendzh_kompyuternoi_hramotnosti.jpg",
     img_descr: "",
