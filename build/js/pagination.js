@@ -2,6 +2,20 @@ const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/23_09_Protydiya_bulinhu.html",
+    image: "https://ntpu.org.ua/image/news/23_09_Protydiya_bulinhu/23_09_Protydiya_bulinhu.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/22_09_26_eko_lis.html",
+    image: "https://ntpu.org.ua/image/news/22_09_26_eko_lis/22_09_26_eko_lis.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/21_09_26_zabih_za_heroiv.html",
     image: "https://ntpu.org.ua/image/news/21_09_26_zabih_za_heroiv/21_09_26_zabih_za_heroiv.jpg",
     img_descr: "",
