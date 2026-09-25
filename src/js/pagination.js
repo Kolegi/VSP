@@ -2,6 +2,27 @@ const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/25_09_26_narada_kuratoriv.html",
+    image: "https://ntpu.org.ua/image/news/25_09_26_narada_kuratoriv/25_09_26_narada_kuratoriv.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/25_09_26_misyachnyk_pershokursnyka.html",
+    image: "https://ntpu.org.ua/image/news/25_09_26_misyachnyk_pershokursnyka/25_09_26_misyachnyk_pershokursnyka.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/24_09_26_tsk.html",
+    image: "https://ntpu.org.ua/image/news/24_09_26_tsk/24_09_26_tsk.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/23_09_Protydiya_bulinhu.html",
     image: "https://ntpu.org.ua/image/news/23_09_Protydiya_bulinhu/23_09_Protydiya_bulinhu.jpg",
     img_descr: "",
