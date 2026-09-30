@@ -2,6 +2,13 @@ const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/29_09_26_naukove_tovarystvo.html",
+    image: "https://ntpu.org.ua/image/news/29_09_26_naukove_tovarystvo/29_09_26_naukove_tovarystvo.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/25_09_26_narada_kuratoriv.html",
     image: "https://ntpu.org.ua/image/news/25_09_26_narada_kuratoriv/25_09_26_narada_kuratoriv.jpg",
     img_descr: "",
