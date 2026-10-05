@@ -2,6 +2,62 @@ const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/01_10_26_vitannya_den_pratsivnyka_osvity.html",
+    image: "https://ntpu.org.ua/image/news/01_10_26_vitannya_den_pratsivnyka_osvity/01_10_26_vitannya_den_pratsivnyka_osvity.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/01_10_26_zmahannya_1.html",
+    image: "https://ntpu.org.ua/image/news/01_10_26_zmahannya_1/01_10_26_zmahannya_1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/01_10_26_zustrich_z_politsiyeyu1.html",
+    image: "https://ntpu.org.ua/image/news/01_10_26_zustrich_z_politsiyeyu1/01_10_26_zustrich_z_politsiyeyu1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/01_10_26_urok_pamyati1.html",
+    image: "https://ntpu.org.ua/image/news/01_10_26_urok_pamyati1/01_10_26_urok_pamyati1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/01_10_26_pokladannya.html",
+    image: "https://ntpu.org.ua/image/news/01_10_26_pokladannya/01_10_26_pokladannya.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/30_09_26_Vseukrayinskyy_den_bibliotek.html",
+    image: "https://ntpu.org.ua/image/news/30_09_26_Vseukrayinskyy_den_bibliotek/30_09_26_Vseukrayinskyy_den_bibliotek.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/30_09_26_ShMV_1.html",
+    image: "https://ntpu.org.ua/image/news/30_09_26_ShMV_1/30_09_26_ShMV_1.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/29_09_26_pamyati_Babynoho_Yaru.html",
+    image: "https://ntpu.org.ua/image/news/29_09_26_pamyati_Babynoho_Yaru/29_09_26_pamyati_Babynoho_Yaru.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/29_09_26_naukove_tovarystvo.html",
     image: "https://ntpu.org.ua/image/news/29_09_26_naukove_tovarystvo/29_09_26_naukove_tovarystvo.jpg",
     img_descr: "",
