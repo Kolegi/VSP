@@ -2,6 +2,34 @@ const newsPerPage = 10;
 let currentPage = 1;
 const newsItems = [
   {
+    link: "/news/05_10_26_zasidannya_TsK_Hrokholskyy.html",
+    image: "https://ntpu.org.ua/image/news/05_10_26_zasidannya_TsK_Hrokholskyy/05_10_26_zasidannya_TsK_Hrokholskyy.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/04_10_26_Den_lyudey_pohyloho_viku.html",
+    image: "https://ntpu.org.ua/image/news/04_10_26_Den_lyudey_pohyloho_viku/04_10_26_Den_lyudey_pohyloho_viku.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/03_10_26_zmahannya_lehka_atletyka.html",
+    image: "https://ntpu.org.ua/image/news/03_10_26_zmahannya_lehka_atletyka/03_10_26_zmahannya_lehka_atletyka.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
+    link: "/news/02_10_26_vechir_vidpochynku.html",
+    image: "https://ntpu.org.ua/image/news/02_10_26_vechir_vidpochynku/02_10_26_vechir_vidpochynku.jpg",
+    img_descr: "",
+    title: "",
+    content: "",
+  },
+  {
     link: "/news/01_10_26_vitannya_den_pratsivnyka_osvity.html",
     image: "https://ntpu.org.ua/image/news/01_10_26_vitannya_den_pratsivnyka_osvity/01_10_26_vitannya_den_pratsivnyka_osvity.jpg",
     img_descr: "",
